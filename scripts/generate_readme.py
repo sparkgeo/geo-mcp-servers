@@ -10,6 +10,7 @@ so prose above/below the tables is preserved.
 """
 from __future__ import annotations
 
+import json
 import re
 import sys
 from pathlib import Path
@@ -22,9 +23,30 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "servers.yaml"
 README = ROOT / "README.md"
+HEALTH = ROOT / "health.json"
 
 START = "<!-- AUTOGEN:START -->"
 END = "<!-- AUTOGEN:END -->"
+
+# Health status -> column label. Populated by scripts/check_health.py -> health.json.
+HEALTH_LABELS = {
+    "active": "🟢 active",
+    "stale": "🟡 stale",
+    "archived": "🔴 archived",
+    "dead": "🔴 dead",
+    "unreachable": "🔴 unreachable",
+    "hosted": "⚪ hosted",
+}
+
+
+def load_health() -> dict:
+    """health.json is optional — the README still generates without it."""
+    if HEALTH.exists():
+        try:
+            return json.loads(HEALTH.read_text())
+        except (ValueError, OSError):
+            return {}
+    return {}
 
 
 def esc(text: str) -> str:
@@ -38,9 +60,28 @@ def slug(title: str) -> str:
     return s.replace(" ", "-")
 
 
-def build_tables(data: dict) -> str:
+def health_summary(health: dict, servers: list[dict]) -> str:
+    """One-line health tally + as-of date, or '' when no health.json is present."""
+    hservers = health.get("servers") or {}
+    if not hservers:
+        return ""
+    counts: dict[str, int] = {}
+    for s in servers:
+        st = hservers.get(s.get("url", ""), {}).get("status")
+        if st:
+            counts[st] = counts.get(st, 0) + 1
+    order = ["active", "stale", "hosted", "archived", "dead", "unreachable"]
+    parts = [f"{HEALTH_LABELS.get(k, k)} {counts[k]}" for k in order if counts.get(k)]
+    months = health.get("active_months", 12)
+    return (f"\n_Health checked {health.get('checked', '?')} "
+            f"(active = repo pushed within {months} months): "
+            f"{' · '.join(parts)}._\n")
+
+
+def build_tables(data: dict, health: dict) -> str:
     categories: dict[str, str] = data.get("categories", {})
     servers: list[dict] = data.get("servers") or []
+    hservers = health.get("servers") or {}
 
     by_cat: dict[str, list[dict]] = {key: [] for key in categories}
     for srv in servers:
@@ -48,7 +89,8 @@ def build_tables(data: dict) -> str:
         by_cat.setdefault(cat, []).append(srv)
 
     total = len(servers)
-    lines = [f"**{total} servers tracked** across {sum(1 for v in by_cat.values() if v)} categories.\n"]
+    lines = [f"**{total} servers tracked** across {sum(1 for v in by_cat.values() if v)} categories."]
+    lines.append(health_summary(health, servers))
 
     # Table of contents
     lines.append("### Categories\n")
@@ -58,27 +100,38 @@ def build_tables(data: dict) -> str:
             lines.append(f"- [{title}](#{slug(title)}) ({count})")
     lines.append("")
 
+    show_health = bool(hservers)
+    header = "| Server | Description | Lang | By | Type |"
+    sep = "| --- | --- | --- | --- | --- |"
+    if show_health:
+        header += " Health |"
+        sep += " --- |"
+
     for key, title in categories.items():
         rows = sorted(by_cat.get(key, []), key=lambda s: s.get("name", "").lower())
         if not rows:
             continue
         lines.append(f"### {title}\n")
-        lines.append("| Server | Description | Lang | By | Type |")
-        lines.append("| --- | --- | --- | --- | --- |")
+        lines.append(header)
+        lines.append(sep)
         for s in rows:
             name = f"[{esc(s.get('name', '?'))}]({s['url']})" if s.get("url") else esc(s.get("name", "?"))
             desc = esc(s.get("description", ""))
             lang = esc(s.get("language", "")) or "—"
             author = esc(s.get("author", "")) or "—"
             kind = "official" if s.get("official") else "community"
-            lines.append(f"| {name} | {desc} | {lang} | {author} | {kind} |")
+            row = f"| {name} | {desc} | {lang} | {author} | {kind} |"
+            if show_health:
+                status = hservers.get(s.get("url", ""), {}).get("status")
+                row += f" {HEALTH_LABELS.get(status, '—')} |"
+            lines.append(row)
         lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
 
 
-def render(data: dict) -> str:
-    block = build_tables(data)
+def render(data: dict, health: dict) -> str:
+    block = build_tables(data, health)
     if README.exists():
         text = README.read_text()
         if START in text and END in text:
@@ -98,7 +151,7 @@ def render(data: dict) -> str:
 
 def main() -> int:
     data = yaml.safe_load(DATA.read_text()) or {}
-    new = render(data)
+    new = render(data, load_health())
     check = "--check" in sys.argv
     current = README.read_text() if README.exists() else ""
     if check:

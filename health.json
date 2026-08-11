@@ -1,0 +1,302 @@
+{
+  "active_months": 12,
+  "checked": "2026-08-11",
+  "servers": {
+    "https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403": {
+      "status": "hosted"
+    },
+    "https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/": {
+      "status": "hosted"
+    },
+    "https://docs.carto.com/carto-for-agents/mcp-server": {
+      "status": "hosted"
+    },
+    "https://docs.earthmover.io/mcp/": {
+      "status": "hosted"
+    },
+    "https://docs.tilebox.com/onboard-your-agent": {
+      "status": "hosted"
+    },
+    "https://felt.com/blog/introducing-felt-mcp-server": {
+      "status": "hosted"
+    },
+    "https://github.com/BnJam/stac-mcp": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/CesiumGS/cesium-ai-integrations": {
+      "pushed": "2026-05",
+      "status": "active"
+    },
+    "https://github.com/Cicatriiz/timezone-toolkit": {
+      "pushed": "2025-03",
+      "status": "stale"
+    },
+    "https://github.com/Cyreslab-AI/marinetraffic-mcp-server": {
+      "pushed": "2025-05",
+      "status": "stale"
+    },
+    "https://github.com/Dhenenjay/Axion-MCP": {
+      "pushed": "2025-11",
+      "status": "active"
+    },
+    "https://github.com/FahrenheitResearch/weather-mcp": {
+      "pushed": "2026-03",
+      "status": "active"
+    },
+    "https://github.com/Flightradar24/fr24api-mcp": {
+      "pushed": "2026-01",
+      "status": "active"
+    },
+    "https://github.com/GarrickGarcia/ArcGISMCP": {
+      "pushed": "2025-08",
+      "status": "active"
+    },
+    "https://github.com/JordanGunn/gdal-mcp": {
+      "pushed": "2026-05",
+      "status": "active"
+    },
+    "https://github.com/NERVsystems/osmmcp": {
+      "pushed": "2026-03",
+      "status": "active"
+    },
+    "https://github.com/OpenCageData/opencage-geocoding-mcp": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/OriShmila/geoapify-mcp-server": {
+      "pushed": "2025-08",
+      "status": "active"
+    },
+    "https://github.com/ProgramComputer/NASA-MCP-server": {
+      "pushed": "2026-07",
+      "status": "active"
+    },
+    "https://github.com/RyanCardin15/NOAA-TidesAndCurrents-MCP": {
+      "pushed": "2026-07",
+      "status": "active"
+    },
+    "https://github.com/Sir-Adrien-Claudington/qgis-mcp-1": {
+      "pushed": "2026-06",
+      "status": "active"
+    },
+    "https://github.com/X-McKay/geocode-mcp": {
+      "pushed": "2025-07",
+      "status": "stale"
+    },
+    "https://github.com/aatakansalar/valhalla-mcp": {
+      "pushed": "2025-06",
+      "status": "stale"
+    },
+    "https://github.com/anitagraser/qgis_mcp": {
+      "pushed": "2026-01",
+      "status": "active"
+    },
+    "https://github.com/baidu-maps/mcp": {
+      "pushed": "2025-08",
+      "status": "active"
+    },
+    "https://github.com/briandconnelly/mcp-server-ipinfo": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/cablate/mcp-google-map": {
+      "pushed": "2026-07",
+      "status": "active"
+    },
+    "https://github.com/cameronking4/google-earth-engine-mcp": {
+      "pushed": "2025-05",
+      "status": "stale"
+    },
+    "https://github.com/cmer81/open-meteo-mcp": {
+      "pushed": "2026-07",
+      "status": "active"
+    },
+    "https://github.com/cyanheads/noaa-marine-mcp-server": {
+      "pushed": "2026-07",
+      "status": "active"
+    },
+    "https://github.com/cyanheads/open-meteo-mcp-server": {
+      "pushed": "2026-07",
+      "status": "active"
+    },
+    "https://github.com/cyanheads/openaq-mcp-server": {
+      "pushed": "2026-07",
+      "status": "active"
+    },
+    "https://github.com/cyanheads/openstreetmap-mcp-server": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/david-pivonka/google-maps-mcp-server": {
+      "pushed": "2025-10",
+      "status": "active"
+    },
+    "https://github.com/dirkhh/adsb-mcp-server": {
+      "pushed": "2025-11",
+      "status": "active"
+    },
+    "https://github.com/domdomegg/google-maps-places-mcp": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/dynamical-org/mcp": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/eKerney/esri-mcp": {
+      "pushed": "2025-09",
+      "status": "active"
+    },
+    "https://github.com/foursquare/foursquare-places-mcp": {
+      "pushed": "2025-04",
+      "status": "stale"
+    },
+    "https://github.com/geo2004/MCP-ArcGISPro": {
+      "pushed": "2026-04",
+      "status": "active"
+    },
+    "https://github.com/ipgeolocation/ipgeolocation-io-mcp": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/isaaccorley/planetary-computer-mcp": {
+      "pushed": "2026-04",
+      "status": "active"
+    },
+    "https://github.com/isdaniel/mcp_weather_server": {
+      "pushed": "2026-07",
+      "status": "active"
+    },
+    "https://github.com/jagan-shanmugam/open-streetmap-mcp": {
+      "pushed": "2025-07",
+      "status": "stale"
+    },
+    "https://github.com/jjsantos01/qgis_mcp": {
+      "pushed": "2025-10",
+      "status": "active"
+    },
+    "https://github.com/jpwilson/skyfi-mcp": {
+      "pushed": "2026-03",
+      "status": "active"
+    },
+    "https://github.com/limingchina/heremaps-mcp-server": {
+      "pushed": "2025-07",
+      "status": "stale"
+    },
+    "https://github.com/lwsinclair/arcgis-location-services-mcp": {
+      "pushed": "2025-05",
+      "status": "stale"
+    },
+    "https://github.com/mahdin75/geoserver-mcp": {
+      "pushed": "2025-12",
+      "status": "active"
+    },
+    "https://github.com/mahdin75/gis-mcp": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/mapbox/mcp-server": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/mattmarcin/aqicn-mcp": {
+      "pushed": "2025-02",
+      "status": "stale"
+    },
+    "https://github.com/modelcontextprotocol/servers": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/nasa/earthdata-mcp": {
+      "pushed": "2026-07",
+      "status": "active"
+    },
+    "https://github.com/nic01asFr/QgisStreamMCP": {
+      "pushed": "2026-02",
+      "status": "active"
+    },
+    "https://github.com/nicogis/MCP-Server-ArcGIS-Pro-AddIn": {
+      "pushed": "2026-07",
+      "status": "active"
+    },
+    "https://github.com/nitvob/nws-mcp-server": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/nkarasiak/qgis-mcp": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/pipeworx-io/mcp-maptiler": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/pipeworx-io/mcp-nominatim": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/pipeworx-io/mcp-what3words": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/receptopalak/postgis-mcp": {
+      "pushed": "2026-04",
+      "status": "active"
+    },
+    "https://github.com/shimizu/OSM-GeoJSON-MCP-Server": {
+      "pushed": "2026-06",
+      "status": "active"
+    },
+    "https://github.com/srivinod1/overture-mcp-server": {
+      "pushed": "2026-03",
+      "status": "active"
+    },
+    "https://github.com/tomtom-international/tomtom-maps-mcp": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/tomtom-international/tomtom-traffic-analytics-mcp": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/tools-mcp/vessel-traffic-mcp": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/tryolabs/unicef-gee-mcp": {
+      "pushed": "2025-11",
+      "status": "active"
+    },
+    "https://github.com/wb1016/copernicus-mcp": {
+      "pushed": "2026-02",
+      "status": "active"
+    },
+    "https://github.com/weather-mcp/weather-mcp": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/webcoderz/MCP-Geo": {
+      "pushed": "2025-01",
+      "status": "stale"
+    },
+    "https://mcp.ipinfo.io/": {
+      "status": "hosted"
+    },
+    "https://regrid.com/mcp": {
+      "status": "hosted"
+    },
+    "https://signalk.org/2025/introducing-signalk-mcp-server-ai-powered-marine-data-access/": {
+      "status": "hosted"
+    },
+    "https://techcommunity.microsoft.com/blog/microsoft-planetary-computer-blog/introducing-microsoft-planetary-computer-pro-model-context-protocol-tools-on-vs-/4522346": {
+      "status": "hosted"
+    },
+    "https://wherobots.com": {
+      "status": "hosted"
+    },
+    "https://www.smarty.com/docs/mcp": {
+      "status": "hosted"
+    }
+  }
+}

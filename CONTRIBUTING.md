@@ -29,7 +29,14 @@ they are overwritten by the generator.
    ./.venv/bin/python scripts/generate_readme.py
    ```
 
-4. Commit both `servers.yaml` and `README.md`.
+   To refresh the **Health** column (needs the `gh` CLI, authenticated), run the
+   health check first — it rewrites `health.json`, which the generator reads:
+
+   ```bash
+   ./.venv/bin/python scripts/check_health.py && ./.venv/bin/python scripts/generate_readme.py
+   ```
+
+4. Commit `servers.yaml`, `README.md` (and `health.json` if you refreshed it).
 
 ## Rules of thumb
 
