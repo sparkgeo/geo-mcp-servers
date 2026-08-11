@@ -48,7 +48,7 @@ _Health checked 2026-08-11 (active = repo pushed within 12 months): 🟢 active 
 
 ### Geocoding & place search
 
-| Server | Description | Lang | By | Type | Health (in last 12 months) |
+| Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
 | [Geoapify MCP Server](https://github.com/OriShmila/geoapify-mcp-server) | Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time | Python | OriShmila | community | 🟢 active |
 | [geocode-mcp](https://github.com/X-McKay/geocode-mcp) | Lat/long for places via free Nominatim, no API key | Python | X-McKay | community | 🟡 stale |
@@ -65,13 +65,13 @@ _Health checked 2026-08-11 (active = repo pushed within 12 months): 🟢 active 
 
 ### Routing, isochrones & navigation
 
-| Server | Description | Lang | By | Type | Health (in last 12 months) |
+| Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
 | [valhalla-mcp](https://github.com/aatakansalar/valhalla-mcp) | Valhalla OSM routing engine — routing, isochrones, tiles, matrix | TypeScript | Atakan Salar | community | 🟡 stale |
 
 ### Maps, tiles & commercial platforms
 
-| Server | Description | Lang | By | Type | Health (in last 12 months) |
+| Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
 | [ArcGIS Location Services MCP (beta)](https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/) | Official Esri MCP exposing ArcGIS Location Platform services — geocoding, routing, static maps | — | Esri | official | ⚪ hosted |
 | [ArcGIS Location Services MCP (community)](https://github.com/lwsinclair/arcgis-location-services-mcp) | Community wrapper over the Esri ArcGIS Location Platform — geocoding, routing, places | — | lwsinclair | community | 🟡 stale |
@@ -91,7 +91,7 @@ _Health checked 2026-08-11 (active = repo pushed within 12 months): 🟢 active 
 
 ### Spatial databases & analytics
 
-| Server | Description | Lang | By | Type | Health (in last 12 months) |
+| Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
 | [Overture Maps MCP Server](https://github.com/srivinod1/overture-mcp-server) | Query Overture Maps GeoParquet directly from S3 via DuckDB spatial — buildings, place density, land-use analytics | Python | srivinod1 | community | 🟢 active |
 | [postgis-mcp](https://github.com/receptopalak/postgis-mcp) | PostGIS database connection over MCP — multi-connection via env vars | Node.js | receptopalak | community | 🟢 active |
@@ -99,7 +99,7 @@ _Health checked 2026-08-11 (active = repo pushed within 12 months): 🟢 active 
 
 ### Remote sensing, STAC & earth observation
 
-| Server | Description | Lang | By | Type | Health (in last 12 months) |
+| Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
 | [Arraylake MCP Server](https://docs.earthmover.io/mcp/) | Browse Arraylake repos, inspect schemas, run OGC EDR queries & render maps over Zarr/Icechunk scientific arrays | — | Earthmover | official | ⚪ hosted |
 | [Axion-MCP](https://github.com/Dhenenjay/Axion-MCP) | Earth Engine analysis platform for Claude Desktop — NDVI/NDWI, classification, maps | TypeScript | Dhenenjay | community | 🟢 active |
@@ -117,7 +117,7 @@ _Health checked 2026-08-11 (active = repo pushed within 12 months): 🟢 active 
 
 ### Weather & climate
 
-| Server | Description | Lang | By | Type | Health (in last 12 months) |
+| Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
 | [aqicn-mcp](https://github.com/mattmarcin/aqicn-mcp) | Real-time air quality from the World Air Quality Index (AQICN) by city or coordinates | — | mattmarcin | community | 🟡 stale |
 | [dynamical.org Weather & Climate Catalog](https://github.com/dynamical-org/mcp) | Hosted server over dynamical.org's open STAC catalog of cloud-optimized weather & climate archives and forecasts (GFS, HRRR, ECMWF/AIFS) — dataset search & docs, ready-to-run xarray/Zarr/Icechunk snippets, forecast-run freshness | Python | dynamical.org | official | 🟢 active |
@@ -133,7 +133,7 @@ _Health checked 2026-08-11 (active = repo pushed within 12 months): 🟢 active 
 
 ### Desktop & enterprise GIS (QGIS, ArcGIS)
 
-| Server | Description | Lang | By | Type | Health (in last 12 months) |
+| Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
 | [ArcGISMCP](https://github.com/GarrickGarcia/ArcGISMCP) | Integrates ArcGIS Online — search/query geospatial feature layers | Python | GarrickGarcia | community | 🟢 active |
 | [esri-mcp](https://github.com/eKerney/esri-mcp) | Query & map Esri Living Atlas data, focus on water resources | Python | eKerney | community | 🟢 active |
@@ -147,7 +147,7 @@ _Health checked 2026-08-11 (active = repo pushed within 12 months): 🟢 active 
 
 ### General GIS / geoprocessing toolkits
 
-| Server | Description | Lang | By | Type | Health (in last 12 months) |
+| Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
 | [gdal-mcp](https://github.com/JordanGunn/gdal-mcp) | GDAL-style raster/vector workflows (Rasterio, GeoPandas, PyProj) — conversion, reprojection, COG, metadata | Python | JordanGunn / Wayfinder-Foundry | community | 🟢 active |
 | [geoserver-mcp](https://github.com/mahdin75/geoserver-mcp) | Drives the GeoServer REST API — manage workspaces/layers/styles, CQL spatial queries, WMS/WFS access | Python | mahdin75 | community | 🟢 active |
@@ -155,7 +155,7 @@ _Health checked 2026-08-11 (active = repo pushed within 12 months): 🟢 active 
 
 ### Aviation & maritime tracking (ADS-B, AIS)
 
-| Server | Description | Lang | By | Type | Health (in last 12 months) |
+| Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
 | [ADS-B MCP Server](https://github.com/dirkhh/adsb-mcp-server) | Exposes a local ADS-B feeder (readsb/tar1090) — aircraft positions, callsigns, altitudes, routes | Python | dirkhh | community | 🟢 active |
 | [Flightradar24 API MCP](https://github.com/Flightradar24/fr24api-mcp) | Official Flightradar24 flight-tracking API access | — | Flightradar24 | official | 🟢 active |
@@ -165,7 +165,7 @@ _Health checked 2026-08-11 (active = repo pushed within 12 months): 🟢 active 
 
 ### Other (IP geolocation, misc)
 
-| Server | Description | Lang | By | Type | Health (in last 12 months) |
+| Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
 | [ipgeolocation-io-mcp](https://github.com/ipgeolocation/ipgeolocation-io-mcp) | Official ipgeolocation.io — IP geolocation, VPN/proxy detection, timezone, astronomy, ASN | — | IPGeolocation.io | official | 🟢 active |
 | [IPinfo MCP Server](https://mcp.ipinfo.io/) | Hosted IPinfo MCP — country/continent (free), city/coords/timezone/postal (detailed) | — | IPinfo | official | ⚪ hosted |

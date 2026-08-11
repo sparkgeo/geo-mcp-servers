@@ -104,8 +104,7 @@ def build_tables(data: dict, health: dict) -> str:
     header = "| Server | Description | Lang | By | Type |"
     sep = "| --- | --- | --- | --- | --- |"
     if show_health:
-        months = health.get("active_months", 12)
-        header += f" Health (in last {months} months) |"
+        header += " Health |"
         sep += " --- |"
 
     for key, title in categories.items():
