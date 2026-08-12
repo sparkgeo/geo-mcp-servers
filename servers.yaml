@@ -234,6 +234,15 @@ servers:
     tags: [maptiler, tiles, geocoding]
     note: community Pipeworx-gateway wrapper — no official MapTiler-published server found
     added: 2026-08-02
+  - name: Stadia Maps MCP Server
+    url: https://github.com/stadiamaps/stadiamaps-mcp-server-ts
+    description: Official Stadia Maps APIs - geocoding, search, routing, isochrones, map tiles, time zone lookup
+    category: mapping
+    author: Stadia Maps
+    language: TypeScript
+    official: true
+    tags: [stadiamaps, geocoding, routing, isochrones, tiles]
+    added: 2026-08-11
 
   # ---- Geocoding & place search ----
   - name: osmmcp

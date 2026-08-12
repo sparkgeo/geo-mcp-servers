@@ -29,15 +29,15 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**77 servers tracked** across 10 categories.
+**78 servers tracked** across 10 categories.
 
-_Health checked 2026-08-11 (active = repo pushed within 12 months): 🟢 active 54 · 🟡 stale 11 · ⚪ hosted 12._
+_Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 54 · 🟡 stale 12 · ⚪ hosted 12._
 
 ### Categories
 
 - [Geocoding & place search](#geocoding--place-search) (12)
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (1)
-- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (15)
+- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (16)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (13)
 - [Weather & climate](#weather--climate) (11)
@@ -86,6 +86,7 @@ _Health checked 2026-08-11 (active = repo pushed within 12 months): 🟢 active 
 | [Mapbox MCP Server](https://github.com/mapbox/mcp-server) | Official Mapbox web services — geocoding, POI search, multimodal routing, matrix, isochrones, static maps | TypeScript | Mapbox | official | 🟢 active |
 | [MapTiler MCP](https://github.com/pipeworx-io/mcp-maptiler) | MapTiler geocoding, elevation and mapping APIs as MCP tools | — | Pipeworx (uses MapTiler API) | community | 🟢 active |
 | [mcp-google-map](https://github.com/cablate/mcp-google-map) | Google Places (New), Routes, geocoding, distance matrix | TypeScript | cablate | community | 🟢 active |
+| [Stadia Maps MCP Server](https://github.com/stadiamaps/stadiamaps-mcp-server-ts) | Official Stadia Maps APIs - geocoding, search, routing, isochrones, map tiles, time zone lookup | TypeScript | Stadia Maps | official | 🟡 stale |
 | [TomTom Maps MCP Server](https://github.com/tomtom-international/tomtom-maps-mcp) | Official TomTom location services — search, geocoding, routing, traffic | TypeScript | TomTom | official | 🟢 active |
 | [TomTom Traffic Analytics MCP](https://github.com/tomtom-international/tomtom-traffic-analytics-mcp) | TomTom MOVE traffic analytics — past, present & predicted traffic | — | TomTom | official | 🟢 active |
 

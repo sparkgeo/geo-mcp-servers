@@ -1,6 +1,6 @@
 {
   "active_months": 12,
-  "checked": "2026-08-11",
+  "checked": "2026-08-12",
   "servers": {
     "https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403": {
       "status": "hosted"
@@ -251,6 +251,10 @@
     "https://github.com/srivinod1/overture-mcp-server": {
       "pushed": "2026-03",
       "status": "active"
+    },
+    "https://github.com/stadiamaps/stadiamaps-mcp-server-ts": {
+      "pushed": "2025-07",
+      "status": "stale"
     },
     "https://github.com/tomtom-international/tomtom-maps-mcp": {
       "pushed": "2026-08",
