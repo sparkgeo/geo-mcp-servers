@@ -1,0 +1,36 @@
+name: README check
+
+# Fails a PR (or push to main) when README.md is out of sync with servers.yaml —
+# i.e. someone edited the catalog but didn't regenerate the tables. Uses the
+# committed health.json as-is; it does NOT run the network health check (that
+# needs the gh CLI), so this stays fast and offline.
+
+on:
+  pull_request:
+    paths:
+      - servers.yaml
+      - health.json
+      - README.md
+      - scripts/generate_readme.py
+  push:
+    branches: [main]
+    paths:
+      - servers.yaml
+      - health.json
+      - README.md
+      - scripts/generate_readme.py
+
+jobs:
+  check-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Verify README matches servers.yaml
+        run: |
+          python scripts/generate_readme.py --check \
+            || { echo "::error::README.md is stale. Run: python scripts/generate_readme.py"; exit 1; }

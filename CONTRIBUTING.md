@@ -38,6 +38,9 @@ they are overwritten by the generator.
 
 4. Commit `servers.yaml`, `README.md` (and `health.json` if you refreshed it).
 
+> CI runs `generate_readme.py --check` on every PR — if you edit `servers.yaml`
+> but forget to regenerate, the check fails. Just run the generator and commit.
+
 ## Rules of thumb
 
 - **One canonical URL**, preferably the GitHub repo.
