@@ -288,6 +288,9 @@
       "pushed": "2025-01",
       "status": "stale"
     },
+    "https://landrecords.us/documentation/mcp-server": {
+      "status": "hosted"
+    },
     "https://mcp.ipinfo.io/": {
       "status": "hosted"
     },
@@ -304,6 +307,9 @@
       "status": "hosted"
     },
     "https://www.smarty.com/docs/mcp": {
+      "status": "hosted"
+    },
+    "https://zephr.xyz/places-grounding": {
       "status": "hosted"
     }
   }

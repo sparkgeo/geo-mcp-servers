@@ -29,13 +29,13 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**79 servers tracked** across 10 categories.
+**81 servers tracked** across 10 categories.
 
-_Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 54 · 🟡 stale 13 · ⚪ hosted 12._
+_Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 54 · 🟡 stale 13 · ⚪ hosted 14._
 
 ### Categories
 
-- [Geocoding & place search](#geocoding--place-search) (12)
+- [Geocoding & place search](#geocoding--place-search) (13)
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (1)
 - [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (16)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
@@ -44,7 +44,7 @@ _Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (4)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (5)
-- [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (5)
+- [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (6)
 
 ### Geocoding & place search
 
@@ -62,6 +62,7 @@ _Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 
 | [osmmcp](https://github.com/NERVsystems/osmmcp) | OSM geospatial tools — geocoding, routing, nearby places, neighborhood analysis, EV charging | Go | NERV Systems | community | 🟢 active |
 | [Smarty MCP Server](https://www.smarty.com/docs/mcp) | 20 tools for US/international address verification, ZIP lookup, reverse geocoding & property/census enrichment | — | Smarty | official | ⚪ hosted |
 | [what3words MCP](https://github.com/pipeworx-io/mcp-what3words) | Convert 3-word addresses to lat/long + bounding box | — | Pipeworx (uses what3words API) | community | 🟢 active |
+| [Zephr Places Grounding MCP](https://zephr.xyz/places-grounding) | Places grounding for local AI — nearest-place search, rich place details & walking navigation (find_nearest_to_me, get_place_details, navigate_to_place) | — | Zephr | official | ⚪ hosted |
 
 ### Routing, isochrones & navigation
 
@@ -171,6 +172,7 @@ _Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 
 | --- | --- | --- | --- | --- | --- |
 | [ipgeolocation-io-mcp](https://github.com/ipgeolocation/ipgeolocation-io-mcp) | Official ipgeolocation.io — IP geolocation, VPN/proxy detection, timezone, astronomy, ASN | — | IPGeolocation.io | official | 🟢 active |
 | [IPinfo MCP Server](https://mcp.ipinfo.io/) | Hosted IPinfo MCP — country/continent (free), city/coords/timezone/postal (detailed) | — | IPinfo | official | ⚪ hosted |
+| [LandRecords.us MCP Server](https://landrecords.us/documentation/mcp-server) | Query 160M+ US land parcels by attribute, address, radius, bbox or GeoJSON polygon — ownership, assessed value, land use, acreage & geometry | — | landrecords.us | official | ⚪ hosted |
 | [mcp-server-ipinfo](https://github.com/briandconnelly/mcp-server-ipinfo) | IP geolocation via the IPInfo API (location + network details) | Python | briandconnelly | community | 🟢 active |
 | [Regrid MCP Server](https://regrid.com/mcp) | 160M+ US/Canada land parcels — query by location, zoning, acreage, ownership & building criteria | — | Regrid | official | ⚪ hosted |
 | [TimezoneToolkit](https://github.com/Cicatriiz/timezone-toolkit) | Timezone conversion plus sunrise/sunset/twilight from lat/long | TypeScript | Cicatriiz | community | 🟡 stale |

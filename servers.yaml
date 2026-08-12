@@ -253,6 +253,14 @@ servers:
     added: 2026-08-11
 
   # ---- Geocoding & place search ----
+  - name: Zephr Places Grounding MCP
+    url: https://zephr.xyz/places-grounding
+    description: Places grounding for local AI — nearest-place search, rich place details & walking navigation (find_nearest_to_me, get_place_details, navigate_to_place)
+    category: geocoding
+    author: Zephr
+    official: true
+    tags: [places, place-details, navigation, positioning, hosted]
+    added: 2026-08-12
   - name: osmmcp
     url: https://github.com/NERVsystems/osmmcp
     description: OSM geospatial tools — geocoding, routing, nearby places, neighborhood analysis, EV charging
@@ -695,6 +703,14 @@ servers:
     official: true
     tags: [regrid, parcels, cadastral, hosted]
     added: 2026-08-05
+  - name: LandRecords.us MCP Server
+    url: https://landrecords.us/documentation/mcp-server
+    description: Query 160M+ US land parcels by attribute, address, radius, bbox or GeoJSON polygon — ownership, assessed value, land use, acreage & geometry
+    category: other
+    author: landrecords.us
+    official: true
+    tags: [parcels, cadastral, property, hosted]
+    added: 2026-08-12
   - name: TimezoneToolkit
     url: https://github.com/Cicatriiz/timezone-toolkit
     description: Timezone conversion plus sunrise/sunset/twilight from lat/long
