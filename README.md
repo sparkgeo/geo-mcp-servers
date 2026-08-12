@@ -29,9 +29,9 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**78 servers tracked** across 10 categories.
+**79 servers tracked** across 10 categories.
 
-_Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 54 · 🟡 stale 12 · ⚪ hosted 12._
+_Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 54 · 🟡 stale 13 · ⚪ hosted 12._
 
 ### Categories
 
