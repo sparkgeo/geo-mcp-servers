@@ -56,6 +56,14 @@ servers:
     language: Python
     tags: [geoserver, ogc, wms, wfs]
     added: 2026-08-02
+  - name: fastgeoapi MCP server
+    url: https://github.com/geobeyond/fastgeoapi
+    description: Optional integrated MCP server exposing a secured pygeoapi (OGC API) instance's endpoints as LLM tools, auto-generated from its OpenAPI spec
+    category: toolkit
+    author: Geobeyond
+    language: Python
+    tags: [pygeoapi, ogc-api, fastmcp, oidc]
+    added: 2026-08-12
 
   # ---- Desktop & enterprise GIS ----
   - name: qgis_mcp

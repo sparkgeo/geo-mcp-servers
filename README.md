@@ -42,7 +42,7 @@ _Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (13)
 - [Weather & climate](#weather--climate) (11)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
-- [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (3)
+- [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (4)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (5)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (5)
 
@@ -136,7 +136,7 @@ _Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 
 
 | Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
-| [ArcGISMCP](https://github.com/GarrickGarcia/ArcGISMCP) | Integrates ArcGIS Online — search/query geospatial feature layers | Python | GarrickGarcia | community | 🟢 active |
+| [ArcGISMCP](https://github.com/GarrickGarcia/ArcGISMCP) | Integrates ArcGIS Online — search/query geospatial feature layers | Python | GarrickGarcia | community | 🟡 stale |
 | [esri-mcp](https://github.com/eKerney/esri-mcp) | Query & map Esri Living Atlas data, focus on water resources | Python | eKerney | community | 🟢 active |
 | [MCP-ArcGISPro](https://github.com/geo2004/MCP-ArcGISPro) | Control and automate ArcGIS Pro from Claude Desktop | Python | geo2004 | community | 🟢 active |
 | [MCP-Server-ArcGIS-Pro-AddIn](https://github.com/nicogis/MCP-Server-ArcGIS-Pro-AddIn) | MCP server delivered as an ArcGIS Pro add-in | C#/.NET | nicogis | community | 🟢 active |
@@ -150,6 +150,7 @@ _Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 
 
 | Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
+| [fastgeoapi MCP server](https://github.com/geobeyond/fastgeoapi) | Optional integrated MCP server exposing a secured pygeoapi (OGC API) instance's endpoints as LLM tools, auto-generated from its OpenAPI spec | Python | Geobeyond | community | 🟢 active |
 | [gdal-mcp](https://github.com/JordanGunn/gdal-mcp) | GDAL-style raster/vector workflows (Rasterio, GeoPandas, PyProj) — conversion, reprojection, COG, metadata | Python | JordanGunn / Wayfinder-Foundry | community | 🟢 active |
 | [geoserver-mcp](https://github.com/mahdin75/geoserver-mcp) | Drives the GeoServer REST API — manage workspaces/layers/styles, CQL spatial queries, WMS/WFS access | Python | mahdin75 | community | 🟢 active |
 | [gis-mcp](https://github.com/mahdin75/gis-mcp) | Connects LLMs to core GIS libraries (Shapely, PyProj, GeoPandas, Rasterio, PySAL) for geometry, projections, raster & spatial stats | Python | mahdin75 | community | 🟢 active |

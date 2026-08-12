@@ -50,7 +50,7 @@
     },
     "https://github.com/GarrickGarcia/ArcGISMCP": {
       "pushed": "2025-08",
-      "status": "active"
+      "status": "stale"
     },
     "https://github.com/JordanGunn/gdal-mcp": {
       "pushed": "2026-05",
@@ -154,6 +154,10 @@
     },
     "https://github.com/geo2004/MCP-ArcGISPro": {
       "pushed": "2026-04",
+      "status": "active"
+    },
+    "https://github.com/geobeyond/fastgeoapi": {
+      "pushed": "2026-08",
       "status": "active"
     },
     "https://github.com/ipgeolocation/ipgeolocation-io-mcp": {
