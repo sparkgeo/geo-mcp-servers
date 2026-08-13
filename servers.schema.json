@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sparkgeo/geo-mcp-servers/servers.schema.json",
+  "title": "Geospatial MCP server catalog",
+  "description": "Machine-checked shape for servers.yaml. Field names mirror the contract documented in that file's header. Category keys are deliberately NOT enumerated here — verify.yml cross-checks every server's category against the top-level `categories` map, so the two cannot drift apart.",
+
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["categories", "servers"],
+
+  "properties": {
+    "categories": {
+      "description": "Category key -> display heading. Consumed by scripts/generate_readme.py.",
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[a-z][a-z0-9_]*$": { "type": "string", "minLength": 1 }
+      }
+    },
+
+    "servers": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/server" }
+    }
+  },
+
+  "$defs": {
+    "server": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url", "description", "category"],
+
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+
+        "url": {
+          "description": "Canonical source URL, preferring the GitHub repo. HTTPS only — the catalog should never send a reader to a plaintext endpoint.",
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+
+        "description": { "type": "string", "minLength": 10, "maxLength": 250 },
+
+        "category": {
+          "description": "Must be a key in the top-level `categories` map. Cross-checked in CI.",
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+
+        "author": { "type": "string", "minLength": 1 },
+
+        "language": { "type": "string", "minLength": 1 },
+
+        "official": {
+          "description": "True when the vendor that owns the underlying service publishes this server. This is the strongest trust signal the catalog emits, so it must be backed by vendor_orgs (GitHub URLs) or vendor_domain (everything else) and is checked in CI.",
+          "type": "boolean"
+        },
+
+        "vendor_orgs": {
+          "description": "GitHub org logins the vendor controls. Required when official is true and the URL is on github.com. CI checks the repo owner against this list, which is what stops a lookalike org from inheriting the official badge.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9-]{0,38}$"
+          }
+        },
+
+        "vendor_domain": {
+          "description": "Registrable domain the vendor controls, e.g. 'carto.com'. Required when official is true and the URL is not on github.com, and whenever transport is hosted. The URL host must equal it or be a subdomain of it.",
+          "type": "string",
+          "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$"
+        },
+
+        "transport": {
+          "description": "How the server is reached. 'hosted' entries have no source to scan, so CI can only check that the endpoint is still live and still itself.",
+          "type": "string",
+          "enum": ["stdio", "http", "hosted", "addin", "unknown"]
+        },
+
+        "tags": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+
+        "added": {
+          "description": "YYYY-MM-DD the entry was added. YAML parses this to a date object, so verify.yml normalises it to a string before validating.",
+          "type": "string",
+          "format": "date"
+        },
+
+        "note": {
+          "description": "Free text for a caveat a reader needs. Do not use it to track work — open an issue instead.",
+          "type": "string",
+          "maxLength": 300
+        }
+      },
+
+      "allOf": [
+        {
+          "comment": "An official claim on a GitHub URL has to name the vendor's org(s).",
+          "if": {
+            "properties": {
+              "official": { "const": true },
+              "url": { "pattern": "^https://(www\\.)?github\\.com/" }
+            },
+            "required": ["official", "url"]
+          },
+          "then": { "required": ["vendor_orgs"] }
+        },
+        {
+          "comment": "An official claim anywhere else has to name the vendor's domain.",
+          "if": {
+            "properties": {
+              "official": { "const": true },
+              "url": { "not": { "pattern": "^https://(www\\.)?github\\.com/" } }
+            },
+            "required": ["official", "url"]
+          },
+          "then": { "required": ["vendor_domain"] }
+        },
+        {
+          "comment": "A hosted endpoint you cannot scan should at least name who runs it.",
+          "if": {
+            "properties": { "transport": { "const": "hosted" } },
+            "required": ["transport"]
+          },
+          "then": { "required": ["vendor_domain"] }
+        }
+      ]
+    }
+  }
+}
