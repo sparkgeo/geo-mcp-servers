@@ -132,8 +132,11 @@ jobs:
 
       - name: Scan skill/
         run: |
+          # SARIF for the Security tab, then a human-readable pass that
+          # actually gates. Without --fail-on-severity the scanner exits 0
+          # whatever it finds, which would make this job decorative.
           skill-scanner scan ./skill/ --format sarif --output skill.sarif
-          skill-scanner scan ./skill/ --format terminal
+          skill-scanner scan ./skill/ --format summary --fail-on-severity high
 
       - name: Upload SARIF
         if: always()
@@ -314,7 +317,9 @@ jobs:
 
           with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
               fh.write(f"count={len(changed)}\n")
-          json.dump(changed, open("/tmp/changed.json", "w"))
+          # default=str because `added:` parses to a datetime.date, which
+          # json cannot serialise. Same reason the schema job round-trips.
+          json.dump(changed, open("/tmp/changed.json", "w"), default=str)
           PY
 
       - name: Check URLs resolve
