@@ -20,12 +20,26 @@ on:
       - README.md
       - scripts/generate_readme.py
 
+permissions:
+  contents: read
+
+concurrency:
+  group: readme-check-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check-readme:
+    name: Verify README matches servers.yaml
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: step-security/harden-runner@b09bb98e06d4d774595224525879c09bc6e98c40  # v2.20.1
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with:
           python-version: "3.12"
       - name: Install dependencies

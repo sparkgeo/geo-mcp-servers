@@ -15,6 +15,20 @@
 #   added:       (optional) YYYY-MM-DD you added it
 #   note:        (optional) caveats, e.g. URL needs confirming
 #
+# `official: true` is the strongest trust signal this catalog emits, so CI makes
+# you back it up rather than just assert it:
+#   vendor_orgs:   (required when official + GitHub URL) list of GitHub org logins
+#                  the vendor controls. CI checks the repo owner is one of them,
+#                  which is what stops a lookalike org inheriting the badge.
+#   vendor_domain: (required when official + non-GitHub URL, and for any hosted
+#                  entry) registrable domain the vendor controls, e.g. carto.com.
+#                  The URL host must equal it or be a subdomain of it.
+#   transport:     (optional) stdio | http | hosted | addin | unknown. `hosted`
+#                  means there is no source to scan, so CI can only check the
+#                  endpoint is still live.
+#
+# The shape above is enforced by servers.schema.json in .github/workflows/verify.yml.
+#
 # To add a server: append an entry under `servers:` and run the generator.
 
 categories:
@@ -147,6 +161,7 @@ servers:
     author: Cesium (CesiumGS)
     language: TypeScript
     official: true
+    vendor_orgs: [CesiumGS]
     tags: [cesium, 3d-tiles, cesiumjs, globe, visualization]
     note: a collection of reference MCP servers/skills, not a single server
     added: 2026-08-02
@@ -156,6 +171,8 @@ servers:
     category: mapping
     author: Esri
     official: true
+    transport: hosted
+    vendor_domain: arcgis.com
     tags: [arcgis, geocoding, routing]
     added: 2026-08-02
   - name: Mapbox MCP Server
@@ -165,6 +182,7 @@ servers:
     author: Mapbox
     language: TypeScript
     official: true
+    vendor_orgs: [mapbox]
     tags: [mapbox, geocoding, routing, tiles]
     added: 2026-08-02
   - name: Google Maps MCP (reference)
@@ -173,7 +191,6 @@ servers:
     category: mapping
     author: Anthropic / MCP project
     language: TypeScript
-    official: true
     tags: [google-maps, reference, archived]
     added: 2026-08-02
   - name: google-maps-mcp-server
@@ -207,6 +224,7 @@ servers:
     author: Baidu
     language: Python / TypeScript
     official: true
+    vendor_orgs: [baidu-maps]
     tags: [baidu, china, geocoding, routing]
     added: 2026-08-02
   - name: foursquare-places-mcp
@@ -216,6 +234,7 @@ servers:
     author: Foursquare
     language: TypeScript
     official: true
+    vendor_orgs: [foursquare]
     tags: [foursquare, places, poi]
     added: 2026-08-02
   - name: CARTO MCP Server
@@ -224,6 +243,8 @@ servers:
     category: mapping
     author: CARTO
     official: true
+    transport: hosted
+    vendor_domain: carto.com
     tags: [carto, warehouse, hosted]
     added: 2026-08-02
   - name: Felt MCP Server
@@ -232,6 +253,8 @@ servers:
     category: mapping
     author: Felt
     official: true
+    transport: hosted
+    vendor_domain: felt.com
     tags: [felt, hosted, spatial-sql]
     added: 2026-08-02
   - name: MapTiler MCP
@@ -249,6 +272,7 @@ servers:
     author: Stadia Maps
     language: TypeScript
     official: true
+    vendor_orgs: [stadiamaps]
     tags: [stadiamaps, geocoding, routing, isochrones, tiles]
     added: 2026-08-11
 
@@ -259,6 +283,8 @@ servers:
     category: geocoding
     author: Zephr
     official: true
+    transport: hosted
+    vendor_domain: zephr.xyz
     tags: [places, place-details, navigation, positioning, hosted]
     added: 2026-08-12
   - name: osmmcp
@@ -392,6 +418,7 @@ servers:
     author: NASA
     language: Python
     official: true
+    vendor_orgs: [nasa]
     tags: [nasa, earthdata, cmr]
     added: 2026-08-02
   - name: NASA-MCP-server
@@ -417,6 +444,8 @@ servers:
     author: Tilebox
     language: Python / Go
     official: true
+    transport: hosted
+    vendor_domain: tilebox.com
     tags: [tilebox, earth-observation, datasets, workflows, schemas, cli, agent-skills]
     added: 2026-08-02
   - name: Arraylake MCP Server
@@ -425,6 +454,8 @@ servers:
     category: remote_sensing
     author: Earthmover
     official: true
+    transport: hosted
+    vendor_domain: earthmover.io
     tags: [arraylake, zarr, icechunk, edr, scientific-data, hosted]
     added: 2026-08-02
 
@@ -476,6 +507,7 @@ servers:
     author: dynamical.org
     language: Python
     official: true
+    vendor_orgs: [dynamical-org]
     tags: [stac, zarr, icechunk, forecast, gfs, hrrr, ecmwf, hosted]
     note: hosted streamable-HTTP remote at https://mcp.dynamical.org/mcp, no auth; in the official MCP registry as io.github.dynamical-org/mcp
     added: 2026-08-03
@@ -496,6 +528,8 @@ servers:
     author: Wherobots
     language: Python
     official: true
+    transport: hosted
+    vendor_domain: wherobots.com
     tags: [wherobots, sedona, spatial-sql]
     note: install docs for Claude Code / OpenCode; confirm canonical repo/doc URL
     added: 2026-08-02
@@ -515,6 +549,7 @@ servers:
     category: other
     author: IPGeolocation.io
     official: true
+    vendor_orgs: [ipgeolocation]
     tags: [ip-geolocation]
     added: 2026-08-02
   - name: IPinfo MCP Server
@@ -523,6 +558,8 @@ servers:
     category: other
     author: IPinfo
     official: true
+    transport: hosted
+    vendor_domain: ipinfo.io
     tags: [ip-geolocation, hosted]
     added: 2026-08-02
 
@@ -543,6 +580,7 @@ servers:
     author: OpenCage
     language: TypeScript
     official: true
+    vendor_orgs: [OpenCageData]
     tags: [opencage, geocoding]
     added: 2026-08-05
   - name: Geoapify MCP Server
@@ -559,6 +597,8 @@ servers:
     category: geocoding
     author: Smarty
     official: true
+    transport: hosted
+    vendor_domain: smarty.com
     tags: [smarty, address-validation, enrichment, hosted]
     added: 2026-08-05
 
@@ -570,6 +610,7 @@ servers:
     author: TomTom
     language: TypeScript
     official: true
+    vendor_orgs: [tomtom-international]
     tags: [tomtom, geocoding, routing, traffic]
     added: 2026-08-05
   - name: TomTom Traffic Analytics MCP
@@ -578,6 +619,7 @@ servers:
     category: mapping
     author: TomTom
     official: true
+    vendor_orgs: [tomtom-international]
     tags: [tomtom, traffic, analytics]
     added: 2026-08-05
   - name: ArcGIS Location Services MCP (community)
@@ -605,6 +647,8 @@ servers:
     category: remote_sensing
     author: Planet Labs
     official: true
+    transport: hosted
+    vendor_domain: planet.com
     tags: [planet, imagery, tasking]
     added: 2026-08-05
   - name: Microsoft Planetary Computer Pro MCP Tools
@@ -613,6 +657,8 @@ servers:
     category: remote_sensing
     author: Microsoft
     official: true
+    transport: hosted
+    vendor_domain: microsoft.com
     tags: [planetary-computer, stac, microsoft]
     added: 2026-08-05
 
@@ -670,6 +716,7 @@ servers:
     category: tracking
     author: Flightradar24
     official: true
+    vendor_orgs: [Flightradar24]
     tags: [flightradar24, aviation, flights]
     added: 2026-08-05
   - name: Vessel Traffic MCP
@@ -690,6 +737,8 @@ servers:
     url: https://signalk.org/2025/introducing-signalk-mcp-server-ai-powered-marine-data-access/
     description: Conversational access to live boat/marine sensor data over Signal K
     category: tracking
+    transport: hosted
+    vendor_domain: signalk.org
     author: Signal K project
     tags: [signalk, marine, sensors]
     added: 2026-08-05
@@ -701,6 +750,8 @@ servers:
     category: other
     author: Regrid
     official: true
+    transport: hosted
+    vendor_domain: regrid.com
     tags: [regrid, parcels, cadastral, hosted]
     added: 2026-08-05
   - name: LandRecords.us MCP Server
@@ -709,6 +760,8 @@ servers:
     category: other
     author: landrecords.us
     official: true
+    transport: hosted
+    vendor_domain: landrecords.us
     tags: [parcels, cadastral, property, hosted]
     added: 2026-08-12
   - name: TimezoneToolkit

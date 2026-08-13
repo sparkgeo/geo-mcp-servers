@@ -1,0 +1,584 @@
+# .github/workflows/verify.yml
+#
+# Verification for a catalog that recommends third-party MCP servers.
+#
+# The unit of risk here is not this repo's code. It is the 81 external
+# repos and hosted endpoints in servers.yaml, plus the skill/ directory
+# that ships to a user's ~/.claude/skills.
+#
+# Two cadences, because the checks cost very different amounts:
+#   pull_request  - self-scan, schema, and the changed entries only
+#   schedule      - full catalog drift against servers.lock.json
+#
+# README freshness lives in its own workflow (readme-check.yml), not here.
+#
+# Fork safety: this uses `pull_request`, not `pull_request_target`.
+# `pull_request_target` runs with a writable token and repo secrets while
+# checking out untrusted PR code. For a repo whose PRs add links to
+# arbitrary third-party projects, that combination is an RCE waiting to
+# happen. Keep it as `pull_request` and accept that fork PRs get no secrets.
+#
+# Every `uses:` is pinned to a commit SHA, with the version it resolved to in
+# a trailing comment. A catalog that tells people to pin cannot float its own
+# tags. To bump one: resolve the new tag to a commit and update both the SHA
+# and the comment — never repoint at a moving tag.
+
+name: verify
+
+on:
+  pull_request:
+    paths:
+      - "servers.yaml"
+      - "servers.schema.json"
+      - "skill/**"
+      - "scripts/**"
+      - ".github/workflows/**"
+  push:
+    branches: [main]
+  schedule:
+    # 04:17 UTC daily. Off the hour to avoid the Actions rush.
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+    inputs:
+      full_rescan:
+        description: "Re-scan every entry, ignoring the lockfile cache"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.12"
+
+jobs:
+
+  # ---------------------------------------------------------------------
+  # 0. Lint and scan the workflows themselves.
+  #
+  # This file resolves 81 attacker-influenced URLs, interpolates upstream
+  # repo names, and holds a token that can open issues. It is part of the
+  # attack surface it exists to defend, so it gets the same treatment the
+  # catalog demands of everyone else.
+  #
+  # actionlint catches expression and shell errors that only show up at
+  # runtime. zizmor catches the security patterns — template injection,
+  # over-broad permissions, unpinned actions, artifact poisoning.
+  # ---------------------------------------------------------------------
+  workflow-lint:
+    name: Lint and scan workflows
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read           # zizmor reads workflow run metadata
+      checks: write           # actionlint reports via the Checks API
+      security-events: write  # zizmor uploads SARIF to the Security tab
+    steps:
+      - uses: step-security/harden-runner@b09bb98e06d4d774595224525879c09bc6e98c40  # v2.20.1
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: actionlint
+        uses: sparkgeo/github-actions/.github/actions/github-actionlint@462b79fa231f43f79171a36328774aa4c85c0a48  # main @ 2026-07-16
+
+      - name: zizmor
+        uses: sparkgeo/github-actions/.github/actions/zizmor@462b79fa231f43f79171a36328774aa4c85c0a48  # main @ 2026-07-16
+
+  # ---------------------------------------------------------------------
+  # 1. Self-scan.
+  #
+  # This repo ships a Claude Code skill. Install instructions symlink it
+  # into ~/.claude/skills, which puts skill/SKILL.md into a user's system
+  # prompt. Hold it to the standard the catalog implies.
+  #
+  # This job must pass before anything else runs.
+  # ---------------------------------------------------------------------
+  self-scan:
+    name: Scan this repo's own skill
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write   # free on public repos
+    steps:
+      # egress-policy: audit, not block. This job pip-installs scanners from
+      # PyPI and from two git URLs, so a blocklist would need an allowed-
+      # endpoints list that goes stale on the next transitive dependency.
+      # Audit gets you the egress record; tighten to block once the runs show
+      # a stable endpoint set.
+      - uses: step-security/harden-runner@b09bb98e06d4d774595224525879c09bc6e98c40  # v2.20.1
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install scanners
+        run: |
+          pip install --quiet cisco-skill-scanner || \
+            pip install --quiet git+https://github.com/cisco-ai-defense/skill-scanner.git
+
+      - name: Scan skill/
+        run: |
+          skill-scanner scan ./skill/ --format sarif --output skill.sarif
+          skill-scanner scan ./skill/ --format terminal
+
+      - name: Upload SARIF
+        if: always()
+        uses: github/codeql-action/upload-sarif@f3712979fa5f215279b101dd0a2e3bdfb4353324  # v3.37.7
+        with:
+          sarif_file: skill.sarif
+          category: skill-scanner
+
+      # Second opinion. Different rule sets miss different things, and the
+      # cost of running both on one small directory is seconds.
+      - name: Cross-check with SkillSpector
+        continue-on-error: true
+        run: |
+          pip install --quiet git+https://github.com/NVIDIA/SkillSpector.git
+          skillspector scan ./skill/ --no-llm --format terminal
+
+      # Belt and braces for the thing scanners are worst at: text that
+      # renders as nothing but reads as an instruction.
+      - name: Reject invisible characters in skill text
+        run: |
+          python - <<'PY'
+          import pathlib, sys, unicodedata
+
+          # Zero-width, bidi overrides, and the tag block used to smuggle
+          # instructions past a human reviewer.
+          BAD = {
+              "\u200b": "ZERO WIDTH SPACE",
+              "\u200c": "ZERO WIDTH NON-JOINER",
+              "\u200d": "ZERO WIDTH JOINER",
+              "\u2060": "WORD JOINER",
+              "\ufeff": "ZERO WIDTH NO-BREAK SPACE",
+              "\u202a": "LRE", "\u202b": "RLE", "\u202d": "LRO",
+              "\u202e": "RLO", "\u2066": "LRI", "\u2067": "RLI",
+              "\u2068": "FSI", "\u061c": "ARABIC LETTER MARK",
+          }
+          fail = False
+          for p in pathlib.Path("skill").rglob("*"):
+              if not p.is_file():
+                  continue
+              try:
+                  text = p.read_text(encoding="utf-8")
+              except UnicodeDecodeError:
+                  continue
+              for i, ch in enumerate(text):
+                  if ch in BAD or 0xE0000 <= ord(ch) <= 0xE007F:
+                      name = BAD.get(ch) or unicodedata.name(ch, "TAG CHAR")
+                      print(f"::error file={p}::{name} at offset {i}")
+                      fail = True
+          sys.exit(1 if fail else 0)
+          PY
+
+  # ---------------------------------------------------------------------
+  # 2. Schema.
+  #
+  # servers.yaml is the single source of truth and currently has no
+  # machine-checked shape. The `note:` field flagging unconfirmed URLs is
+  # a sign that data quality is tracked by hand. Move it into the schema.
+  #
+  # The schema also carries the fields the later jobs need: vendor_domain
+  # and vendor_orgs make the `official` claim checkable instead of asserted.
+  # ---------------------------------------------------------------------
+  schema:
+    name: Validate servers.yaml
+    runs-on: ubuntu-latest
+    steps:
+      - uses: step-security/harden-runner@b09bb98e06d4d774595224525879c09bc6e98c40  # v2.20.1
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - run: pip install --quiet pyyaml jsonschema
+
+      - name: Check schema, categories, and uniqueness
+        run: |
+          python - <<'PY'
+          import json, sys, yaml, collections
+          from jsonschema import Draft202012Validator, FormatChecker
+
+          # YAML turns `added: 2026-08-02` into a datetime.date, which no JSON
+          # Schema type matches. Round-trip through JSON so dates become the
+          # strings the schema's `format: date` is written against.
+          data = json.loads(json.dumps(yaml.safe_load(open("servers.yaml")), default=str))
+          schema = json.load(open("servers.schema.json"))
+
+          errors = sorted(
+              Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(data),
+              key=lambda e: list(e.path),
+          )
+          for e in errors:
+              path = "/".join(str(p) for p in e.path) or "<root>"
+              print(f"::error::{path}: {e.message}")
+
+          servers = data["servers"]
+          failed = bool(errors)
+
+          # Categories are cross-checked instead of enumerated in the schema,
+          # so the two can never drift apart.
+          known = set(data["categories"])
+          for s in servers:
+              if s["category"] not in known:
+                  print(f"::error::{s['name']}: category '{s['category']}' is not "
+                        f"a key in the top-level `categories` map")
+                  failed = True
+
+          # A duplicate URL means two entries confer trust on one artifact, and
+          # it collides in the lockfile, which is keyed by URL.
+          counts = collections.Counter(s["url"] for s in servers)
+          for value, n in counts.items():
+              if n > 1:
+                  print(f"::error::duplicate url: {value} appears {n} times")
+                  failed = True
+
+          sys.exit(1 if failed else 0)
+          PY
+
+  # ---------------------------------------------------------------------
+  # 3. Changed entries.
+  #
+  # Scanning 77 external repos on every PR is slow and burns API quota.
+  # Scan only what the diff touches. The scheduled job covers the rest.
+  #
+  # The provenance check is the one that matters most. `official: true`
+  # is the strongest signal the catalog emits, and on its own it is a human
+  # judgement stored in YAML. Nothing stops a PR from adding
+  # `official: true` to a lookalike repo. This makes the claim earn itself.
+  # ---------------------------------------------------------------------
+  changed-entries:
+    name: Verify changed entries
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    needs: [schema]
+    steps:
+      - uses: step-security/harden-runner@b09bb98e06d4d774595224525879c09bc6e98c40  # v2.20.1
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - run: pip install --quiet pyyaml httpx
+
+      - name: Extract added and changed entries
+        id: diff
+        env:
+          # Via env, never `${{ }}` in the script body. A fork PR chooses its
+          # own branch names, so this string is attacker-controlled and would
+          # be spliced into the shell before it ever ran.
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          git show "origin/$BASE_REF:servers.yaml" > /tmp/base.yaml 2>/dev/null || echo "servers: []" > /tmp/base.yaml
+          python - <<'PY'
+          import json, os, yaml
+
+          def load(path):
+              d = yaml.safe_load(open(path)) or {}
+              rows = d["servers"] if isinstance(d, dict) else d
+              return {r["url"]: r for r in rows}
+
+          base, head = load("/tmp/base.yaml"), load("servers.yaml")
+          changed = [r for u, r in head.items() if base.get(u) != r]
+
+          print(f"{len(changed)} entries added or changed")
+          for r in changed:
+              print(f"  {r.get('name')} -> {r['url']}")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+              fh.write(f"count={len(changed)}\n")
+          json.dump(changed, open("/tmp/changed.json", "w"))
+          PY
+
+      - name: Check URLs resolve
+        if: steps.diff.outputs.count != '0'
+        run: |
+          python - <<'PY'
+          import json, sys, httpx
+
+          fail = False
+          for r in json.load(open("/tmp/changed.json")):
+              url = r["url"]
+              try:
+                  resp = httpx.head(url, follow_redirects=True, timeout=20)
+                  if resp.status_code >= 400:
+                      resp = httpx.get(url, follow_redirects=True, timeout=20)
+                  if resp.status_code >= 400:
+                      print(f"::error::{url} returned {resp.status_code}")
+                      fail = True
+                  elif str(resp.url).rstrip("/") != url.rstrip("/"):
+                      # A silent redirect can mean a transferred repo, which
+                      # is a change of owner and therefore of trust.
+                      print(f"::warning::{url} redirects to {resp.url}")
+              except Exception as exc:
+                  print(f"::error::{url} unreachable: {exc}")
+                  fail = True
+          sys.exit(1 if fail else 0)
+          PY
+
+      - name: Verify the 'official' claim
+        if: steps.diff.outputs.count != '0'
+        run: |
+          python - <<'PY'
+          import json, sys
+          from urllib.parse import urlparse
+
+          fail = False
+          for r in json.load(open("/tmp/changed.json")):
+              host = (urlparse(r["url"]).hostname or "").lower()
+              name = r.get("name", r["url"])
+              domain = (r.get("vendor_domain") or "").lower().lstrip(".")
+
+              # A hosted entry has no source to scan, so the least it can do is
+              # name who runs it — and prove the URL is actually on their domain.
+              if r.get("transport") == "hosted" or r.get("official") and host not in ("github.com", "www.github.com"):
+                  if not domain:
+                      print(f"::error::{name}: needs vendor_domain "
+                            f"(official on a non-GitHub URL, or transport: hosted)")
+                      fail = True
+                  elif not (host == domain or host.endswith("." + domain)):
+                      print(f"::error::{name}: host '{host}' is outside the "
+                            f"declared vendor domain '{domain}'")
+                      fail = True
+
+              if r.get("official") and host in ("github.com", "www.github.com"):
+                  owner = urlparse(r["url"]).path.strip("/").split("/")[0].lower()
+                  allowed = [o.lower() for o in r.get("vendor_orgs", [])]
+                  if not allowed:
+                      print(f"::error::{name}: official: true on a GitHub URL "
+                            f"needs vendor_orgs listing the vendor's org(s)")
+                      fail = True
+                  elif owner not in allowed:
+                      print(f"::error::{name}: repo owner '{owner}' is not in "
+                            f"vendor_orgs {allowed} — either the claim is wrong "
+                            f"or this is a lookalike")
+                      fail = True
+
+          sys.exit(1 if fail else 0)
+          PY
+
+      - name: Scan changed source repos
+        if: steps.diff.outputs.count != '0'
+        continue-on-error: true   # advisory on PRs; see the note below
+        run: |
+          pip install --quiet cisco-mcp-scanner cisco-skill-scanner || true
+          python - <<'PY'
+          import json, subprocess
+          from urllib.parse import urlparse
+
+          for r in json.load(open("/tmp/changed.json")):
+              if (urlparse(r["url"]).hostname or "") not in ("github.com", "www.github.com"):
+                  print(f"::notice::{r.get('name')}: hosted endpoint, no source to scan")
+                  continue
+              print(f"--- {r.get('name')} ---")
+              subprocess.run(["mcp-scanner", "scan", r["url"], "--format", "terminal"])
+          PY
+          # continue-on-error is deliberate. A scanner verdict on someone
+          # else's repo is evidence for a reviewer, not a merge gate. Gating
+          # on it means a false positive from an upstream rule change blocks
+          # unrelated PRs, and the fix is out of your hands.
+
+  # ---------------------------------------------------------------------
+  # 4. Drift.
+  #
+  # This is the rug-pull detector and the reason the whole workflow exists.
+  # A curated list is a point-in-time judgement published as if permanent.
+  # Everything below re-earns that judgement every day.
+  #
+  # It compares the live state of all 77 entries against servers.lock.json
+  # and opens one issue per real change. It reports only differences, so a
+  # quiet day produces no output.
+  # ---------------------------------------------------------------------
+  drift:
+    name: Detect catalog drift
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: read
+      issues: write            # the only way drift reaches a human
+    steps:
+      - uses: step-security/harden-runner@b09bb98e06d4d774595224525879c09bc6e98c40  # v2.20.1
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - run: pip install --quiet pyyaml httpx
+
+      - name: Resolve every entry and diff against the lockfile
+        id: drift
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<'PY'
+          import json, os, pathlib, yaml, httpx
+          from datetime import datetime, timezone
+          from urllib.parse import urlparse
+
+          API = "https://api.github.com"
+          HEAD = {
+              "Authorization": f"Bearer {os.environ['GH_TOKEN']}",
+              "Accept": "application/vnd.github+json",
+          }
+
+          def resolve(url):
+              """Snapshot the facts that define trust in an upstream repo."""
+              host = (urlparse(url).hostname or "").lower()
+              if host not in ("github.com", "www.github.com"):
+                  # Hosted endpoint. No source, no commits. All you can
+                  # check is that it is still there and still itself.
+                  try:
+                      resp = httpx.head(url, follow_redirects=True, timeout=20)
+                      return {"kind": "hosted",
+                              "status": resp.status_code,
+                              "final_url": str(resp.url)}
+                  except Exception as exc:
+                      return {"kind": "hosted", "error": str(exc)}
+
+              parts = urlparse(url).path.strip("/").split("/")
+              if len(parts) < 2:
+                  return {"kind": "unknown"}
+              owner, repo = parts[0], parts[1]
+
+              r = httpx.get(f"{API}/repos/{owner}/{repo}", headers=HEAD, timeout=30)
+              if r.status_code == 404:
+                  return {"kind": "github", "gone": True}
+              r.raise_for_status()
+              meta = r.json()
+
+              branch = meta["default_branch"]
+              c = httpx.get(f"{API}/repos/{owner}/{repo}/commits/{branch}",
+                            headers=HEAD, timeout=30)
+
+              return {
+                  "kind": "github",
+                  # full_name catches an ownership transfer, which is a
+                  # change of maintainer and the cleanest rug-pull signal
+                  # there is. The old URL keeps working via redirect.
+                  "full_name": meta["full_name"],
+                  "head_sha": c.json()["sha"] if c.status_code == 200 else None,
+                  "archived": meta["archived"],
+                  "disabled": meta.get("disabled", False),
+                  "license": (meta.get("license") or {}).get("spdx_id"),
+                  "pushed_at": meta["pushed_at"],
+                  "stars": meta["stargazers_count"],
+              }
+
+          doc = yaml.safe_load(open("servers.yaml")) or {}
+          rows = doc["servers"] if isinstance(doc, dict) else doc
+
+          lock_path = pathlib.Path("servers.lock.json")
+          lock = json.loads(lock_path.read_text()) if lock_path.exists() else {"entries": {}}
+          old = lock.get("entries", {})
+
+          new, changes = {}, []
+          for row in rows:
+              key = row.get("slug") or row["url"]
+              try:
+                  state = resolve(row["url"])
+              except Exception as exc:
+                  print(f"::warning::{key}: {exc}")
+                  new[key] = old.get(key, {})
+                  continue
+
+              new[key] = {"url": row["url"], "state": state,
+                          "checked": datetime.now(timezone.utc).isoformat()}
+
+              prev = (old.get(key) or {}).get("state")
+              if prev is None:
+                  continue
+
+              name = row.get("name", key)
+
+              # Ordered loudest first. Anything here means the entry is not
+              # the artifact it was when a human approved it.
+              if state.get("gone"):
+                  changes.append(("CRITICAL", name, "repository deleted or made private"))
+              elif prev.get("full_name") and state.get("full_name") \
+                      and prev["full_name"] != state["full_name"]:
+                  changes.append(("CRITICAL", name,
+                                  f"ownership moved: {prev['full_name']} -> {state['full_name']}"))
+              elif prev.get("license") != state.get("license"):
+                  changes.append(("HIGH", name,
+                                  f"license changed: {prev.get('license')} -> {state.get('license')}"))
+              elif state.get("archived") and not prev.get("archived"):
+                  changes.append(("MEDIUM", name, "repository archived upstream"))
+              elif prev.get("head_sha") != state.get("head_sha"):
+                  changes.append(("INFO", name, "new commits on the default branch"))
+
+              if state.get("kind") == "hosted" and state.get("status", 0) >= 400:
+                  changes.append(("HIGH", name,
+                                  f"hosted endpoint returned {state['status']}"))
+
+          lock_path.write_text(json.dumps(
+              {"generated": datetime.now(timezone.utc).isoformat(), "entries": new},
+              indent=2, sort_keys=True) + "\n")
+
+          rank = {"CRITICAL": 0, "HIGH": 1, "MEDIUM": 2, "INFO": 3}
+          actionable = [c for c in changes if c[0] != "INFO"]
+          body = "\n".join(f"- **{sev}** — {name}: {msg}"
+                           for sev, name, msg in sorted(changes, key=lambda c: rank[c[0]]))
+
+          # Written to a file, never to a step output that gets interpolated
+          # into a shell command. Every name in `body` comes from servers.yaml
+          # or from an upstream repo's full_name, so it is attacker-influenced
+          # text, and an expression interpolation would splice it into `run:`.
+          with open("drift-body.md", "w") as fh:
+              fh.write((body or "No changes.") + "\n\n"
+                       "Each entry above changed since the last verified snapshot.\n"
+                       "Re-check the entry, then commit the refreshed `servers.lock.json`.\n")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+              fh.write(f"actionable={len(actionable)}\n")
+
+          print(body or "No changes detected.")
+          PY
+
+      - name: Open an issue for actionable drift
+        if: steps.drift.outputs.actionable != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "Catalog drift: $(date -u +%Y-%m-%d)" \
+            --label "drift,security" \
+            --body-file drift-body.md
+
+      - name: Publish the refreshed lockfile
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4.6.2
+        with:
+          name: servers-lock
+          path: servers.lock.json
