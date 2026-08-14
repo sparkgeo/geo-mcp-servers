@@ -275,6 +275,17 @@ servers:
     vendor_orgs: [stadiamaps]
     tags: [stadiamaps, geocoding, routing, isochrones, tiles]
     added: 2026-08-11
+  - name: GIS Cloud MCP Server
+    url: https://manual.giscloud.com/knowledge-base/gis-cloud-ai-mcp/
+    description: Remote read & write MCP for the GIS Cloud platform — 55 tools covering maps, layers, features, spatial queries, forms, tables, file import & map rendering, with OAuth 2.1 sign-in and two-phase confirmation for destructive tools
+    category: mapping
+    author: GIS Cloud
+    official: true
+    transport: hosted
+    vendor_domain: giscloud.com
+    tags: [giscloud, hosted, layers, features, forms, rendering]
+    note: endpoint https://mcp.giscloud.com/mcp
+    added: 2026-08-14
 
   # ---- Geocoding & place search ----
   - name: Zephr Places Grounding MCP
