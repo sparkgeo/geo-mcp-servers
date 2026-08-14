@@ -1,6 +1,6 @@
 {
   "active_months": 12,
-  "checked": "2026-08-12",
+  "checked": "2026-08-14",
   "servers": {
     "https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403": {
       "status": "hosted"
@@ -101,7 +101,7 @@
       "status": "active"
     },
     "https://github.com/cablate/mcp-google-map": {
-      "pushed": "2026-07",
+      "pushed": "2026-08",
       "status": "active"
     },
     "https://github.com/cameronking4/google-earth-engine-mcp": {
@@ -289,6 +289,9 @@
       "status": "stale"
     },
     "https://landrecords.us/documentation/mcp-server": {
+      "status": "hosted"
+    },
+    "https://manual.giscloud.com/knowledge-base/gis-cloud-ai-mcp/": {
       "status": "hosted"
     },
     "https://mcp.ipinfo.io/": {
