@@ -29,7 +29,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**81 servers tracked** across 10 categories.
+**82 servers tracked** across 10 categories.
 
 _Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 54 · 🟡 stale 13 · ⚪ hosted 14._
 
@@ -37,7 +37,7 @@ _Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 
 
 - [Geocoding & place search](#geocoding--place-search) (13)
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (1)
-- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (16)
+- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (17)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (13)
 - [Weather & climate](#weather--climate) (11)
@@ -81,6 +81,7 @@ _Health checked 2026-08-12 (active = repo pushed within 12 months): 🟢 active 
 | [Cesium AI Integrations](https://github.com/CesiumGS/cesium-ai-integrations) | Official Cesium MCP servers & agent skills connecting the Cesium 3D geospatial ecosystem (CesiumJS, 3D Tiles) to AI assistants | TypeScript | Cesium (CesiumGS) | official | 🟢 active |
 | [Felt MCP Server](https://felt.com/blog/introducing-felt-mcp-server) | Remote MCP — create maps, query warehouse, run spatial SQL, style layers, publish live URLs | — | Felt | official | ⚪ hosted |
 | [foursquare-places-mcp](https://github.com/foursquare/foursquare-places-mcp) | Official Foursquare Places API v3 — venue search, place details, location context | TypeScript | Foursquare | official | 🟡 stale |
+| [GIS Cloud MCP Server](https://manual.giscloud.com/knowledge-base/gis-cloud-ai-mcp/) | Remote read & write MCP for the GIS Cloud platform — 55 tools covering maps, layers, features, spatial queries, forms, tables, file import & map rendering, with OAuth 2.1 sign-in and two-phase confirmation for destructive tools | — | GIS Cloud | official | — |
 | [Google Maps MCP (reference)](https://github.com/modelcontextprotocol/servers) | Reference server — geocoding, places, directions, distance matrix, elevation (now archived) | TypeScript | Anthropic / MCP project | community | 🟢 active |
 | [google-maps-mcp-server](https://github.com/david-pivonka/google-maps-mcp-server) | STDIO server on the new Google Places (New) + Routes APIs | TypeScript | david-pivonka | community | 🟢 active |
 | [google-maps-places-mcp](https://github.com/domdomegg/google-maps-places-mcp) | Google Places search + photos | TypeScript | domdomegg | community | 🟢 active |
