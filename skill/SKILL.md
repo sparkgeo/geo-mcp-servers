@@ -1,6 +1,7 @@
 ---
 name: geo-mcp-servers
 description: Browse, search, and recommend geospatial / GIS / mapping / earth-observation MCP servers, and add newly discovered ones to the tracked list. Use when the user asks "is there an MCP server for <geospatial thing>", wants to find a geocoding/routing/PostGIS/STAC/imagery/weather MCP server, or says they found a new geo MCP server to track.
+license: MIT
 ---
 
 # Geospatial MCP Servers

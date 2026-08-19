@@ -180,3 +180,7 @@ _Health checked 2026-08-19 (active = repo pushed within 12 months): 🟢 active 
 | [TimezoneToolkit](https://github.com/Cicatriiz/timezone-toolkit) | Timezone conversion plus sunrise/sunset/twilight from lat/long | TypeScript | Cicatriiz | community | 🟡 stale |
 
 <!-- AUTOGEN:END -->
+
+## License
+
+[MIT](LICENSE) © Sparkgeo — the catalog data and tooling are free to use, share, and adapt.
