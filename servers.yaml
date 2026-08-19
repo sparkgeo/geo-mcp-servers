@@ -298,6 +298,15 @@ servers:
     vendor_domain: zephr.xyz
     tags: [places, place-details, navigation, positioning, hosted]
     added: 2026-08-12
+  - name: PlaceRoot
+    url: https://github.com/chuofringer/placeroot
+    description: Overture Maps places, geocoding, admin boundaries, buildings & isochrones via DuckDB (no ETL, no API key); token-budgeted responses with GERS ids
+    category: geocoding
+    author: chuofringer
+    language: Python
+    transport: stdio
+    tags: [overture, duckdb, geocoding, isochrones, boundaries, gers]
+    added: 2026-08-19
   - name: osmmcp
     url: https://github.com/NERVsystems/osmmcp
     description: OSM geospatial tools — geocoding, routing, nearby places, neighborhood analysis, EV charging

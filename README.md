@@ -29,13 +29,13 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**82 servers tracked** across 10 categories.
+**83 servers tracked** across 10 categories.
 
-_Health checked 2026-08-14 (active = repo pushed within 12 months): 🟢 active 54 · 🟡 stale 13 · ⚪ hosted 15._
+_Health checked 2026-08-19 (active = repo pushed within 12 months): 🟢 active 55 · 🟡 stale 13 · ⚪ hosted 15._
 
 ### Categories
 
-- [Geocoding & place search](#geocoding--place-search) (13)
+- [Geocoding & place search](#geocoding--place-search) (14)
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (1)
 - [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (17)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
@@ -60,6 +60,7 @@ _Health checked 2026-08-14 (active = repo pushed within 12 months): 🟢 active 
 | [openstreetmap-mcp-server](https://github.com/cyanheads/openstreetmap-mcp-server) | Geocode, reverse geocode, and Overpass spatial queries (STDIO or Streamable HTTP) | TypeScript | cyanheads | community | 🟢 active |
 | [OSM-GeoJSON-MCP-Server](https://github.com/shimizu/OSM-GeoJSON-MCP-Server) | Fetches OSM data as GeoJSON via Overpass | JavaScript | shimizu | community | 🟢 active |
 | [osmmcp](https://github.com/NERVsystems/osmmcp) | OSM geospatial tools — geocoding, routing, nearby places, neighborhood analysis, EV charging | Go | NERV Systems | community | 🟢 active |
+| [PlaceRoot](https://github.com/chuofringer/placeroot) | Overture Maps places, geocoding, admin boundaries, buildings & isochrones via DuckDB (no ETL, no API key); token-budgeted responses with GERS ids | Python | chuofringer | community | 🟢 active |
 | [Smarty MCP Server](https://www.smarty.com/docs/mcp) | 20 tools for US/international address verification, ZIP lookup, reverse geocoding & property/census enrichment | — | Smarty | official | ⚪ hosted |
 | [what3words MCP](https://github.com/pipeworx-io/mcp-what3words) | Convert 3-word addresses to lat/long + bounding box | — | Pipeworx (uses what3words API) | community | 🟢 active |
 | [Zephr Places Grounding MCP](https://zephr.xyz/places-grounding) | Places grounding for local AI — nearest-place search, rich place details & walking navigation (find_nearest_to_me, get_place_details, navigate_to_place) | — | Zephr | official | ⚪ hosted |

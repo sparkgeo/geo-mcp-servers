@@ -1,6 +1,6 @@
 {
   "active_months": 12,
-  "checked": "2026-08-14",
+  "checked": "2026-08-19",
   "servers": {
     "https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403": {
       "status": "hosted"
@@ -25,7 +25,7 @@
       "status": "active"
     },
     "https://github.com/CesiumGS/cesium-ai-integrations": {
-      "pushed": "2026-05",
+      "pushed": "2026-08",
       "status": "active"
     },
     "https://github.com/Cicatriiz/timezone-toolkit": {
@@ -107,6 +107,10 @@
     "https://github.com/cameronking4/google-earth-engine-mcp": {
       "pushed": "2025-05",
       "status": "stale"
+    },
+    "https://github.com/chuofringer/placeroot": {
+      "pushed": "2026-08",
+      "status": "active"
     },
     "https://github.com/cmer81/open-meteo-mcp": {
       "pushed": "2026-07",
@@ -193,7 +197,7 @@
       "status": "stale"
     },
     "https://github.com/mahdin75/geoserver-mcp": {
-      "pushed": "2025-12",
+      "pushed": "2026-08",
       "status": "active"
     },
     "https://github.com/mahdin75/gis-mcp": {
@@ -213,7 +217,7 @@
       "status": "active"
     },
     "https://github.com/nasa/earthdata-mcp": {
-      "pushed": "2026-07",
+      "pushed": "2026-08",
       "status": "active"
     },
     "https://github.com/nic01asFr/QgisStreamMCP": {
