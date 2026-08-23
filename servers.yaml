@@ -792,3 +792,14 @@ servers:
     language: TypeScript
     tags: [timezone, sun, coordinates]
     added: 2026-08-05
+  - name: GeoLens MCP
+    url: https://github.com/geolens-io/geolens/tree/main/mcp
+    description: "Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL"
+    category: data_access
+    author: GeoLens
+    language: Python
+    official: true
+    vendor_orgs: [geolens-io]
+    transport: stdio
+    tags: [catalog, postgis, ogc-api, stac]
+    added: 2026-08-21
