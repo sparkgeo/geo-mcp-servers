@@ -78,6 +78,15 @@ servers:
     language: Python
     tags: [pygeoapi, ogc-api, fastmcp, oidc]
     added: 2026-08-12
+  - name: MapSmith
+    url: https://github.com/mapsmith-ai/MapSmith
+    description: Deterministic GIS geoprocessing for AI agents — buffers, overlays, reprojection, zonal stats, terrain & hydrology (GeoPandas/DuckDB/Whitebox), with a verifiable provenance manifest on every output
+    category: toolkit
+    author: mapsmith-ai
+    language: Python
+    transport: stdio
+    tags: [geoprocessing, provenance, duckdb, whitebox, geopandas]
+    added: 2026-08-23
 
   # ---- Desktop & enterprise GIS ----
   - name: qgis_mcp

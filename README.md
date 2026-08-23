@@ -29,9 +29,9 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**84 servers tracked** across 11 categories.
+**85 servers tracked** across 11 categories.
 
-_Health checked 2026-08-19 (active = repo pushed within 12 months): 🟢 active 55 · 🟡 stale 13 · ⚪ hosted 15._
+_Health checked 2026-08-23 (active = repo pushed within 12 months): 🟢 active 55 · 🟡 stale 15 · ⚪ hosted 15._
 
 ### Categories
 
@@ -42,7 +42,7 @@ _Health checked 2026-08-19 (active = repo pushed within 12 months): 🟢 active 
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (13)
 - [Weather & climate](#weather--climate) (11)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
-- [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (4)
+- [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (5)
 - [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (1)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (5)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (6)
@@ -51,7 +51,7 @@ _Health checked 2026-08-19 (active = repo pushed within 12 months): 🟢 active 
 
 | Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
-| [Geoapify MCP Server](https://github.com/OriShmila/geoapify-mcp-server) | Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time | Python | OriShmila | community | 🟢 active |
+| [Geoapify MCP Server](https://github.com/OriShmila/geoapify-mcp-server) | Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time | Python | OriShmila | community | 🟡 stale |
 | [geocode-mcp](https://github.com/X-McKay/geocode-mcp) | Lat/long for places via free Nominatim, no API key | Python | X-McKay | community | 🟡 stale |
 | [HERE Maps MCP Server](https://github.com/limingchina/heremaps-mcp-server) | HERE Platform geocoding, reverse geocoding, routing, places search & traffic | TypeScript | limingchina | community | 🟡 stale |
 | [MCP-Geo](https://github.com/webcoderz/MCP-Geo) | Geocoding MCP built on GeoPy — multi-provider (Nominatim, ArcGIS, Bing) | Python | webcoderz | community | 🟡 stale |
@@ -78,7 +78,7 @@ _Health checked 2026-08-19 (active = repo pushed within 12 months): 🟢 active 
 | --- | --- | --- | --- | --- | --- |
 | [ArcGIS Location Services MCP (beta)](https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/) | Official Esri MCP exposing ArcGIS Location Platform services — geocoding, routing, static maps | — | Esri | official | ⚪ hosted |
 | [ArcGIS Location Services MCP (community)](https://github.com/lwsinclair/arcgis-location-services-mcp) | Community wrapper over the Esri ArcGIS Location Platform — geocoding, routing, places | — | lwsinclair | community | 🟡 stale |
-| [baidu-maps/mcp](https://github.com/baidu-maps/mcp) | Official Baidu Map — geocoding, POI, route planning, weather, IP location, traffic (China) | Python / TypeScript | Baidu | official | 🟢 active |
+| [baidu-maps/mcp](https://github.com/baidu-maps/mcp) | Official Baidu Map — geocoding, POI, route planning, weather, IP location, traffic (China) | Python / TypeScript | Baidu | official | 🟡 stale |
 | [CARTO MCP Server](https://docs.carto.com/carto-for-agents/mcp-server) | Remote MCP over CARTO — explore data, render Builder maps inline, run saved spatial Workflows on your cloud warehouse | — | CARTO | official | ⚪ hosted |
 | [Cesium AI Integrations](https://github.com/CesiumGS/cesium-ai-integrations) | Official Cesium MCP servers & agent skills connecting the Cesium 3D geospatial ecosystem (CesiumJS, 3D Tiles) to AI assistants | TypeScript | Cesium (CesiumGS) | official | 🟢 active |
 | [Felt MCP Server](https://felt.com/blog/introducing-felt-mcp-server) | Remote MCP — create maps, query warehouse, run spatial SQL, style layers, publish live URLs | — | Felt | official | ⚪ hosted |
@@ -158,12 +158,13 @@ _Health checked 2026-08-19 (active = repo pushed within 12 months): 🟢 active 
 | [gdal-mcp](https://github.com/JordanGunn/gdal-mcp) | GDAL-style raster/vector workflows (Rasterio, GeoPandas, PyProj) — conversion, reprojection, COG, metadata | Python | JordanGunn / Wayfinder-Foundry | community | 🟢 active |
 | [geoserver-mcp](https://github.com/mahdin75/geoserver-mcp) | Drives the GeoServer REST API — manage workspaces/layers/styles, CQL spatial queries, WMS/WFS access | Python | mahdin75 | community | 🟢 active |
 | [gis-mcp](https://github.com/mahdin75/gis-mcp) | Connects LLMs to core GIS libraries (Shapely, PyProj, GeoPandas, Rasterio, PySAL) for geometry, projections, raster & spatial stats | Python | mahdin75 | community | 🟢 active |
+| [MapSmith](https://github.com/mapsmith-ai/MapSmith) | Deterministic GIS geoprocessing for AI agents — buffers, overlays, reprojection, zonal stats, terrain & hydrology (GeoPandas/DuckDB/Whitebox), with a verifiable provenance manifest on every output | Python | mapsmith-ai | community | 🟢 active |
 
 ### Geospatial data access & catalogs
 
 | Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
-| [GeoLens MCP](https://github.com/geolens-io/geolens/tree/main/mcp) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python | GeoLens | official | — |
+| [GeoLens MCP](https://github.com/geolens-io/geolens/tree/main/mcp) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python | GeoLens | official | 🟢 active |
 
 ### Aviation & maritime tracking (ADS-B, AIS)
 
