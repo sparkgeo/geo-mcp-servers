@@ -1,6 +1,6 @@
 {
   "active_months": 12,
-  "checked": "2026-08-23",
+  "checked": "2026-08-26",
   "servers": {
     "https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403": {
       "status": "hosted"
@@ -117,7 +117,7 @@
       "status": "active"
     },
     "https://github.com/cyanheads/noaa-marine-mcp-server": {
-      "pushed": "2026-07",
+      "pushed": "2026-08",
       "status": "active"
     },
     "https://github.com/cyanheads/open-meteo-mcp-server": {
@@ -125,7 +125,7 @@
       "status": "active"
     },
     "https://github.com/cyanheads/openaq-mcp-server": {
-      "pushed": "2026-07",
+      "pushed": "2026-08",
       "status": "active"
     },
     "https://github.com/cyanheads/openstreetmap-mcp-server": {
@@ -249,6 +249,10 @@
       "status": "active"
     },
     "https://github.com/pipeworx-io/mcp-nominatim": {
+      "pushed": "2026-08",
+      "status": "active"
+    },
+    "https://github.com/pipeworx-io/mcp-osrm": {
       "pushed": "2026-08",
       "status": "active"
     },

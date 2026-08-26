@@ -389,6 +389,15 @@ servers:
     language: TypeScript
     tags: [valhalla, routing, isochrones]
     added: 2026-08-02
+  - name: OSRM MCP
+    url: https://github.com/pipeworx-io/mcp-osrm
+    description: Routing, distances & travel times via OSRM, with map-matching & trip optimization
+    category: routing
+    author: Pipeworx (uses OSRM)
+    language: TypeScript
+    tags: [osrm, routing, matrix, map-matching]
+    note: routes via OSRM's public demo server by default — point at your own OSRM instance for production
+    added: 2026-08-26
 
   # ---- Remote sensing, STAC & earth observation ----
   - name: planetary-computer-mcp

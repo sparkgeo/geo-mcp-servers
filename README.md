@@ -29,14 +29,14 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**85 servers tracked** across 11 categories.
+**86 servers tracked** across 11 categories.
 
-_Health checked 2026-08-23 (active = repo pushed within 12 months): 🟢 active 55 · 🟡 stale 15 · ⚪ hosted 15._
+_Health checked 2026-08-26 (active = repo pushed within 12 months): 🟢 active 56 · 🟡 stale 15 · ⚪ hosted 15._
 
 ### Categories
 
 - [Geocoding & place search](#geocoding--place-search) (14)
-- [Routing, isochrones & navigation](#routing-isochrones--navigation) (1)
+- [Routing, isochrones & navigation](#routing-isochrones--navigation) (2)
 - [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (17)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (13)
@@ -70,6 +70,7 @@ _Health checked 2026-08-23 (active = repo pushed within 12 months): 🟢 active 
 
 | Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
+| [OSRM MCP](https://github.com/pipeworx-io/mcp-osrm) | Routing, distances & travel times via OSRM, with map-matching & trip optimization | TypeScript | Pipeworx (uses OSRM) | community | 🟢 active |
 | [valhalla-mcp](https://github.com/aatakansalar/valhalla-mcp) | Valhalla OSM routing engine — routing, isochrones, tiles, matrix | TypeScript | Atakan Salar | community | 🟡 stale |
 
 ### Maps, tiles & commercial platforms
