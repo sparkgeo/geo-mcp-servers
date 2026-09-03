@@ -29,7 +29,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**86 servers tracked** across 11 categories.
+**87 servers tracked** across 11 categories.
 
 _Health checked 2026-08-26 (active = repo pushed within 12 months): 🟢 active 56 · 🟡 stale 15 · ⚪ hosted 15._
 
@@ -43,7 +43,7 @@ _Health checked 2026-08-26 (active = repo pushed within 12 months): 🟢 active 
 - [Weather & climate](#weather--climate) (11)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (5)
-- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (1)
+- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (2)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (5)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (6)
 
@@ -166,6 +166,7 @@ _Health checked 2026-08-26 (active = repo pushed within 12 months): 🟢 active 
 | Server | Description | Lang | By | Type | Health |
 | --- | --- | --- | --- | --- | --- |
 | [GeoLens MCP](https://github.com/geolens-io/geolens/tree/main/mcp) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python | GeoLens | official | 🟢 active |
+| [Scigantic MCP](https://github.com/Scigantic/scigantic-mcp) | Cross-domain scientific dataset catalog and schema cards (genomics, proteomics, imaging, and a large Earth-observation/geospatial footprint), with per-dataset access snippets for agents | Python | Scigantic | official | — |
 
 ### Aviation & maritime tracking (ADS-B, AIS)
 

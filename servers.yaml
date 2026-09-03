@@ -821,3 +821,15 @@ servers:
     transport: stdio
     tags: [catalog, postgis, ogc-api, stac]
     added: 2026-08-21
+  - name: Scigantic MCP
+    url: https://github.com/Scigantic/scigantic-mcp
+    description: "Cross-domain scientific dataset catalog and schema cards (genomics, proteomics, imaging, and a large Earth-observation/geospatial footprint), with per-dataset access snippets for agents"
+    category: data_access
+    author: Scigantic
+    language: Python
+    official: true
+    vendor_orgs: [Scigantic]
+    transport: stdio
+    tags: [catalog, schema-cards, cross-domain, dataset-discovery, geospatial]
+    note: "also runs as a public, zero-auth hosted endpoint at https://api.scigantic.com/mcp (Streamable HTTP)"
+    added: 2026-08-28
