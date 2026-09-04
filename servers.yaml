@@ -14,6 +14,10 @@
 #   tags:        (optional) list of freeform keywords
 #   added:       (optional) YYYY-MM-DD you added it
 #   note:        (optional) caveats, e.g. URL needs confirming
+#   access:      (optional) open | free | commercial | paywalled — how the
+#                underlying service/data can be used. open = open-source server on
+#                free/open data; free = free but not open source; commercial =
+#                has a usable free tier (freemium); paywalled = must pay to use.
 #
 # `official: true` is the strongest trust signal this catalog emits, so CI makes
 # you back it up rather than just assert it:
@@ -47,6 +51,7 @@ categories:
 servers:
   # ---- General GIS / geoprocessing toolkits ----
   - name: gis-mcp
+    access: open
     url: https://github.com/mahdin75/gis-mcp
     description: Connects LLMs to core GIS libraries (Shapely, PyProj, GeoPandas, Rasterio, PySAL) for geometry, projections, raster & spatial stats
     category: toolkit
@@ -55,6 +60,7 @@ servers:
     tags: [shapely, gdal, geopandas, rasterio]
     added: 2026-08-02
   - name: gdal-mcp
+    access: open
     url: https://github.com/JordanGunn/gdal-mcp
     description: GDAL-style raster/vector workflows (Rasterio, GeoPandas, PyProj) — conversion, reprojection, COG, metadata
     category: toolkit
@@ -63,6 +69,7 @@ servers:
     tags: [gdal, raster, vector, cog]
     added: 2026-08-02
   - name: geoserver-mcp
+    access: open
     url: https://github.com/mahdin75/geoserver-mcp
     description: Drives the GeoServer REST API — manage workspaces/layers/styles, CQL spatial queries, WMS/WFS access
     category: toolkit
@@ -71,6 +78,7 @@ servers:
     tags: [geoserver, ogc, wms, wfs]
     added: 2026-08-02
   - name: fastgeoapi MCP server
+    access: open
     url: https://github.com/geobeyond/fastgeoapi
     description: Optional integrated MCP server exposing a secured pygeoapi (OGC API) instance's endpoints as LLM tools, auto-generated from its OpenAPI spec
     category: toolkit
@@ -79,6 +87,7 @@ servers:
     tags: [pygeoapi, ogc-api, fastmcp, oidc]
     added: 2026-08-12
   - name: MapSmith
+    access: open
     url: https://github.com/mapsmith-ai/MapSmith
     description: Deterministic GIS geoprocessing for AI agents — buffers, overlays, reprojection, zonal stats, terrain & hydrology (GeoPandas/DuckDB/Whitebox), with a verifiable provenance manifest on every output
     category: toolkit
@@ -90,6 +99,7 @@ servers:
 
   # ---- Desktop & enterprise GIS ----
   - name: qgis_mcp
+    access: open
     url: https://github.com/jjsantos01/qgis_mcp
     description: Links QGIS Desktop to Claude — project setup, layer management, spatial ops via PyQGIS
     category: desktop_gis
@@ -98,6 +108,7 @@ servers:
     tags: [qgis, pyqgis]
     added: 2026-08-02
   - name: qgis-mcp (nkarasiak)
+    access: open
     url: https://github.com/nkarasiak/qgis-mcp
     description: 117 QGIS tools — layer mgmt, feature editing, processing, styling, layout/atlas, cross-layer SQL
     category: desktop_gis
@@ -106,6 +117,7 @@ servers:
     tags: [qgis]
     added: 2026-08-02
   - name: QgisStreamMCP
+    access: open
     url: https://github.com/nic01asFr/QgisStreamMCP
     description: Full QGIS Desktop in Docker via noVNC — 1000+ Processing algorithms (Native/GDAL/GRASS/SAGA)
     category: desktop_gis
@@ -114,6 +126,7 @@ servers:
     tags: [qgis, docker, grass, saga]
     added: 2026-08-02
   - name: QGIS2OllamaMCP
+    access: open
     url: https://github.com/anitagraser/qgis_mcp
     description: Lets LLMs (via Ollama) drive QGIS Desktop
     category: desktop_gis
@@ -122,6 +135,7 @@ servers:
     tags: [qgis, ollama]
     added: 2026-08-02
   - name: qgis-mcp-1
+    access: open
     url: https://github.com/Sir-Adrien-Claudington/qgis-mcp-1
     description: Fork connecting QGIS to Claude via MCP
     category: desktop_gis
@@ -130,6 +144,7 @@ servers:
     tags: [qgis, fork]
     added: 2026-08-02
   - name: ArcGISMCP
+    access: commercial
     url: https://github.com/GarrickGarcia/ArcGISMCP
     description: Integrates ArcGIS Online — search/query geospatial feature layers
     category: desktop_gis
@@ -138,6 +153,7 @@ servers:
     tags: [arcgis, esri]
     added: 2026-08-02
   - name: MCP-ArcGISPro
+    access: paywalled
     url: https://github.com/geo2004/MCP-ArcGISPro
     description: Control and automate ArcGIS Pro from Claude Desktop
     category: desktop_gis
@@ -146,6 +162,7 @@ servers:
     tags: [arcgis, arcpy]
     added: 2026-08-02
   - name: MCP-Server-ArcGIS-Pro-AddIn
+    access: paywalled
     url: https://github.com/nicogis/MCP-Server-ArcGIS-Pro-AddIn
     description: MCP server delivered as an ArcGIS Pro add-in
     category: desktop_gis
@@ -154,6 +171,7 @@ servers:
     tags: [arcgis, addin]
     added: 2026-08-02
   - name: esri-mcp
+    access: commercial
     url: https://github.com/eKerney/esri-mcp
     description: Query & map Esri Living Atlas data, focus on water resources
     category: desktop_gis
@@ -164,6 +182,7 @@ servers:
 
   # ---- Maps, tiles & commercial platforms ----
   - name: Cesium AI Integrations
+    access: commercial
     url: https://github.com/CesiumGS/cesium-ai-integrations
     description: Official Cesium MCP servers & agent skills connecting the Cesium 3D geospatial ecosystem (CesiumJS, 3D Tiles) to AI assistants
     category: mapping
@@ -175,6 +194,7 @@ servers:
     note: a collection of reference MCP servers/skills, not a single server
     added: 2026-08-02
   - name: ArcGIS Location Services MCP (beta)
+    access: commercial
     url: https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/
     description: Official Esri MCP exposing ArcGIS Location Platform services — geocoding, routing, static maps
     category: mapping
@@ -185,6 +205,7 @@ servers:
     tags: [arcgis, geocoding, routing]
     added: 2026-08-02
   - name: Mapbox MCP Server
+    access: commercial
     url: https://github.com/mapbox/mcp-server
     description: Official Mapbox web services — geocoding, POI search, multimodal routing, matrix, isochrones, static maps
     category: mapping
@@ -195,6 +216,7 @@ servers:
     tags: [mapbox, geocoding, routing, tiles]
     added: 2026-08-02
   - name: Google Maps MCP (reference)
+    access: commercial
     url: https://github.com/modelcontextprotocol/servers
     description: Reference server — geocoding, places, directions, distance matrix, elevation (now archived)
     category: mapping
@@ -203,6 +225,7 @@ servers:
     tags: [google-maps, reference, archived]
     added: 2026-08-02
   - name: google-maps-mcp-server
+    access: commercial
     url: https://github.com/david-pivonka/google-maps-mcp-server
     description: STDIO server on the new Google Places (New) + Routes APIs
     category: mapping
@@ -211,6 +234,7 @@ servers:
     tags: [google-maps, places, routes]
     added: 2026-08-02
   - name: google-maps-places-mcp
+    access: commercial
     url: https://github.com/domdomegg/google-maps-places-mcp
     description: Google Places search + photos
     category: mapping
@@ -219,6 +243,7 @@ servers:
     tags: [google-maps, places]
     added: 2026-08-02
   - name: mcp-google-map
+    access: commercial
     url: https://github.com/cablate/mcp-google-map
     description: Google Places (New), Routes, geocoding, distance matrix
     category: mapping
@@ -227,6 +252,7 @@ servers:
     tags: [google-maps]
     added: 2026-08-02
   - name: baidu-maps/mcp
+    access: commercial
     url: https://github.com/baidu-maps/mcp
     description: Official Baidu Map — geocoding, POI, route planning, weather, IP location, traffic (China)
     category: mapping
@@ -237,6 +263,7 @@ servers:
     tags: [baidu, china, geocoding, routing]
     added: 2026-08-02
   - name: foursquare-places-mcp
+    access: commercial
     url: https://github.com/foursquare/foursquare-places-mcp
     description: Official Foursquare Places API v3 — venue search, place details, location context
     category: mapping
@@ -247,6 +274,7 @@ servers:
     tags: [foursquare, places, poi]
     added: 2026-08-02
   - name: CARTO MCP Server
+    access: commercial
     url: https://docs.carto.com/carto-for-agents/mcp-server
     description: Remote MCP over CARTO — explore data, render Builder maps inline, run saved spatial Workflows on your cloud warehouse
     category: mapping
@@ -257,6 +285,7 @@ servers:
     tags: [carto, warehouse, hosted]
     added: 2026-08-02
   - name: Felt MCP Server
+    access: commercial
     url: https://felt.com/blog/introducing-felt-mcp-server
     description: Remote MCP — create maps, query warehouse, run spatial SQL, style layers, publish live URLs
     category: mapping
@@ -267,6 +296,7 @@ servers:
     tags: [felt, hosted, spatial-sql]
     added: 2026-08-02
   - name: MapTiler MCP
+    access: commercial
     url: https://github.com/pipeworx-io/mcp-maptiler
     description: MapTiler geocoding, elevation and mapping APIs as MCP tools
     category: mapping
@@ -275,6 +305,7 @@ servers:
     note: community Pipeworx-gateway wrapper — no official MapTiler-published server found
     added: 2026-08-02
   - name: Stadia Maps MCP Server
+    access: commercial
     url: https://github.com/stadiamaps/stadiamaps-mcp-server-ts
     description: Official Stadia Maps APIs - geocoding, search, routing, isochrones, map tiles, time zone lookup
     category: mapping
@@ -285,6 +316,7 @@ servers:
     tags: [stadiamaps, geocoding, routing, isochrones, tiles]
     added: 2026-08-11
   - name: GIS Cloud MCP Server
+    access: commercial
     url: https://manual.giscloud.com/knowledge-base/gis-cloud-ai-mcp/
     description: Remote read & write MCP for the GIS Cloud platform — 55 tools covering maps, layers, features, spatial queries, forms, tables, file import & map rendering, with OAuth 2.1 sign-in and two-phase confirmation for destructive tools
     category: mapping
@@ -298,6 +330,7 @@ servers:
 
   # ---- Geocoding & place search ----
   - name: Zephr Places Grounding MCP
+    access: commercial
     url: https://zephr.xyz/places-grounding
     description: Places grounding for local AI — nearest-place search, rich place details & walking navigation (find_nearest_to_me, get_place_details, navigate_to_place)
     category: geocoding
@@ -308,6 +341,7 @@ servers:
     tags: [places, place-details, navigation, positioning, hosted]
     added: 2026-08-12
   - name: PlaceRoot
+    access: open
     url: https://github.com/chuofringer/placeroot
     description: Overture Maps places, geocoding, admin boundaries, buildings & isochrones via DuckDB (no ETL, no API key); token-budgeted responses with GERS ids
     category: geocoding
@@ -317,6 +351,7 @@ servers:
     tags: [overture, duckdb, geocoding, isochrones, boundaries, gers]
     added: 2026-08-19
   - name: osmmcp
+    access: open
     url: https://github.com/NERVsystems/osmmcp
     description: OSM geospatial tools — geocoding, routing, nearby places, neighborhood analysis, EV charging
     category: geocoding
@@ -325,6 +360,7 @@ servers:
     tags: [osm, geocoding, routing]
     added: 2026-08-02
   - name: open-streetmap-mcp
+    access: open
     url: https://github.com/jagan-shanmugam/open-streetmap-mcp
     description: OSM location services — geocode/reverse, POI, directions, meeting points, neighborhood analysis
     category: geocoding
@@ -333,6 +369,7 @@ servers:
     tags: [osm, geocoding, poi]
     added: 2026-08-02
   - name: openstreetmap-mcp-server
+    access: open
     url: https://github.com/cyanheads/openstreetmap-mcp-server
     description: Geocode, reverse geocode, and Overpass spatial queries (STDIO or Streamable HTTP)
     category: geocoding
@@ -341,6 +378,7 @@ servers:
     tags: [osm, overpass, geocoding]
     added: 2026-08-02
   - name: OSM-GeoJSON-MCP-Server
+    access: open
     url: https://github.com/shimizu/OSM-GeoJSON-MCP-Server
     description: Fetches OSM data as GeoJSON via Overpass
     category: geocoding
@@ -349,6 +387,7 @@ servers:
     tags: [osm, geojson, overpass]
     added: 2026-08-02
   - name: mcp-nominatim
+    access: open
     url: https://github.com/pipeworx-io/mcp-nominatim
     description: Geocoding / reverse geocoding via OSM Nominatim
     category: geocoding
@@ -357,6 +396,7 @@ servers:
     tags: [nominatim, osm]
     added: 2026-08-02
   - name: MCP-Geo
+    access: open
     url: https://github.com/webcoderz/MCP-Geo
     description: Geocoding MCP built on GeoPy — multi-provider (Nominatim, ArcGIS, Bing)
     category: geocoding
@@ -365,6 +405,7 @@ servers:
     tags: [geopy, multi-provider]
     added: 2026-08-02
   - name: geocode-mcp
+    access: open
     url: https://github.com/X-McKay/geocode-mcp
     description: Lat/long for places via free Nominatim, no API key
     category: geocoding
@@ -373,6 +414,7 @@ servers:
     tags: [nominatim, geocoding]
     added: 2026-08-02
   - name: what3words MCP
+    access: commercial
     url: https://github.com/pipeworx-io/mcp-what3words
     description: Convert 3-word addresses to lat/long + bounding box
     category: geocoding
@@ -382,6 +424,7 @@ servers:
 
   # ---- Routing ----
   - name: valhalla-mcp
+    access: open
     url: https://github.com/aatakansalar/valhalla-mcp
     description: Valhalla OSM routing engine — routing, isochrones, tiles, matrix
     category: routing
@@ -390,6 +433,7 @@ servers:
     tags: [valhalla, routing, isochrones]
     added: 2026-08-02
   - name: OSRM MCP
+    access: open
     url: https://github.com/pipeworx-io/mcp-osrm
     description: Routing, distances & travel times via OSRM, with map-matching & trip optimization
     category: routing
@@ -401,6 +445,7 @@ servers:
 
   # ---- Remote sensing, STAC & earth observation ----
   - name: planetary-computer-mcp
+    access: open
     url: https://github.com/isaaccorley/planetary-computer-mcp
     description: Query & download satellite imagery from the Microsoft Planetary Computer STAC API
     category: remote_sensing
@@ -409,6 +454,7 @@ servers:
     tags: [planetary-computer, stac, imagery]
     added: 2026-08-02
   - name: stac-mcp
+    access: open
     url: https://github.com/BnJam/stac-mcp
     description: Natural-language search of any STAC-compliant catalog (defaults to Planetary Computer)
     category: remote_sensing
@@ -418,6 +464,7 @@ servers:
     note: repo URL flagged for confirmation
     added: 2026-08-02
   - name: copernicus-mcp
+    access: open
     url: https://github.com/wb1016/copernicus-mcp
     description: Access ESA Copernicus OData API — search/download Sentinel-1/2/3/5P/6 imagery
     category: remote_sensing
@@ -426,6 +473,7 @@ servers:
     tags: [copernicus, sentinel, esa]
     added: 2026-08-02
   - name: google-earth-engine-mcp
+    access: commercial
     url: https://github.com/cameronking4/google-earth-engine-mcp
     description: Query Google Earth Engine with natural language — fetch datasets, run tasks, visualize in chat
     category: remote_sensing
@@ -434,6 +482,7 @@ servers:
     tags: [earth-engine, gee]
     added: 2026-08-02
   - name: Axion-MCP
+    access: commercial
     url: https://github.com/Dhenenjay/Axion-MCP
     description: Earth Engine analysis platform for Claude Desktop — NDVI/NDWI, classification, maps
     category: remote_sensing
@@ -442,6 +491,7 @@ servers:
     tags: [earth-engine, ndvi]
     added: 2026-08-02
   - name: unicef-gee-mcp
+    access: commercial
     url: https://github.com/tryolabs/unicef-gee-mcp
     description: Google Earth Engine access/analysis for UNICEF workflows
     category: remote_sensing
@@ -450,6 +500,7 @@ servers:
     tags: [earth-engine, unicef]
     added: 2026-08-02
   - name: earthdata-mcp
+    access: open
     url: https://github.com/nasa/earthdata-mcp
     description: LLM access to NASA Common Metadata Repository — discover/verify/access Earth science datasets
     category: remote_sensing
@@ -460,6 +511,7 @@ servers:
     tags: [nasa, earthdata, cmr]
     added: 2026-08-02
   - name: NASA-MCP-server
+    access: open
     url: https://github.com/ProgramComputer/NASA-MCP-server
     description: Standardized interface to many NASA APIs incl. Earth observations & imagery
     category: remote_sensing
@@ -468,6 +520,7 @@ servers:
     tags: [nasa, imagery]
     added: 2026-08-02
   - name: SkyFi MCP
+    access: commercial
     url: https://github.com/jpwilson/skyfi-mcp
     description: Search 150+ satellites from 12+ providers, compare pricing, order archive or tasking imagery in natural language
     category: remote_sensing
@@ -475,7 +528,20 @@ servers:
     tags: [skyfi, tasking, imagery-marketplace]
     note: SkyFi launched an official MCP (2026-07-22); this is the most complete community repo — confirm if an official skyfi-org repo is preferred
     added: 2026-08-02
+  - name: Vexcel MCP
+    url: https://vexceldata.com/platform/vexcel-mcp/
+    description: Official Vexcel aerial & oblique imagery, DSM/DTM elevation, roof/solar/pool property metadata & post-disaster damage assessments for AI agents
+    category: remote_sensing
+    author: Vexcel
+    official: true
+    transport: hosted
+    vendor_domain: vexceldata.com
+    access: paywalled
+    tags: [vexcel, aerial-imagery, elevation, property, damage-assessment]
+    note: commercial — needs a Vexcel API key (existing customers) or a requested sandbox account; endpoint https://api.vexcelgroup.com/v2/mcp (HTTP, X-API-KEY)
+    added: 2026-09-04
   - name: Tilebox MCP Server
+    access: commercial
     url: https://docs.tilebox.com/onboard-your-agent
     description: Create and manage geospatial datasets and distributed workflows, with docs search + CLI and Skills for coding agents
     category: remote_sensing
@@ -487,6 +553,7 @@ servers:
     tags: [tilebox, earth-observation, datasets, workflows, schemas, cli, agent-skills]
     added: 2026-08-02
   - name: Arraylake MCP Server
+    access: commercial
     url: https://docs.earthmover.io/mcp/
     description: Browse Arraylake repos, inspect schemas, run OGC EDR queries & render maps over Zarr/Icechunk scientific arrays
     category: remote_sensing
@@ -499,6 +566,7 @@ servers:
 
   # ---- Weather & climate ----
   - name: weather-mcp
+    access: open
     url: https://github.com/weather-mcp/weather-mcp
     description: 17 weather tools — forecasts, alerts, air quality, marine, radar, lightning, rivers, wildfires, history to 1940 (NOAA + Open-Meteo)
     category: weather
@@ -507,6 +575,7 @@ servers:
     tags: [noaa, open-meteo, air-quality]
     added: 2026-08-02
   - name: open-meteo-mcp
+    access: open
     url: https://github.com/cmer81/open-meteo-mcp
     description: Full Open-Meteo API — forecast, ERA5 archive, air quality, marine, seasonal
     category: weather
@@ -515,6 +584,7 @@ servers:
     tags: [open-meteo, era5]
     added: 2026-08-02
   - name: mcp_weather_server
+    access: open
     url: https://github.com/isdaniel/mcp_weather_server
     description: Weather info via the Open-Meteo API
     category: weather
@@ -523,6 +593,7 @@ servers:
     tags: [open-meteo]
     added: 2026-08-02
   - name: weather-mcp (Fahrenheit)
+    access: open
     url: https://github.com/FahrenheitResearch/weather-mcp
     description: 12 tools — NWS data, NWP model imagery, NEXRAD radar, 205 meteorological calculations
     category: weather
@@ -531,6 +602,7 @@ servers:
     tags: [nws, nexrad, radar]
     added: 2026-08-02
   - name: nws-mcp-server
+    access: open
     url: https://github.com/nitvob/nws-mcp-server
     description: Quickstart NWS server — get-alerts + get-forecast from the National Weather Service
     category: weather
@@ -539,6 +611,7 @@ servers:
     tags: [nws]
     added: 2026-08-02
   - name: dynamical.org Weather & Climate Catalog
+    access: open
     url: https://github.com/dynamical-org/mcp
     description: Hosted server over dynamical.org's open STAC catalog of cloud-optimized weather & climate archives and forecasts (GFS, HRRR, ECMWF/AIFS) — dataset search & docs, ready-to-run xarray/Zarr/Icechunk snippets, forecast-run freshness
     category: weather
@@ -552,6 +625,7 @@ servers:
 
   # ---- Spatial databases & analytics ----
   - name: postgis-mcp
+    access: open
     url: https://github.com/receptopalak/postgis-mcp
     description: PostGIS database connection over MCP — multi-connection via env vars
     category: database
@@ -560,6 +634,7 @@ servers:
     tags: [postgis, postgres]
     added: 2026-08-02
   - name: Wherobots MCP Server
+    access: commercial
     url: https://wherobots.com
     description: Direct access to WherobotsDB (Apache Sedona) — design & run spatial SQL over S3 & Unity Catalog data
     category: database
@@ -574,6 +649,7 @@ servers:
 
   # ---- Other (IP geolocation, misc) ----
   - name: mcp-server-ipinfo
+    access: commercial
     url: https://github.com/briandconnelly/mcp-server-ipinfo
     description: IP geolocation via the IPInfo API (location + network details)
     category: other
@@ -582,6 +658,7 @@ servers:
     tags: [ip-geolocation, ipinfo]
     added: 2026-08-02
   - name: ipgeolocation-io-mcp
+    access: commercial
     url: https://github.com/ipgeolocation/ipgeolocation-io-mcp
     description: Official ipgeolocation.io — IP geolocation, VPN/proxy detection, timezone, astronomy, ASN
     category: other
@@ -591,6 +668,7 @@ servers:
     tags: [ip-geolocation]
     added: 2026-08-02
   - name: IPinfo MCP Server
+    access: commercial
     url: https://mcp.ipinfo.io/
     description: Hosted IPinfo MCP — country/continent (free), city/coords/timezone/postal (detailed)
     category: other
@@ -604,6 +682,7 @@ servers:
   # ==== Added 2026-08-05 (discovery sweep + liveness-verified) ================
   # ---- Geocoding & place search ----
   - name: HERE Maps MCP Server
+    access: commercial
     url: https://github.com/limingchina/heremaps-mcp-server
     description: HERE Platform geocoding, reverse geocoding, routing, places search & traffic
     category: geocoding
@@ -612,6 +691,7 @@ servers:
     tags: [here, geocoding, routing, traffic]
     added: 2026-08-05
   - name: OpenCage Geocoding MCP
+    access: commercial
     url: https://github.com/OpenCageData/opencage-geocoding-mcp
     description: Forward/reverse geocoding via the OpenCage API, plus API-status/quota checks
     category: geocoding
@@ -622,6 +702,7 @@ servers:
     tags: [opencage, geocoding]
     added: 2026-08-05
   - name: Geoapify MCP Server
+    access: commercial
     url: https://github.com/OriShmila/geoapify-mcp-server
     description: Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time
     category: geocoding
@@ -630,6 +711,7 @@ servers:
     tags: [geoapify, geocoding, routing, isolines]
     added: 2026-08-05
   - name: Smarty MCP Server
+    access: commercial
     url: https://www.smarty.com/docs/mcp
     description: 20 tools for US/international address verification, ZIP lookup, reverse geocoding & property/census enrichment
     category: geocoding
@@ -642,6 +724,7 @@ servers:
 
   # ---- Maps, tiles & commercial platforms ----
   - name: TomTom Maps MCP Server
+    access: commercial
     url: https://github.com/tomtom-international/tomtom-maps-mcp
     description: Official TomTom location services — search, geocoding, routing, traffic
     category: mapping
@@ -652,6 +735,7 @@ servers:
     tags: [tomtom, geocoding, routing, traffic]
     added: 2026-08-05
   - name: TomTom Traffic Analytics MCP
+    access: commercial
     url: https://github.com/tomtom-international/tomtom-traffic-analytics-mcp
     description: TomTom MOVE traffic analytics — past, present & predicted traffic
     category: mapping
@@ -661,6 +745,7 @@ servers:
     tags: [tomtom, traffic, analytics]
     added: 2026-08-05
   - name: ArcGIS Location Services MCP (community)
+    access: commercial
     url: https://github.com/lwsinclair/arcgis-location-services-mcp
     description: Community wrapper over the Esri ArcGIS Location Platform — geocoding, routing, places
     category: mapping
@@ -670,6 +755,7 @@ servers:
 
   # ---- Spatial databases & analytics ----
   - name: Overture Maps MCP Server
+    access: open
     url: https://github.com/srivinod1/overture-mcp-server
     description: Query Overture Maps GeoParquet directly from S3 via DuckDB spatial — buildings, place density, land-use analytics
     category: database
@@ -680,6 +766,7 @@ servers:
 
   # ---- Remote sensing, STAC & earth observation ----
   - name: Planet MCP Server (beta)
+    access: paywalled
     url: https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403
     description: Natural-language search/preview/order over the Planet Insights Platform Data API using existing Planet SDK creds
     category: remote_sensing
@@ -690,6 +777,7 @@ servers:
     tags: [planet, imagery, tasking]
     added: 2026-08-05
   - name: Microsoft Planetary Computer Pro MCP Tools
+    access: paywalled
     url: https://techcommunity.microsoft.com/blog/microsoft-planetary-computer-blog/introducing-microsoft-planetary-computer-pro-model-context-protocol-tools-on-vs-/4522346
     description: 35+ tools connecting Planetary Computer + Planetary Computer Pro, shipped for VS Code / Copilot
     category: remote_sensing
@@ -702,6 +790,7 @@ servers:
 
   # ---- Weather & climate (incl. air quality, tides) ----
   - name: open-meteo-mcp-server (cyanheads)
+    access: open
     url: https://github.com/cyanheads/open-meteo-mcp-server
     description: Open-Meteo forecasts + geocoding, ERA5 historical climate, marine, air quality & terrain elevation
     category: weather
@@ -710,6 +799,7 @@ servers:
     tags: [open-meteo, era5, air-quality, elevation]
     added: 2026-08-05
   - name: OpenAQ MCP Server
+    access: open
     url: https://github.com/cyanheads/openaq-mcp-server
     description: Global air-quality stations & pollutant observations (PM2.5, PM10, O3, NO2, SO2, CO) via OpenAQ v3, with SQL over history
     category: weather
@@ -717,6 +807,7 @@ servers:
     tags: [openaq, air-quality]
     added: 2026-08-05
   - name: aqicn-mcp
+    access: free
     url: https://github.com/mattmarcin/aqicn-mcp
     description: Real-time air quality from the World Air Quality Index (AQICN) by city or coordinates
     category: weather
@@ -724,6 +815,7 @@ servers:
     tags: [aqicn, air-quality]
     added: 2026-08-05
   - name: NOAA Marine MCP Server
+    access: open
     url: https://github.com/cyanheads/noaa-marine-mcp-server
     description: NOAA CO-OPS tide stations + NDBC buoys — tide predictions, water levels, tidal currents, live buoy conditions
     category: weather
@@ -731,6 +823,7 @@ servers:
     tags: [noaa, tides, buoys, marine]
     added: 2026-08-05
   - name: NOAA-TidesAndCurrents-MCP
+    access: open
     url: https://github.com/RyanCardin15/NOAA-TidesAndCurrents-MCP
     description: NOAA Data/Metadata/Derived-Products APIs for tides and currents
     category: weather
@@ -741,6 +834,7 @@ servers:
 
   # ---- Aviation & maritime tracking ----
   - name: ADS-B MCP Server
+    access: open
     url: https://github.com/dirkhh/adsb-mcp-server
     description: Exposes a local ADS-B feeder (readsb/tar1090) — aircraft positions, callsigns, altitudes, routes
     category: tracking
@@ -749,6 +843,7 @@ servers:
     tags: [adsb, aviation, aircraft]
     added: 2026-08-05
   - name: Flightradar24 API MCP
+    access: commercial
     url: https://github.com/Flightradar24/fr24api-mcp
     description: Official Flightradar24 flight-tracking API access
     category: tracking
@@ -758,6 +853,7 @@ servers:
     tags: [flightradar24, aviation, flights]
     added: 2026-08-05
   - name: Vessel Traffic MCP
+    access: commercial
     url: https://github.com/tools-mcp/vessel-traffic-mcp
     description: Read-only vessel identity, AIS-style positions/tracks, port calls & schedules (BYOK maritime providers)
     category: tracking
@@ -765,6 +861,7 @@ servers:
     tags: [ais, vessels, maritime]
     added: 2026-08-05
   - name: MarineTraffic MCP Server
+    access: commercial
     url: https://github.com/Cyreslab-AI/marinetraffic-mcp-server
     description: Vessel positions/details, search & vessels-in-area via MarineTraffic
     category: tracking
@@ -772,6 +869,7 @@ servers:
     tags: [marinetraffic, ais, vessels]
     added: 2026-08-05
   - name: SignalK MCP Server
+    access: open
     url: https://signalk.org/2025/introducing-signalk-mcp-server-ai-powered-marine-data-access/
     description: Conversational access to live boat/marine sensor data over Signal K
     category: tracking
@@ -783,6 +881,7 @@ servers:
 
   # ---- Other ----
   - name: Regrid MCP Server
+    access: commercial
     url: https://regrid.com/mcp
     description: 160M+ US/Canada land parcels — query by location, zoning, acreage, ownership & building criteria
     category: other
@@ -793,6 +892,7 @@ servers:
     tags: [regrid, parcels, cadastral, hosted]
     added: 2026-08-05
   - name: LandRecords.us MCP Server
+    access: commercial
     url: https://landrecords.us/documentation/mcp-server
     description: Query 160M+ US land parcels by attribute, address, radius, bbox or GeoJSON polygon — ownership, assessed value, land use, acreage & geometry
     category: other
@@ -802,7 +902,18 @@ servers:
     vendor_domain: landrecords.us
     tags: [parcels, cadastral, property, hosted]
     added: 2026-08-12
+  - name: ATTOM MCP
+    url: https://github.com/pipeworx-io/mcp-attom
+    description: Premium US real-estate & property data from ATTOM Data Solutions — property details, valuations, ownership & sales history
+    category: other
+    author: Pipeworx (uses ATTOM API)
+    language: TypeScript
+    access: paywalled
+    tags: [attom, property, real-estate, parcels]
+    note: requires a paid ATTOM Data Solutions API key
+    added: 2026-09-04
   - name: TimezoneToolkit
+    access: open
     url: https://github.com/Cicatriiz/timezone-toolkit
     description: Timezone conversion plus sunrise/sunset/twilight from lat/long
     category: other
@@ -811,6 +922,7 @@ servers:
     tags: [timezone, sun, coordinates]
     added: 2026-08-05
   - name: GeoLens MCP
+    access: commercial
     url: https://github.com/geolens-io/geolens/tree/main/mcp
     description: "Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL"
     category: data_access
@@ -822,6 +934,7 @@ servers:
     tags: [catalog, postgis, ogc-api, stac]
     added: 2026-08-21
   - name: Scigantic MCP
+    access: free
     url: https://github.com/Scigantic/scigantic-mcp
     description: "Cross-domain scientific dataset catalog and schema cards (genomics, proteomics, imaging, and a large Earth-observation/geospatial footprint), with per-dataset access snippets for agents"
     category: data_access

@@ -49,6 +49,28 @@ def load_health() -> dict:
     return {}
 
 
+ACCESS_LABELS = {
+    "open": "🔓 open",
+    "free": "🆓 free",
+    "commercial": "💲 commercial",
+    "paywalled": "🔒 paywalled",
+}
+
+
+def access_summary(servers: list[dict]) -> str:
+    """One-line tally of access levels, or '' when none are set."""
+    counts: dict[str, int] = {}
+    for s in servers:
+        a = s.get("access")
+        if a:
+            counts[a] = counts.get(a, 0) + 1
+    if not counts:
+        return ""
+    order = ["open", "free", "commercial", "paywalled"]
+    parts = [f"{ACCESS_LABELS.get(k, k)} {counts[k]}" for k in order if counts.get(k)]
+    return f"\n_Access: {' · '.join(parts)}._\n"
+
+
 def esc(text: str) -> str:
     return str(text).replace("|", "\\|").replace("\n", " ").strip()
 
@@ -91,6 +113,7 @@ def build_tables(data: dict, health: dict) -> str:
     total = len(servers)
     lines = [f"**{total} servers tracked** across {sum(1 for v in by_cat.values() if v)} categories."]
     lines.append(health_summary(health, servers))
+    lines.append(access_summary(servers))
 
     # Table of contents
     lines.append("### Categories\n")
@@ -101,8 +124,12 @@ def build_tables(data: dict, health: dict) -> str:
     lines.append("")
 
     show_health = bool(hservers)
+    show_access = any(s.get("access") for s in servers)
     header = "| Server | Description | Lang | By | Type |"
     sep = "| --- | --- | --- | --- | --- |"
+    if show_access:
+        header += " Access |"
+        sep += " --- |"
     if show_health:
         header += " Health |"
         sep += " --- |"
@@ -121,6 +148,8 @@ def build_tables(data: dict, health: dict) -> str:
             author = esc(s.get("author", "")) or "—"
             kind = "official" if s.get("official") else "community"
             row = f"| {name} | {desc} | {lang} | {author} | {kind} |"
+            if show_access:
+                row += f" {ACCESS_LABELS.get(s.get('access'), '—')} |"
             if show_health:
                 status = hservers.get(s.get("url", ""), {}).get("status")
                 row += f" {HEALTH_LABELS.get(status, '—')} |"

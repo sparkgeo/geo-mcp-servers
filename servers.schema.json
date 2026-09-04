@@ -99,6 +99,12 @@
           "description": "Free text for a caveat a reader needs. Do not use it to track work — open an issue instead.",
           "type": "string",
           "maxLength": 300
+        },
+
+        "access": {
+          "description": "How the underlying service/data can be used: 'open' = open-source server on free/open data (self-hostable); 'free' = free to use but not open source; 'commercial' = a commercial product with a usable free tier (freemium); 'paywalled' = commercial with no free tier (payment required to use at all).",
+          "type": "string",
+          "enum": ["open", "free", "commercial", "paywalled"]
         }
       },
 
