@@ -50,10 +50,10 @@ def load_health() -> dict:
 
 
 ACCESS_LABELS = {
-    "open": "🔓 open",
-    "free": "~~💲~~ free",
-    "commercial": "💲 commercial",
-    "paywalled": "🔒 paywalled",
+    "open": "🟩 open",
+    "free": "🟨 free",
+    "commercial": "🟦 commercial",
+    "paywalled": "🟥 paywalled",
 }
 
 
