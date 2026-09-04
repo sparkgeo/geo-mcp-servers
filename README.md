@@ -14,7 +14,7 @@ The tables below are **generated** from [`servers.yaml`](servers.yaml) — the s
   ./.venv/bin/python scripts/generate_readme.py                          # regenerate tables
   ```
 
-> **Legend** — *Type* is `official` (published by the platform/data vendor) or `community` (independent). *Health* comes from [`health.json`](health.json), refreshed by `python scripts/check_health.py`: 🟢 **active** (repo pushed within 12 months) · 🟡 **stale** (real but dormant) · ⚪ **hosted** (a hosted service, no repo activity signal) · 🔴 **archived/dead**. *Access* is how the underlying service can be used: 🔓 **open** (open-source on free/open data) · 🆓 **free** (free, not open source) · 💲 **commercial** (a commercial product with a usable free tier) · 🔒 **paywalled** (no free tier — payment required). A few entries carry a `note:` in `servers.yaml` flagging a URL still to be confirmed.
+> **Legend** — *Type* is `official` (published by the platform/data vendor) or `community` (independent). *Health* comes from [`health.json`](health.json), refreshed by `python scripts/check_health.py`: 🟢 **active** (repo pushed within 12 months) · 🟡 **stale** (real but dormant) · ⚪ **hosted** (a hosted service, no repo activity signal) · 🔴 **archived/dead**. *Access* is how the underlying service can be used: 🔓 **open** (open-source on free/open data) · ~~💲~~ **free** (free, not open source) · 💲 **commercial** (a commercial product with a usable free tier) · 🔒 **paywalled** (no free tier — payment required). A few entries carry a `note:` in `servers.yaml` flagging a URL still to be confirmed.
 
 ## Use it as a Claude skill
 
@@ -34,7 +34,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 _Health checked 2026-09-03 (active = repo pushed within 12 months): 🟢 active 57 · 🟡 stale 15 · ⚪ hosted 15._
 
 
-_Access: 🔓 open 40 · 🆓 free 2 · 💲 commercial 41 · 🔒 paywalled 6._
+_Access: 🔓 open 40 · ~~💲~~ free 2 · 💲 commercial 41 · 🔒 paywalled 6._
 
 ### Categories
 
@@ -129,7 +129,7 @@ _Access: 🔓 open 40 · 🆓 free 2 · 💲 commercial 41 · 🔒 paywalled 6._
 
 | Server | Description | Lang | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
-| [aqicn-mcp](https://github.com/mattmarcin/aqicn-mcp) | Real-time air quality from the World Air Quality Index (AQICN) by city or coordinates | — | mattmarcin | community | 🆓 free | 🟡 stale |
+| [aqicn-mcp](https://github.com/mattmarcin/aqicn-mcp) | Real-time air quality from the World Air Quality Index (AQICN) by city or coordinates | — | mattmarcin | community | ~~💲~~ free | 🟡 stale |
 | [dynamical.org Weather & Climate Catalog](https://github.com/dynamical-org/mcp) | Hosted server over dynamical.org's open STAC catalog of cloud-optimized weather & climate archives and forecasts (GFS, HRRR, ECMWF/AIFS) — dataset search & docs, ready-to-run xarray/Zarr/Icechunk snippets, forecast-run freshness | Python | dynamical.org | official | 🔓 open | 🟢 active |
 | [mcp_weather_server](https://github.com/isdaniel/mcp_weather_server) | Weather info via the Open-Meteo API | Python | isdaniel | community | 🔓 open | 🟢 active |
 | [NOAA Marine MCP Server](https://github.com/cyanheads/noaa-marine-mcp-server) | NOAA CO-OPS tide stations + NDBC buoys — tide predictions, water levels, tidal currents, live buoy conditions | — | cyanheads | community | 🔓 open | 🟢 active |
@@ -170,7 +170,7 @@ _Access: 🔓 open 40 · 🆓 free 2 · 💲 commercial 41 · 🔒 paywalled 6._
 | Server | Description | Lang | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
 | [GeoLens MCP](https://github.com/geolens-io/geolens/tree/main/mcp) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python | GeoLens | official | 💲 commercial | 🟢 active |
-| [Scigantic MCP](https://github.com/Scigantic/scigantic-mcp) | Cross-domain scientific dataset catalog and schema cards (genomics, proteomics, imaging, and a large Earth-observation/geospatial footprint), with per-dataset access snippets for agents | Python | Scigantic | official | 🆓 free | 🟢 active |
+| [Scigantic MCP](https://github.com/Scigantic/scigantic-mcp) | Cross-domain scientific dataset catalog and schema cards (genomics, proteomics, imaging, and a large Earth-observation/geospatial footprint), with per-dataset access snippets for agents | Python | Scigantic | official | ~~💲~~ free | 🟢 active |
 
 ### Aviation & maritime tracking (ADS-B, AIS)
 
