@@ -31,7 +31,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 **93 servers tracked** across 11 categories.
 
-_Health checked 2026-09-11 (active = repo pushed within 12 months): 🟢 active 60 · 🟡 stale 15 · ⚪ hosted 16 · ⏳ pending 1._
+_Health checked 2026-09-22 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 14 · ⚪ hosted 16 · ⏳ pending 1._
 
 
 _Access: 🟩 open 43 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
@@ -173,7 +173,7 @@ _Access: 🟩 open 43 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
 | --- | --- | --- | --- | --- | --- | --- |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | — | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
 | [GeoLens MCP](https://github.com/geolens-io/geolens) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python | GeoLens | official | 🟩 open | 🟢 active |
-| [geonode-mcp](https://github.com/christianbraun/geonode-mcp) | Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2 | Python | Christian Braun | community | 🟩 open | — |
+| [geonode-mcp](https://github.com/christianbraun/geonode-mcp) | Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2 | Python | Christian Braun | community | 🟩 open | 🟢 active |
 | [Scigantic MCP](https://github.com/Scigantic/scigantic-mcp) | Cross-domain scientific dataset catalog and schema cards (genomics, proteomics, imaging, and a large Earth-observation/geospatial footprint), with per-dataset access snippets for agents | Python | Scigantic | official | 🟨 free | 🟢 active |
 
 ### Aviation & maritime tracking (ADS-B, AIS)
@@ -182,7 +182,7 @@ _Access: 🟩 open 43 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
 | --- | --- | --- | --- | --- | --- | --- |
 | [ADS-B MCP Server](https://github.com/dirkhh/adsb-mcp-server) | Exposes a local ADS-B feeder (readsb/tar1090) — aircraft positions, callsigns, altitudes, routes | Python | dirkhh | community | 🟩 open | 🟢 active |
 | [Flightradar24 API MCP](https://github.com/Flightradar24/fr24api-mcp) | Official Flightradar24 flight-tracking API access | — | Flightradar24 | official | 🟦 commercial | 🟢 active |
-| [MarineTraffic MCP Server](https://github.com/Cyreslab-AI/marinetraffic-mcp-server) | Vessel positions/details, search & vessels-in-area via MarineTraffic | — | Cyreslab-AI | community | 🟦 commercial | 🟡 stale |
+| [MarineTraffic MCP Server](https://github.com/Cyreslab-AI/marinetraffic-mcp-server) | Vessel positions/details, search & vessels-in-area via MarineTraffic | — | Cyreslab-AI | community | 🟦 commercial | 🟢 active |
 | [SignalK MCP Server](https://signalk.org/2025/introducing-signalk-mcp-server-ai-powered-marine-data-access/) | Conversational access to live boat/marine sensor data over Signal K | — | Signal K project | community | 🟩 open | ⚪ hosted |
 | [Vessel Traffic MCP](https://github.com/tools-mcp/vessel-traffic-mcp) | Read-only vessel identity, AIS-style positions/tracks, port calls & schedules (BYOK maritime providers) | — | tools-mcp | community | 🟦 commercial | 🟢 active |
 
