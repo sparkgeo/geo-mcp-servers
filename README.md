@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**92 servers tracked** across 11 categories.
+**93 servers tracked** across 11 categories.
 
 _Health checked 2026-09-11 (active = repo pushed within 12 months): 🟢 active 60 · 🟡 stale 15 · ⚪ hosted 16 · ⏳ pending 1._
 
 
-_Access: 🟩 open 42 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
+_Access: 🟩 open 43 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
 
 ### Categories
 
@@ -46,7 +46,7 @@ _Access: 🟩 open 42 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
 - [Weather & climate](#weather--climate) (11)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (6)
-- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (3)
+- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (4)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (5)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (7)
 
@@ -173,6 +173,7 @@ _Access: 🟩 open 42 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
 | --- | --- | --- | --- | --- | --- | --- |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | — | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
 | [GeoLens MCP](https://github.com/geolens-io/geolens) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python | GeoLens | official | 🟩 open | 🟢 active |
+| [geonode-mcp](https://github.com/christianbraun/geonode-mcp) | Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2 | Python | Christian Braun | community | 🟩 open | — |
 | [Scigantic MCP](https://github.com/Scigantic/scigantic-mcp) | Cross-domain scientific dataset catalog and schema cards (genomics, proteomics, imaging, and a large Earth-observation/geospatial footprint), with per-dataset access snippets for agents | Python | Scigantic | official | 🟨 free | 🟢 active |
 
 ### Aviation & maritime tracking (ADS-B, AIS)

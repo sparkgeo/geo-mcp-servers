@@ -961,6 +961,17 @@ servers:
     watch: true
     note: "early access / waitlist — no public MCP endpoint yet; connects your ArcGIS data via OAuth. Also a CLI (@geoai-tools/cli on npm). Re-check for GA."
     added: 2026-09-09
+  - name: geonode-mcp
+    access: open
+    url: https://github.com/christianbraun/geonode-mcp
+    description: "Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2"
+    category: data_access
+    author: Christian Braun
+    language: Python
+    transport: http
+    tags: [geonode, catalog, sdi, permissions, oauth2]
+    note: "verified against GeoNode 4.4.x; 5.0.x expected to work but unverified"
+    added: 2026-09-21
   - name: LGND MCP Server
     access: commercial
     url: https://github.com/EarthLegend/developer_resources/tree/main/mcp
