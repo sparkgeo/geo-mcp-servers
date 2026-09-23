@@ -1014,3 +1014,30 @@ servers:
     official: true
     tags: [spatial-index, geospatial-analytics, big-data]
     added: 2026-09-23
+  - name: EarthDaily EarthOne MCP
+    url: https://github.com/earthdaily/earthone-python
+    description: Access to EarthDaily EarthOne high-frequency satellite analytics and STAC imagery catalogs
+    category: remote-sensing
+    author: EarthDaily Analytics
+    language: Python
+    official: true
+    tags: [earth-observation, satellite, stac, spectral]
+    added: 2026-09-23
+  - name: Canada ECCC Weather MCP
+    url: https://github.com/SeanLF/weather-mcp
+    description: Environment and Climate Change Canada weather forecast and radar data interface
+    category: weather
+    author: SeanLF
+    language: TypeScript
+    official: false
+    tags: [eccc, weather, canada, forecast]
+    added: 2026-09-23
+  - name: Canada Open Data Spatial MCP
+    url: https://github.com/opencanada/spatial-mcp
+    description: Natural Resources Canada and StatCan open geospatial data layers including elevation and census boundaries
+    category: spatial-databases
+    author: Open Canada
+    language: Python
+    official: false
+    tags: [canada, nrcan, dem, boundaries]
+    added: 2026-09-23
