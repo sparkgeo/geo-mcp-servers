@@ -996,3 +996,21 @@ servers:
     tags: [kiro, stac, cog, duckdb, embeddings, geoai]
     note: "bundle — servers install à la carte via uvx; optional credentialed servers cover cloud warehouses (Redshift/Snowflake/BigQuery) & commercial imagery"
     added: 2026-09-07
+  - name: Wyvern MCP Server
+    url: https://github.com/wyvern-geo/wyvern-mcp
+    description: Natural-language spatial analytics and earth observation tool access via Wyvern
+    category: remote-sensing
+    author: Wyvern
+    language: Python
+    official: true
+    tags: [earth-observation, satellite, imagery]
+    added: 2026-09-23
+  - name: BigGeo MCP Server
+    url: https://github.com/biggeo/biggeo-mcp
+    description: Geospatial indexing and spatial intelligence engine for big data and LLMs
+    category: spatial-databases
+    author: BigGeo
+    language: Python
+    official: true
+    tags: [spatial-index, geospatial-analytics, big-data]
+    added: 2026-09-23
