@@ -613,6 +613,15 @@ servers:
     language: TypeScript
     tags: [nws]
     added: 2026-08-02
+  - name: Government of Canada Weather MCP
+    access: open
+    url: https://github.com/SeanLF/weather-mcp
+    description: 5-day weather forecasts for any location in Canada (by latitude/longitude) via the Government of Canada Weather API
+    category: weather
+    author: SeanLF
+    language: Python
+    tags: [canada, eccc, forecast]
+    added: 2026-09-24
   - name: dynamical.org Weather & Climate Catalog
     access: open
     url: https://github.com/dynamical-org/mcp

@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**93 servers tracked** across 11 categories.
+**94 servers tracked** across 11 categories.
 
-_Health checked 2026-09-22 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 14 · ⚪ hosted 16 · ⏳ pending 1._
+_Health checked 2026-09-24 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 15 · ⚪ hosted 16 · ⏳ pending 1._
 
 
-_Access: 🟩 open 43 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
+_Access: 🟩 open 44 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
 
 ### Categories
 
@@ -43,7 +43,7 @@ _Access: 🟩 open 43 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
 - [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (17)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (15)
-- [Weather & climate](#weather--climate) (11)
+- [Weather & climate](#weather--climate) (12)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (6)
 - [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (4)
@@ -132,6 +132,7 @@ _Access: 🟩 open 43 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
 | --- | --- | --- | --- | --- | --- | --- |
 | [aqicn-mcp](https://github.com/mattmarcin/aqicn-mcp) | Real-time air quality from the World Air Quality Index (AQICN) by city or coordinates | — | mattmarcin | community | 🟨 free | 🟡 stale |
 | [dynamical.org Weather & Climate Catalog](https://github.com/dynamical-org/mcp) | Hosted server over dynamical.org's open STAC catalog of cloud-optimized weather & climate archives and forecasts (GFS, HRRR, ECMWF/AIFS) — dataset search & docs, ready-to-run xarray/Zarr/Icechunk snippets, forecast-run freshness | Python | dynamical.org | official | 🟩 open | 🟢 active |
+| [Government of Canada Weather MCP](https://github.com/SeanLF/weather-mcp) | 5-day weather forecasts for any location in Canada (by latitude/longitude) via the Government of Canada Weather API | Python | SeanLF | community | 🟩 open | 🟡 stale |
 | [mcp_weather_server](https://github.com/isdaniel/mcp_weather_server) | Weather info via the Open-Meteo API | Python | isdaniel | community | 🟩 open | 🟢 active |
 | [NOAA Marine MCP Server](https://github.com/cyanheads/noaa-marine-mcp-server) | NOAA CO-OPS tide stations + NDBC buoys — tide predictions, water levels, tidal currents, live buoy conditions | — | cyanheads | community | 🟩 open | 🟢 active |
 | [NOAA-TidesAndCurrents-MCP](https://github.com/RyanCardin15/NOAA-TidesAndCurrents-MCP) | NOAA Data/Metadata/Derived-Products APIs for tides and currents | TypeScript | RyanCardin15 | community | 🟩 open | 🟢 active |
