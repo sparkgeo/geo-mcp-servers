@@ -1,6 +1,6 @@
 {
   "active_months": 12,
-  "checked": "2026-09-24",
+  "checked": "2026-10-01",
   "servers": {
     "https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403": {
       "status": "hosted"
@@ -24,7 +24,7 @@
       "status": "pending"
     },
     "https://github.com/BnJam/stac-mcp": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/CesiumGS/cesium-ai-integrations": {
@@ -76,11 +76,11 @@
       "status": "stale"
     },
     "https://github.com/ProgramComputer/NASA-MCP-server": {
-      "pushed": "2026-07",
+      "pushed": "2026-09",
       "status": "active"
     },
     "https://github.com/RyanCardin15/NOAA-TidesAndCurrents-MCP": {
-      "pushed": "2026-07",
+      "pushed": "2026-09",
       "status": "active"
     },
     "https://github.com/Scigantic/scigantic-mcp": {
@@ -132,7 +132,7 @@
       "status": "active"
     },
     "https://github.com/chuofringer/placeroot": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/cmer81/open-meteo-mcp": {
@@ -168,12 +168,12 @@
       "status": "active"
     },
     "https://github.com/dynamical-org/mcp": {
-      "pushed": "2026-08",
+      "pushed": "2026-09",
       "status": "active"
     },
     "https://github.com/eKerney/esri-mcp": {
       "pushed": "2025-09",
-      "status": "active"
+      "status": "stale"
     },
     "https://github.com/foursquare/foursquare-places-mcp": {
       "pushed": "2025-04",
@@ -184,11 +184,11 @@
       "status": "active"
     },
     "https://github.com/geobeyond/fastgeoapi": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/geolens-io/geolens": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/ipgeolocation/ipgeolocation-io-mcp": {
@@ -232,7 +232,7 @@
       "status": "active"
     },
     "https://github.com/mapbox/mcp-server": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/mapsmith-ai/MapSmith": {
@@ -244,11 +244,11 @@
       "status": "stale"
     },
     "https://github.com/modelcontextprotocol/servers": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/nasa/earthdata-mcp": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/nic01asFr/QgisStreamMCP": {
@@ -260,7 +260,7 @@
       "status": "active"
     },
     "https://github.com/nitvob/nws-mcp-server": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/nkarasiak/qgis-mcp": {
@@ -304,7 +304,7 @@
       "status": "stale"
     },
     "https://github.com/tomtom-international/tomtom-maps-mcp": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/tomtom-international/tomtom-traffic-analytics-mcp": {
@@ -324,7 +324,7 @@
       "status": "active"
     },
     "https://github.com/weather-mcp/weather-mcp": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/webcoderz/MCP-Geo": {
@@ -332,6 +332,9 @@
       "status": "stale"
     },
     "https://landrecords.us/documentation/mcp-server": {
+      "status": "hosted"
+    },
+    "https://lgnd.ai/resources/lgnd-geo": {
       "status": "hosted"
     },
     "https://manual.giscloud.com/knowledge-base/gis-cloud-ai-mcp/": {

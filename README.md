@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**94 servers tracked** across 11 categories.
+**95 servers tracked** across 11 categories.
 
-_Health checked 2026-09-24 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 15 · ⚪ hosted 16 · ⏳ pending 1._
+_Health checked 2026-10-01 (active = repo pushed within 12 months): 🟢 active 61 · 🟡 stale 16 · ⚪ hosted 17 · ⏳ pending 1._
 
 
-_Access: 🟩 open 44 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
+_Access: 🟩 open 44 · 🟨 free 3 · 🟦 commercial 42 · 🟥 paywalled 6._
 
 ### Categories
 
@@ -42,7 +42,7 @@ _Access: 🟩 open 44 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (2)
 - [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (17)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
-- [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (15)
+- [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (16)
 - [Weather & climate](#weather--climate) (12)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (6)
@@ -115,7 +115,8 @@ _Access: 🟩 open 44 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
 | [copernicus-mcp](https://github.com/wb1016/copernicus-mcp) | Access ESA Copernicus OData API — search/download Sentinel-1/2/3/5P/6 imagery | Python | wb1016 | community | 🟩 open | 🟢 active |
 | [earthdata-mcp](https://github.com/nasa/earthdata-mcp) | LLM access to NASA Common Metadata Repository — discover/verify/access Earth science datasets | Python | NASA | official | 🟩 open | 🟢 active |
 | [google-earth-engine-mcp](https://github.com/cameronking4/google-earth-engine-mcp) | Query Google Earth Engine with natural language — fetch datasets, run tasks, visualize in chat | TypeScript | cameronking4 | community | 🟦 commercial | 🟡 stale |
-| [LGND MCP Server](https://github.com/EarthLegend/developer_resources/tree/main/mcp) | Search Earth-embedding collections by text, image chip or coordinates, run inference to create new collections, and inspect chip/cell metadata | — | LGND AI | official | 🟦 commercial | 🟢 active |
+| [LGND Developer MCP](https://github.com/EarthLegend/developer_resources/tree/main/mcp) | Search Earth-embedding collections by text, image chip or coordinates, run inference to create new collections, and inspect chip/cell metadata | — | LGND AI | official | 🟦 commercial | 🟢 active |
+| [LGND Geo](https://lgnd.ai/resources/lgnd-geo) | Hosted MCP for Earth questions over satellite/aerial imagery — find similar locations, analyze change over time, build land-cover classifiers & verify imagery claims (Sentinel-2 + US NAIP) | — | LGND AI | official | 🟨 free | ⚪ hosted |
 | [Microsoft Planetary Computer Pro MCP Tools](https://techcommunity.microsoft.com/blog/microsoft-planetary-computer-blog/introducing-microsoft-planetary-computer-pro-model-context-protocol-tools-on-vs-/4522346) | 35+ tools connecting Planetary Computer + Planetary Computer Pro, shipped for VS Code / Copilot | — | Microsoft | official | 🟥 paywalled | ⚪ hosted |
 | [NASA-MCP-server](https://github.com/ProgramComputer/NASA-MCP-server) | Standardized interface to many NASA APIs incl. Earth observations & imagery | TypeScript | ProgramComputer | community | 🟩 open | 🟢 active |
 | [Planet MCP Server (beta)](https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403) | Natural-language search/preview/order over the Planet Insights Platform Data API using existing Planet SDK creds | — | Planet Labs | official | 🟥 paywalled | ⚪ hosted |
@@ -148,7 +149,7 @@ _Access: 🟩 open 44 · 🟨 free 2 · 🟦 commercial 42 · 🟥 paywalled 6._
 | Server | Description | Lang | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
 | [ArcGISMCP](https://github.com/GarrickGarcia/ArcGISMCP) | Integrates ArcGIS Online — search/query geospatial feature layers | Python | GarrickGarcia | community | 🟦 commercial | 🟡 stale |
-| [esri-mcp](https://github.com/eKerney/esri-mcp) | Query & map Esri Living Atlas data, focus on water resources | Python | eKerney | community | 🟦 commercial | 🟢 active |
+| [esri-mcp](https://github.com/eKerney/esri-mcp) | Query & map Esri Living Atlas data, focus on water resources | Python | eKerney | community | 🟦 commercial | 🟡 stale |
 | [MCP-ArcGISPro](https://github.com/geo2004/MCP-ArcGISPro) | Control and automate ArcGIS Pro from Claude Desktop | Python | geo2004 | community | 🟥 paywalled | 🟢 active |
 | [MCP-Server-ArcGIS-Pro-AddIn](https://github.com/nicogis/MCP-Server-ArcGIS-Pro-AddIn) | MCP server delivered as an ArcGIS Pro add-in | C#/.NET | nicogis | community | 🟥 paywalled | 🟢 active |
 | [qgis-mcp (nkarasiak)](https://github.com/nkarasiak/qgis-mcp) | 117 QGIS tools — layer mgmt, feature editing, processing, styling, layout/atlas, cross-layer SQL | Python | nkarasiak | community | 🟩 open | 🟢 active |

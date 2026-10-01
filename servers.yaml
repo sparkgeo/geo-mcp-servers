@@ -981,7 +981,7 @@ servers:
     tags: [geonode, catalog, sdi, permissions, oauth2]
     note: "verified against GeoNode 4.4.x; 5.0.x expected to work but unverified"
     added: 2026-09-21
-  - name: LGND MCP Server
+  - name: LGND Developer MCP
     access: commercial
     url: https://github.com/EarthLegend/developer_resources/tree/main/mcp
     description: "Search Earth-embedding collections by text, image chip or coordinates, run inference to create new collections, and inspect chip/cell metadata"
@@ -992,6 +992,18 @@ servers:
     tags: [embeddings, satellite-imagery, geoai, similarity-search]
     note: "beta; MCP access is gated to paid Developer/Pro/Enterprise plans — the underlying API has a free tier"
     added: 2026-09-07
+  - name: LGND Geo
+    access: free
+    url: https://lgnd.ai/resources/lgnd-geo
+    description: "Hosted MCP for Earth questions over satellite/aerial imagery — find similar locations, analyze change over time, build land-cover classifiers & verify imagery claims (Sentinel-2 + US NAIP)"
+    category: remote_sensing
+    author: LGND AI
+    official: true
+    transport: hosted
+    vendor_domain: lgnd.ai
+    tags: [lgnd, satellite-imagery, naip, sentinel-2, geoai]
+    note: "GA 2026-10-01; endpoint https://geo.lgnd.ai/mcp (HTTP); free for everyone during initial release (one-click account); distinct from the LGND Developer MCP"
+    added: 2026-10-01
   - name: Geospatial Power Pack (Kiro)
     access: open
     url: https://github.com/aws-samples/sample-geospatial-kiro-power-pack
