@@ -344,6 +344,7 @@ servers:
     tags: [places, place-details, navigation, positioning, hosted]
     added: 2026-08-12
   - name: Wheremind
+    access: commercial
     url: https://wheremind.ai
     description: Hosted remote MCP for live place search, place details, nearby search, geocoding & turn-by-turn directions for Claude, ChatGPT, Cursor and Claude Code — no Maps API key to manage
     category: geocoding

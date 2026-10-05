@@ -31,10 +31,10 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 **96 servers tracked** across 11 categories.
 
-_Health checked 2026-10-01 (active = repo pushed within 12 months): 🟢 active 61 · 🟡 stale 16 · ⚪ hosted 17 · ⏳ pending 1._
+_Health checked 2026-10-05 (active = repo pushed within 12 months): 🟢 active 60 · 🟡 stale 17 · ⚪ hosted 17 · ⏳ pending 2._
 
 
-_Access: 🟩 open 44 · 🟨 free 3 · 🟦 commercial 42 · 🟥 paywalled 6._
+_Access: 🟩 open 44 · 🟨 free 3 · 🟦 commercial 43 · 🟥 paywalled 6._
 
 ### Categories
 
@@ -67,7 +67,7 @@ _Access: 🟩 open 44 · 🟨 free 3 · 🟦 commercial 42 · 🟥 paywalled 6._
 | [PlaceRoot](https://github.com/chuofringer/placeroot) | Overture Maps places, geocoding, admin boundaries, buildings & isochrones via DuckDB (no ETL, no API key); token-budgeted responses with GERS ids | Python | chuofringer | community | 🟩 open | 🟢 active |
 | [Smarty MCP Server](https://www.smarty.com/docs/mcp) | 20 tools for US/international address verification, ZIP lookup, reverse geocoding & property/census enrichment | — | Smarty | official | 🟦 commercial | ⚪ hosted |
 | [what3words MCP](https://github.com/pipeworx-io/mcp-what3words) | Convert 3-word addresses to lat/long + bounding box | — | Pipeworx (uses what3words API) | community | 🟦 commercial | 🟢 active |
-| [Wheremind](https://wheremind.ai) | Hosted remote MCP for live place search, place details, nearby search, geocoding & turn-by-turn directions for Claude, ChatGPT, Cursor and Claude Code — no Maps API key to manage | — | Wheremind | community | — | — |
+| [Wheremind](https://wheremind.ai) | Hosted remote MCP for live place search, place details, nearby search, geocoding & turn-by-turn directions for Claude, ChatGPT, Cursor and Claude Code — no Maps API key to manage | — | Wheremind | community | 🟦 commercial | ⏳ pending |
 | [Zephr Places Grounding MCP](https://zephr.xyz/places-grounding) | Places grounding for local AI — nearest-place search, rich place details & walking navigation (find_nearest_to_me, get_place_details, navigate_to_place) | — | Zephr | official | 🟦 commercial | ⚪ hosted |
 
 ### Routing, isochrones & navigation
@@ -156,7 +156,7 @@ _Access: 🟩 open 44 · 🟨 free 3 · 🟦 commercial 42 · 🟥 paywalled 6._
 | [qgis-mcp (nkarasiak)](https://github.com/nkarasiak/qgis-mcp) | 117 QGIS tools — layer mgmt, feature editing, processing, styling, layout/atlas, cross-layer SQL | Python | nkarasiak | community | 🟩 open | 🟢 active |
 | [qgis-mcp-1](https://github.com/Sir-Adrien-Claudington/qgis-mcp-1) | Fork connecting QGIS to Claude via MCP | Python | Sir-Adrien-Claudington | community | 🟩 open | 🟢 active |
 | [QGIS2OllamaMCP](https://github.com/anitagraser/qgis_mcp) | Lets LLMs (via Ollama) drive QGIS Desktop | Python | Anita Graser | community | 🟩 open | 🟢 active |
-| [qgis_mcp](https://github.com/jjsantos01/qgis_mcp) | Links QGIS Desktop to Claude — project setup, layer management, spatial ops via PyQGIS | Python | jjsantos01 | community | 🟩 open | 🟢 active |
+| [qgis_mcp](https://github.com/jjsantos01/qgis_mcp) | Links QGIS Desktop to Claude — project setup, layer management, spatial ops via PyQGIS | Python | jjsantos01 | community | 🟩 open | 🟡 stale |
 | [QgisStreamMCP](https://github.com/nic01asFr/QgisStreamMCP) | Full QGIS Desktop in Docker via noVNC — 1000+ Processing algorithms (Native/GDAL/GRASS/SAGA) | Python | nic01asFr | community | 🟩 open | 🟢 active |
 
 ### General GIS / geoprocessing toolkits
