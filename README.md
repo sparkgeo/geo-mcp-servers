@@ -29,7 +29,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**95 servers tracked** across 11 categories.
+**96 servers tracked** across 11 categories.
 
 _Health checked 2026-10-01 (active = repo pushed within 12 months): 🟢 active 61 · 🟡 stale 16 · ⚪ hosted 17 · ⏳ pending 1._
 
@@ -38,7 +38,7 @@ _Access: 🟩 open 44 · 🟨 free 3 · 🟦 commercial 42 · 🟥 paywalled 6._
 
 ### Categories
 
-- [Geocoding & place search](#geocoding--place-search) (14)
+- [Geocoding & place search](#geocoding--place-search) (15)
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (2)
 - [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (17)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
@@ -67,6 +67,7 @@ _Access: 🟩 open 44 · 🟨 free 3 · 🟦 commercial 42 · 🟥 paywalled 6._
 | [PlaceRoot](https://github.com/chuofringer/placeroot) | Overture Maps places, geocoding, admin boundaries, buildings & isochrones via DuckDB (no ETL, no API key); token-budgeted responses with GERS ids | Python | chuofringer | community | 🟩 open | 🟢 active |
 | [Smarty MCP Server](https://www.smarty.com/docs/mcp) | 20 tools for US/international address verification, ZIP lookup, reverse geocoding & property/census enrichment | — | Smarty | official | 🟦 commercial | ⚪ hosted |
 | [what3words MCP](https://github.com/pipeworx-io/mcp-what3words) | Convert 3-word addresses to lat/long + bounding box | — | Pipeworx (uses what3words API) | community | 🟦 commercial | 🟢 active |
+| [Wheremind](https://wheremind.ai) | Hosted remote MCP for live place search, place details, nearby search, geocoding & turn-by-turn directions for Claude, ChatGPT, Cursor and Claude Code — no Maps API key to manage | — | Wheremind | community | — | — |
 | [Zephr Places Grounding MCP](https://zephr.xyz/places-grounding) | Places grounding for local AI — nearest-place search, rich place details & walking navigation (find_nearest_to_me, get_place_details, navigate_to_place) | — | Zephr | official | 🟦 commercial | ⚪ hosted |
 
 ### Routing, isochrones & navigation
