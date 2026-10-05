@@ -343,6 +343,17 @@ servers:
     vendor_domain: zephr.xyz
     tags: [places, place-details, navigation, positioning, hosted]
     added: 2026-08-12
+  - name: Wheremind
+    url: https://wheremind.ai
+    description: Hosted remote MCP for live place search, place details, nearby search, geocoding & turn-by-turn directions for Claude, ChatGPT, Cursor and Claude Code — no Maps API key to manage
+    category: geocoding
+    author: Wheremind
+    transport: hosted
+    vendor_domain: wheremind.ai
+    tags: [places, geocoding, reverse-geocoding, routing, directions, hosted]
+    note: private beta (request an invite at wheremind.ai); endpoint https://wheremind.ai/mcp (streamable HTTP, OAuth with email-code sign-in or stored Bearer); agent docs at https://wheremind.ai/llms.txt
+    watch: true
+    added: 2026-10-05
   - name: PlaceRoot
     access: open
     url: https://github.com/chuofringer/placeroot
