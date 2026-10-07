@@ -29,18 +29,18 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**96 servers tracked** across 11 categories.
+**97 servers tracked** across 11 categories.
 
 _Health checked 2026-10-05 (active = repo pushed within 12 months): 🟢 active 60 · 🟡 stale 17 · ⚪ hosted 17 · ⏳ pending 2._
 
 
-_Access: 🟩 open 44 · 🟨 free 3 · 🟦 commercial 43 · 🟥 paywalled 6._
+_Access: 🟩 open 44 · 🟨 free 3 · 🟦 commercial 44 · 🟥 paywalled 6._
 
 ### Categories
 
 - [Geocoding & place search](#geocoding--place-search) (15)
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (2)
-- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (17)
+- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (18)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (16)
 - [Weather & climate](#weather--climate) (12)
@@ -93,6 +93,7 @@ _Access: 🟩 open 44 · 🟨 free 3 · 🟦 commercial 43 · 🟥 paywalled 6._
 | [google-maps-mcp-server](https://github.com/david-pivonka/google-maps-mcp-server) | STDIO server on the new Google Places (New) + Routes APIs | TypeScript | david-pivonka | community | 🟦 commercial | 🟢 active |
 | [google-maps-places-mcp](https://github.com/domdomegg/google-maps-places-mcp) | Google Places search + photos | TypeScript | domdomegg | community | 🟦 commercial | 🟢 active |
 | [Mapbox MCP Server](https://github.com/mapbox/mcp-server) | Official Mapbox web services — geocoding, POI search, multimodal routing, matrix, isochrones, static maps | TypeScript | Mapbox | official | 🟦 commercial | 🟢 active |
+| [MapQuest MCP](https://developer.mapquest.com/documentation/mcp/) | Official MapQuest Location Intelligence Suite — geocoding, routing, place search, traffic & truck-safe routing profiles | — | MapQuest | official | 🟦 commercial | — |
 | [MapTiler MCP](https://github.com/pipeworx-io/mcp-maptiler) | MapTiler geocoding, elevation and mapping APIs as MCP tools | — | Pipeworx (uses MapTiler API) | community | 🟦 commercial | 🟢 active |
 | [mcp-google-map](https://github.com/cablate/mcp-google-map) | Google Places (New), Routes, geocoding, distance matrix | TypeScript | cablate | community | 🟦 commercial | 🟢 active |
 | [Stadia Maps MCP Server](https://github.com/stadiamaps/stadiamaps-mcp-server-ts) | Official Stadia Maps APIs - geocoding, search, routing, isochrones, map tiles, time zone lookup | TypeScript | Stadia Maps | official | 🟦 commercial | 🟡 stale |
