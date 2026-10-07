@@ -218,6 +218,18 @@ servers:
     vendor_orgs: [mapbox]
     tags: [mapbox, geocoding, routing, tiles]
     added: 2026-08-02
+  - name: MapQuest MCP
+    access: commercial
+    url: https://developer.mapquest.com/documentation/mcp/
+    description: Official MapQuest Location Intelligence Suite — geocoding, routing, place search, traffic & truck-safe routing profiles
+    category: mapping
+    author: MapQuest
+    official: true
+    transport: hosted
+    vendor_domain: mapquest.com
+    tags: [mapquest, geocoding, routing, search, traffic, truck-routing, hosted]
+    note: endpoint https://www.mapquestapi.com/mcp (streamable HTTP, OAuth); every tool needs an active MapQuest API key, free monthly transactions included
+    added: 2026-10-06
   - name: Google Maps MCP (reference)
     access: commercial
     url: https://github.com/modelcontextprotocol/servers
