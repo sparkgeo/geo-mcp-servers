@@ -1051,3 +1051,14 @@ servers:
     tags: [earthscope, fdsn, seismology, earthquakes, stations]
     note: community Pipeworx-gateway wrapper — no official EarthScope-published server found; no GNSS coverage
     added: 2026-10-08
+  - name: God's Eye View
+    access: open
+    url: https://github.com/bilawalsidhu/gods-eye-view
+    description: "Live open-source spatial intelligence on a photorealistic 3D globe — show a place with live flights (incl. military ADS-B), vessels, satellites, earthquakes, traffic & public CCTV, rendered in-conversation"
+    category: tracking
+    author: Bilawal Sidhu
+    language: JavaScript
+    transport: stdio
+    tags: [3d-globe, cesium, adsb, ais, satellites, earthquakes, cctv, osint]
+    note: MCP server ships inside the app — run the local web app (npm run dev) and point server/mcp/stdio.js at it; most layers keyless, some (vessels, Google 3D, TomTom) need a provider key
+    added: 2026-10-09
