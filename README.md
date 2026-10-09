@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**98 servers tracked** across 11 categories.
+**99 servers tracked** across 11 categories.
 
 _Health checked 2026-10-07 (active = repo pushed within 12 months): 🟢 active 60 · 🟡 stale 17 · ⚪ hosted 18 · ⏳ pending 2._
 
 
-_Access: 🟩 open 45 · 🟨 free 3 · 🟦 commercial 44 · 🟥 paywalled 6._
+_Access: 🟩 open 46 · 🟨 free 3 · 🟦 commercial 44 · 🟥 paywalled 6._
 
 ### Categories
 
@@ -47,7 +47,7 @@ _Access: 🟩 open 45 · 🟨 free 3 · 🟦 commercial 44 · 🟥 paywalled 6._
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (6)
 - [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (5)
-- [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (5)
+- [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (6)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (7)
 
 ### Geocoding & place search
@@ -187,6 +187,7 @@ _Access: 🟩 open 45 · 🟨 free 3 · 🟦 commercial 44 · 🟥 paywalled 6._
 | --- | --- | --- | --- | --- | --- | --- |
 | [ADS-B MCP Server](https://github.com/dirkhh/adsb-mcp-server) | Exposes a local ADS-B feeder (readsb/tar1090) — aircraft positions, callsigns, altitudes, routes | Python | dirkhh | community | 🟩 open | 🟢 active |
 | [Flightradar24 API MCP](https://github.com/Flightradar24/fr24api-mcp) | Official Flightradar24 flight-tracking API access | — | Flightradar24 | official | 🟦 commercial | 🟢 active |
+| [God's Eye View](https://github.com/bilawalsidhu/gods-eye-view) | Live open-source spatial intelligence on a photorealistic 3D globe — show a place with live flights (incl. military ADS-B), vessels, satellites, earthquakes, traffic & public CCTV, rendered in-conversation | JavaScript | Bilawal Sidhu | community | 🟩 open | — |
 | [MarineTraffic MCP Server](https://github.com/Cyreslab-AI/marinetraffic-mcp-server) | Vessel positions/details, search & vessels-in-area via MarineTraffic | — | Cyreslab-AI | community | 🟦 commercial | 🟢 active |
 | [SignalK MCP Server](https://signalk.org/2025/introducing-signalk-mcp-server-ai-powered-marine-data-access/) | Conversational access to live boat/marine sensor data over Signal K | — | Signal K project | community | 🟩 open | ⚪ hosted |
 | [Vessel Traffic MCP](https://github.com/tools-mcp/vessel-traffic-mcp) | Read-only vessel identity, AIS-style positions/tracks, port calls & schedules (BYOK maritime providers) | — | tools-mcp | community | 🟦 commercial | 🟢 active |
