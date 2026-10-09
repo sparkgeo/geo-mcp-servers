@@ -1041,3 +1041,13 @@ servers:
     tags: [kiro, stac, cog, duckdb, embeddings, geoai]
     note: "bundle — servers install à la carte via uvx; optional credentialed servers cover cloud warehouses (Redshift/Snowflake/BigQuery) & commercial imagery"
     added: 2026-09-07
+  - name: mcp-earthscope-fdsn
+    access: open
+    url: https://github.com/pipeworx-io/mcp-earthscope-fdsn
+    description: "FDSN seismic web services (EarthScope endpoints) — seismometer station metadata, waveform data availability & regional earthquake catalogues"
+    category: data_access
+    author: Pipeworx (uses EarthScope FDSN services)
+    language: TypeScript
+    tags: [earthscope, fdsn, seismology, earthquakes, stations]
+    note: community Pipeworx-gateway wrapper — no official EarthScope-published server found; no GNSS coverage
+    added: 2026-10-08
