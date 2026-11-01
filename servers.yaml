@@ -1266,8 +1266,7 @@ servers:
     deployment: hosted
     vendor_domain: geodb.io
     tags: [mining, mineral-exploration, drillhole, assay, qaqc, geoparquet, stac, hosted]
-    note: private beta (request access at https://geodb.io/contact-us/); 30-day free trial per project, then a paid plan; endpoint https://api.geodb.io/mcp (streamable HTTP, OAuth sign-in from inside the assistant); agent docs at https://geodb.io/llms.txt
-    watch: true
+    note: a company's first 30 days are free, then a paid plan per project; endpoint https://api.geodb.io/mcp (streamable HTTP, OAuth sign-in from inside the assistant); agent docs at https://geodb.io/llms.txt
     added: 2026-10-20
   - name: Zip-Codes.com ZIP & Postal Code MCP
     access: commercial
