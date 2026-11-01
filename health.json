@@ -1,6 +1,6 @@
 {
   "active_months": 12,
-  "checked": "2026-10-29",
+  "checked": "2026-11-01",
   "servers": {
     "https://api.geobble.com/mcp": {
       "status": "hosted"
@@ -39,7 +39,7 @@
       "status": "pending"
     },
     "https://geodb.io/connect-ai/": {
-      "status": "pending"
+      "status": "hosted"
     },
     "https://github.com/BnJam/stac-mcp": {
       "pushed": "2026-10",
@@ -86,7 +86,7 @@
       "status": "active"
     },
     "https://github.com/OpenCageData/opencage-geocoding-mcp": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/OriShmila/geoapify-mcp-server": {
@@ -118,7 +118,7 @@
       "status": "stale"
     },
     "https://github.com/YUYU20061107/gis-agent-bridges": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/aatakansalar/valhalla-mcp": {
@@ -138,7 +138,7 @@
       "status": "active"
     },
     "https://github.com/azmartone67/dchub-mcp-server": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/baidu-maps/mcp": {
@@ -146,7 +146,7 @@
       "status": "stale"
     },
     "https://github.com/bilawalsidhu/gods-eye-view": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/briandconnelly/mcp-server-ipinfo": {
@@ -166,7 +166,7 @@
       "status": "active"
     },
     "https://github.com/chuofringer/placeroot": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/cmer81/open-meteo-mcp": {
@@ -218,11 +218,11 @@
       "status": "active"
     },
     "https://github.com/geobeyond/fastgeoapi": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/geolens-io/geolens": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/gridpin/gridpin/tree/main/mcp": {
@@ -230,7 +230,7 @@
       "status": "active"
     },
     "https://github.com/ipgeolocation/ipgeolocation-io-mcp": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/isaaccorley/planetary-computer-mcp": {
@@ -274,7 +274,7 @@
       "status": "active"
     },
     "https://github.com/mapsmith-ai/MapSmith": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/mattmarcin/aqicn-mcp": {
@@ -298,7 +298,7 @@
       "status": "active"
     },
     "https://github.com/nitvob/nws-mcp-server": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/nkarasiak/qgis-mcp": {
@@ -310,7 +310,7 @@
       "status": "active"
     },
     "https://github.com/pipeworx-io/mcp-earthscope-fdsn": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/pipeworx-io/mcp-maptiler": {
@@ -346,11 +346,11 @@
       "status": "stale"
     },
     "https://github.com/tomtom-international/tomtom-maps-mcp": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/tomtom-international/tomtom-traffic-analytics-mcp": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/tools-mcp/vessel-traffic-mcp": {

@@ -31,7 +31,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 **113 servers tracked** across 12 categories.
 
-_Health checked 2026-10-29 (active = repo pushed within 12 months): 🟢 active 64 · 🟡 stale 18 · ⚪ hosted 27 · ⏳ pending 3 · 🔴 archived 1._
+_Health checked 2026-11-01 (active = repo pushed within 12 months): 🟢 active 64 · 🟡 stale 18 · ⚪ hosted 28 · ⏳ pending 2 · 🔴 archived 1._
 
 
 _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 53 · 🟥 paywalled 8._
@@ -187,7 +187,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 53 · 🟥 paywalled 8._
 | [Factori MCP](https://factori.ai/mcp/) | Location intelligence from mobility data — POI visits and trends, visitor profiles, market saturation and demographics, for site selection, audience building and out-of-home (OOH) planning | hosted | Factori | official | 🟥 paywalled | ⚪ hosted |
 | [Fotoshi MCP](https://fotoshi.com/developer/mcp) | Search public geotagged Fotoshi photos within a bounded area, resolve place names, and get each photo's licence and attribution; signed-in users can also retrieve their own public photos | hosted | Fotoshi | official | 🟨 free | ⚪ hosted |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | hosted | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
-| [geoDB (mineral exploration)](https://geodb.io/connect-ai/) | Hosted remote MCP over a mineral-exploration system of record, reading and writing drill holes, assays, QA/QC, geophysics and claims through a scoped, revocable, logged grant, with dry run, confirm and undo on every write | hosted | geoDB | official | 🟥 paywalled | ⏳ pending |
+| [geoDB (mineral exploration)](https://geodb.io/connect-ai/) | Hosted remote MCP over a mineral-exploration system of record, reading and writing drill holes, assays, QA/QC, geophysics and claims through a scoped, revocable, logged grant, with dry run, confirm and undo on every write | hosted | geoDB | official | 🟥 paywalled | ⚪ hosted |
 | [GeoLens MCP](https://github.com/geolens-io/geolens) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python<br>local | GeoLens | official | 🟩 open | 🟢 active |
 | [geonode-mcp](https://github.com/christianbraun/geonode-mcp) | Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2 | Python<br>self-hosted | Christian Braun | community | 🟩 open | 🟢 active |
 | [mcp-earthscope-fdsn](https://github.com/pipeworx-io/mcp-earthscope-fdsn) | FDSN seismic web services (EarthScope endpoints) — seismometer station metadata, waveform data availability & regional earthquake catalogues | TypeScript<br>local+hosted | Pipeworx (uses EarthScope FDSN services) | community | 🟩 open | 🟢 active |
