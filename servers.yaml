@@ -115,13 +115,13 @@ servers:
   - name: TerraLab MCP
     access: commercial
     url: https://terra-lab.ai/mcp
-    description: "Geodata for any place, inside your agent: map data extracts, terrain and contours, routes and travel-time areas, satellite images, population, natural risks, GIS file conversion and French cadastral parcels, each result naming its sources & licences"
+    description: "Geodata for any place, inside your agent: map data extracts, a catalogue of hosted open datasets, terrain, routes, isochrones and distance matrices, satellite images and NDVI, population, natural risks and French parcels, each result naming its sources & licences"
     category: toolkit
     author: TerraLab
     official: true
     deployment: hosted
     vendor_domain: terra-lab.ai
-    tags: [geocoding, elevation, routing, satellite, file-conversion, french-parcels, open-data]
+    tags: [geocoding, elevation, routing, isochrones, satellite, catalog, overture, osm, file-conversion, french-parcels, open-data]
     note: "Streamable HTTP endpoint https://mcp.terra-lab.ai/mcp, TerraLab account by OAuth or API key (2026-10-26); client config and skills at github.com/TerraLabAI/mcp (MIT)"
     added: 2026-10-11
 

@@ -177,7 +177,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 53 · 🟥 paywalled 8._
 | [Geospatial Power Pack (Kiro)](https://github.com/aws-samples/sample-geospatial-kiro-power-pack) | 19 modular MCP servers with a Kiro hub power — STAC/vector/geocoding connectors, CRS/geometry/raster/point-cloud/3D processing, H3/S2 indexing, and GeoAI embeddings & similarity search over open data on AWS | Python<br>local | AWS | official | 🟩 open | 🟢 active |
 | [gis-mcp](https://github.com/mahdin75/gis-mcp) | Connects LLMs to core GIS libraries (Shapely, PyProj, GeoPandas, Rasterio, PySAL) for geometry, projections, raster & spatial stats | Python<br>local | mahdin75 | community | 🟩 open | 🟢 active |
 | [MapSmith](https://github.com/mapsmith-ai/MapSmith) | Deterministic GIS geoprocessing for AI agents — buffers, overlays, reprojection, zonal stats, terrain & hydrology (GeoPandas/DuckDB/Whitebox), with a verifiable provenance manifest on every output | Python<br>local | mapsmith-ai | community | 🟩 open | 🟢 active |
-| [TerraLab MCP](https://terra-lab.ai/mcp) | Geodata for any place, inside your agent: map data extracts, terrain and contours, routes and travel-time areas, satellite images, population, natural risks, GIS file conversion and French cadastral parcels, each result naming its sources & licences | hosted | TerraLab | official | 🟦 commercial | ⚪ hosted |
+| [TerraLab MCP](https://terra-lab.ai/mcp) | Geodata for any place, inside your agent: map data extracts, a catalogue of hosted open datasets, terrain, routes, isochrones and distance matrices, satellite images and NDVI, population, natural risks and French parcels, each result naming its sources & licences | hosted | TerraLab | official | 🟦 commercial | ⚪ hosted |
 
 ### Geospatial data access & catalogs
 
