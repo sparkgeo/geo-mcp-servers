@@ -1233,7 +1233,7 @@ servers:
   - name: GridPin MCP
     access: open
     url: https://github.com/gridpin/gridpin/tree/main/mcp
-    description: "Offline forward and reverse geocoding from one local file per country (US, CA, BR, DE, ES, FR, IT, NL, RS); no API key, queries stay on the machine"
+    description: "Offline forward and reverse geocoding from one local file per country (US, CA, MX, BR, DE, ES, FR, IT, NL, RS); no API key, queries stay on the machine"
     category: geocoding
     author: GridPin
     language: Python / Rust
@@ -1241,7 +1241,7 @@ servers:
     vendor_orgs: [gridpin]
     deployment: local
     tags: [geocoding, reverse-geocoding, offline, overture, duckdb, privacy]
-    note: "uvx gridpin-mcp; current coverage: https://gridpin.dev/#countries; country files built from Overture, BAN, CNEFE, US Census TIGER, Canada's National Address Register and other open sources, data licences vary by source; paid tiers planned, nothing on sale yet"
+    note: "uvx gridpin-mcp; current coverage: https://gridpin.dev/#countries; country files built from Overture, BAN, CNEFE, US Census TIGER, Canada's National Address Register, Mexico's INEGI and other open sources, data licences vary by source; paid tiers planned, nothing on sale yet"
     added: 2026-10-15
   - name: Geobble
     access: commercial
