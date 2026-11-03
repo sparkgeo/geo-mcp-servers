@@ -1,6 +1,6 @@
 {
   "active_months": 12,
-  "checked": "2026-11-01",
+  "checked": "2026-11-03",
   "servers": {
     "https://api.geobble.com/mcp": {
       "status": "hosted"
@@ -77,6 +77,10 @@
       "pushed": "2025-08",
       "status": "stale"
     },
+    "https://github.com/Hydrata/hydrata-mcp-server": {
+      "pushed": "2026-11",
+      "status": "active"
+    },
     "https://github.com/JordanGunn/gdal-mcp": {
       "pushed": "2026-05",
       "status": "active"
@@ -134,7 +138,7 @@
       "status": "active"
     },
     "https://github.com/awslabs/mcp/tree/main/src/roda-mcp-server": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/azmartone67/dchub-mcp-server": {
@@ -226,7 +230,7 @@
       "status": "active"
     },
     "https://github.com/gridpin/gridpin/tree/main/mcp": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/ipgeolocation/ipgeolocation-io-mcp": {
@@ -270,7 +274,7 @@
       "status": "active"
     },
     "https://github.com/mapbox/mcp-server": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/mapsmith-ai/MapSmith": {
@@ -286,7 +290,7 @@
       "status": "archived"
     },
     "https://github.com/nasa/earthdata-mcp": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/nic01asFr/QgisStreamMCP": {
@@ -314,7 +318,7 @@
       "status": "active"
     },
     "https://github.com/pipeworx-io/mcp-maptiler": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/pipeworx-io/mcp-nominatim": {
@@ -354,7 +358,7 @@
       "status": "active"
     },
     "https://github.com/tools-mcp/vessel-traffic-mcp": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/tryolabs/unicef-gee-mcp": {
@@ -366,7 +370,7 @@
       "status": "active"
     },
     "https://github.com/weather-mcp/weather-mcp": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/webcoderz/MCP-Geo": {

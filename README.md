@@ -31,7 +31,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 **114 servers tracked** across 12 categories.
 
-_Health checked 2026-11-01 (active = repo pushed within 12 months): 🟢 active 64 · 🟡 stale 18 · ⚪ hosted 28 · ⏳ pending 2 · 🔴 archived 1._
+_Health checked 2026-11-03 (active = repo pushed within 12 months): 🟢 active 65 · 🟡 stale 18 · ⚪ hosted 28 · ⏳ pending 2 · 🔴 archived 1._
 
 
 _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 54 · 🟥 paywalled 8._
@@ -176,7 +176,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 54 · 🟥 paywalled 8._
 | [geoserver-mcp](https://github.com/mahdin75/geoserver-mcp) | Drives the GeoServer REST API — manage workspaces/layers/styles, CQL spatial queries, WMS/WFS access | Python<br>local | mahdin75 | community | 🟩 open | 🟢 active |
 | [Geospatial Power Pack (Kiro)](https://github.com/aws-samples/sample-geospatial-kiro-power-pack) | 19 modular MCP servers with a Kiro hub power — STAC/vector/geocoding connectors, CRS/geometry/raster/point-cloud/3D processing, H3/S2 indexing, and GeoAI embeddings & similarity search over open data on AWS | Python<br>local | AWS | official | 🟩 open | 🟢 active |
 | [gis-mcp](https://github.com/mahdin75/gis-mcp) | Connects LLMs to core GIS libraries (Shapely, PyProj, GeoPandas, Rasterio, PySAL) for geometry, projections, raster & spatial stats | Python<br>local | mahdin75 | community | 🟩 open | 🟢 active |
-| [Hydrata MCP Server](https://github.com/Hydrata/hydrata-mcp-server) | Build and run ANUGA 2D flood simulations on Hydrata Cloud: terrain, input layers, rainfall and inflow time series, scenarios, runs, results and comparison with observed flood levels | Python<br>local+hosted | Hydrata | official | 🟦 commercial | — |
+| [Hydrata MCP Server](https://github.com/Hydrata/hydrata-mcp-server) | Build and run ANUGA 2D flood simulations on Hydrata Cloud: terrain, input layers, rainfall and inflow time series, scenarios, runs, results and comparison with observed flood levels | Python<br>local+hosted | Hydrata | official | 🟦 commercial | 🟢 active |
 | [MapSmith](https://github.com/mapsmith-ai/MapSmith) | Deterministic GIS geoprocessing for AI agents — buffers, overlays, reprojection, zonal stats, terrain & hydrology (GeoPandas/DuckDB/Whitebox), with a verifiable provenance manifest on every output | Python<br>local | mapsmith-ai | community | 🟩 open | 🟢 active |
 | [TerraLab MCP](https://terra-lab.ai/mcp) | Geodata for any place, inside your agent: map data extracts, a hosted open-data catalogue, terrain, routes, isochrones and travel-time matrices, satellite images and NDVI, population, natural risks and French parcels, with sources & licences | hosted | TerraLab | official | 🟦 commercial | ⚪ hosted |
 
