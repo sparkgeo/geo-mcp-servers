@@ -1316,3 +1316,18 @@ servers:
     tags: [france, zoning, plu, urban-planning, cadastral-parcel, hosted]
     note: "endpoint https://pluia.fr/mcp (Streamable HTTP, OAuth 2.1 or API key with a Pluia account); free plan with quotas; docs and client config at github.com/AZERIA-IT/pluia (MIT), service not open source; MCP Registry: io.github.AZERIA-IT/pluia"
     added: 2026-10-29
+  - name: Hydrata MCP Server
+    access: commercial
+    url: https://github.com/Hydrata/hydrata-mcp-server
+    description: "Build and run ANUGA 2D flood simulations on Hydrata Cloud: terrain, input layers, rainfall and inflow time series, scenarios, runs, results and comparison with observed flood levels"
+    category: toolkit
+    author: Hydrata
+    language: Python
+    official: true
+    deployment: local+hosted
+    vendor_orgs: [Hydrata]
+    vendor_domain: hydrata.com
+    tags: [flood, hydrology, hydraulics, anuga, simulation, hosted]
+    note: "endpoint https://hydrata.com/mcp/ (Streamable HTTP; OAuth one-click connect or an hk_ agent key with a hydrata.com account); server MIT, Hydrata Cloud is a paid service and runs need the account holder's consent; MCP Registry: com.hydrata/hydrata-mcp-server"
+    added: 2026-11-03
+    
