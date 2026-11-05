@@ -3,6 +3,28 @@
 This list is generated. **Do not edit the tables in `README.md` directly** —
 they are overwritten by the generator.
 
+## What we list
+
+The catalog lists MCP servers whose main purpose is geospatial work:
+
+- geospatial data and catalogs, including location-intelligence data products
+- location services such as geocoding, place search and routing
+- GIS processing, spatial databases and desktop GIS integration
+- mapping, earth observation, weather and tracking
+
+We do not list:
+
+- **Directories for one activity or business type** that happen to search by
+  location, such as a finder for gyms, restaurants or venues. Location is a
+  filter there, not the purpose of the server.
+- **Servers whose data use breaks the provider's terms**, such as scrapers of
+  commercial map services.
+- **Servers we cannot verify.** The source repo, or for a hosted server a page on
+  the vendor's own domain, must exist and describe the server.
+
+If you are not sure whether a server fits, open a
+[New server issue](../../issues/new?template=new-server.yml) and ask.
+
 ## Add a server
 
 1. Open [`servers.yaml`](servers.yaml).
