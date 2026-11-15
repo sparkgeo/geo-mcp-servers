@@ -1330,3 +1330,15 @@ servers:
     tags: [flood, hydrology, hydraulics, anuga, simulation, hosted]
     note: "endpoint https://hydrata.com/mcp/ (Streamable HTTP; OAuth one-click connect or an hk_ agent key with a hydrata.com account); server MIT, Hydrata Cloud is a paid service and runs need the account holder's consent; MCP Registry: com.hydrata/hydrata-mcp-server"
     added: 2026-11-03
+  - name: No Stairs Please MCP Server
+    access: free
+    url: https://nostairsplease.com/mcp
+    description: US and BC independent live-music venue discovery, booking contacts, capacity filtering, and drive-time tour routing
+    category: geocoding
+    author: No Stairs Please
+    official: true
+    deployment: hosted
+    vendor_domain: nostairsplease.com
+    tags: [music-venues, tour-routing, geocoding, hosted]
+    note: "endpoint https://nostairsplease.com/mcp (Streamable HTTP, OAuth 2.1 + DCR); directory at https://nostairsplease.com/venues"
+    added: 2026-11-15
