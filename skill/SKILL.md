@@ -33,7 +33,8 @@ resolved `$REPO` in every command below.
 2. Match the need to a `category` and to entry `tags`/`description`. Categories:
    `geocoding`, `routing`, `mapping`, `database` (PostGIS/DuckDB), `remote_sensing`
    (STAC/EO), `weather`, `desktop_gis` (QGIS/ArcGIS), `toolkit`, `data_access`,
-   `property` (parcels, ownership, real estate), `tracking` (aviation/maritime — ADS-B/AIS), `other`.
+   `property` (parcels, ownership, real estate), `tracking` (aviation/maritime — ADS-B/AIS),
+   `directory` (specialist location directories, e.g. music venues or gyms), `other`.
 3. Each entry also carries **`access`** (🟩 open / 🟨 free / 🟦 commercial /
    🟥 paywalled) and a generated **health** status (🟢 active / 🟡 stale /
    ⚪ hosted / ⏳ pending / 🔴 archived|dead) — use these when recommending

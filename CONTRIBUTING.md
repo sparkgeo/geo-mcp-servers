@@ -12,11 +12,17 @@ The catalog lists MCP servers whose main purpose is geospatial work:
 - GIS processing, spatial databases and desktop GIS integration
 - mapping, earth observation, weather and tracking
 
+Directories for one activity or business type, such as a finder for music
+venues or gyms, go in their own category, **Specialist location directories**
+(`directory`), so they do not crowd the core geospatial categories. To be
+listed there, a directory must:
+
+- be published by whoever runs the data (`official: true`, verifiable through
+  the vendor's GitHub org or domain), and
+- have searching places by location as its main function.
+
 We do not list:
 
-- **Directories for one activity or business type** that happen to search by
-  location, such as a finder for gyms, restaurants or venues. Location is a
-  filter there, not the purpose of the server.
 - **Servers whose data use breaks the provider's terms**, such as scrapers of
   commercial map services.
 - **Servers we cannot verify.** The source repo, or for a hosted server a page on

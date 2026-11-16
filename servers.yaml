@@ -58,6 +58,7 @@ categories:
   data_access:      "Geospatial data access & catalogs"
   property:         "Parcels & property"
   tracking:         "Aviation & maritime tracking (ADS-B, AIS)"
+  directory:        "Specialist location directories"
   other:            "Other (IP geolocation, misc)"
 
 servers:
@@ -1330,3 +1331,15 @@ servers:
     tags: [flood, hydrology, hydraulics, anuga, simulation, hosted]
     note: "endpoint https://hydrata.com/mcp/ (Streamable HTTP; OAuth one-click connect or an hk_ agent key with a hydrata.com account); server MIT, Hydrata Cloud is a paid service and runs need the account holder's consent; MCP Registry: com.hydrata/hydrata-mcp-server"
     added: 2026-11-03
+  - name: OpenMapp MCP
+    access: free
+    url: https://www.openmapp.com
+    description: "Find Brazilian Jiu-Jitsu gyms in the contiguous US near a city, neighbourhood or ZIP, with open mats, drop-in policies, visitor fees when known and weekly schedules"
+    category: directory
+    author: OpenMapp
+    official: true
+    deployment: hosted
+    vendor_domain: openmapp.com
+    tags: [bjj, martial-arts, gyms, places, hosted]
+    note: "endpoint https://www.openmapp.com/mcp (Streamable HTTP, no auth); listing manifest at github.com/burmanharry/openmapp; MCP Registry: com.openmapp/openmapp"
+    added: 2026-11-16
