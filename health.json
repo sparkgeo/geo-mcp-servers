@@ -1,6 +1,6 @@
 {
   "active_months": 12,
-  "checked": "2026-11-03",
+  "checked": "2026-11-15",
   "servers": {
     "https://api.geobble.com/mcp": {
       "status": "hosted"
@@ -42,7 +42,7 @@
       "status": "hosted"
     },
     "https://github.com/BnJam/stac-mcp": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/CesiumGS/cesium-ai-integrations": {
@@ -59,7 +59,7 @@
     },
     "https://github.com/Dhenenjay/Axion-MCP": {
       "pushed": "2025-11",
-      "status": "active"
+      "status": "stale"
     },
     "https://github.com/EarthLegend/developer_resources/tree/main/mcp": {
       "pushed": "2026-10",
@@ -106,7 +106,7 @@
       "status": "active"
     },
     "https://github.com/Scigantic/scigantic-mcp": {
-      "pushed": "2026-09",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/SeanLF/weather-mcp": {
@@ -154,8 +154,8 @@
       "status": "active"
     },
     "https://github.com/briandconnelly/mcp-server-ipinfo": {
-      "pushed": "2026-09",
-      "status": "active"
+      "pushed": "2026-11",
+      "status": "archived"
     },
     "https://github.com/cablate/mcp-google-map": {
       "pushed": "2026-10",
@@ -174,15 +174,15 @@
       "status": "active"
     },
     "https://github.com/cmer81/open-meteo-mcp": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/cyanheads/noaa-marine-mcp-server": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/cyanheads/open-meteo-mcp-server": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/cyanheads/openaq-mcp-server": {
@@ -190,7 +190,7 @@
       "status": "active"
     },
     "https://github.com/cyanheads/openstreetmap-mcp-server": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/david-pivonka/google-maps-mcp-server": {
@@ -202,7 +202,7 @@
       "status": "active"
     },
     "https://github.com/domdomegg/google-maps-places-mcp": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/dynamical-org/mcp": {
@@ -306,11 +306,11 @@
       "status": "active"
     },
     "https://github.com/nkarasiak/qgis-mcp": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/pipeworx-io/mcp-attom": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/pipeworx-io/mcp-earthscope-fdsn": {
@@ -322,15 +322,15 @@
       "status": "active"
     },
     "https://github.com/pipeworx-io/mcp-nominatim": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/pipeworx-io/mcp-osrm": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/pipeworx-io/mcp-what3words": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/receptopalak/postgis-mcp": {
@@ -363,7 +363,7 @@
     },
     "https://github.com/tryolabs/unicef-gee-mcp": {
       "pushed": "2025-11",
-      "status": "active"
+      "status": "stale"
     },
     "https://github.com/wb1016/copernicus-mcp": {
       "pushed": "2026-10",
@@ -392,6 +392,9 @@
     "https://mcp.ipinfo.io/": {
       "status": "hosted"
     },
+    "https://nostairsplease.com/mcp": {
+      "status": "hosted"
+    },
     "https://pluia.fr/ia": {
       "status": "hosted"
     },
@@ -417,6 +420,9 @@
       "status": "pending"
     },
     "https://wherobots.com": {
+      "status": "hosted"
+    },
+    "https://www.openmapp.com": {
       "status": "hosted"
     },
     "https://www.smarty.com/docs/mcp": {

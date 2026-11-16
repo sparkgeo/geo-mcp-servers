@@ -31,7 +31,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 **116 servers tracked** across 13 categories.
 
-_Health checked 2026-11-03 (active = repo pushed within 12 months): 🟢 active 65 · 🟡 stale 18 · ⚪ hosted 28 · ⏳ pending 2 · 🔴 archived 1._
+_Health checked 2026-11-15 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 20 · ⚪ hosted 30 · ⏳ pending 2 · 🔴 archived 2._
 
 
 _Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 54 · 🟥 paywalled 8._
@@ -119,7 +119,7 @@ _Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 54 · 🟥 paywalled 8._
 | Server | Description | Lang / Deployment | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
 | [Arraylake MCP Server](https://docs.earthmover.io/mcp/) | Browse Arraylake repos, inspect schemas, run OGC EDR queries & render maps over Zarr/Icechunk scientific arrays | hosted | Earthmover | official | 🟦 commercial | ⚪ hosted |
-| [Axion-MCP](https://github.com/Dhenenjay/Axion-MCP) | Earth Engine analysis platform for Claude Desktop — NDVI/NDWI, classification, maps | TypeScript<br>local | Dhenenjay | community | 🟦 commercial | 🟢 active |
+| [Axion-MCP](https://github.com/Dhenenjay/Axion-MCP) | Earth Engine analysis platform for Claude Desktop — NDVI/NDWI, classification, maps | TypeScript<br>local | Dhenenjay | community | 🟦 commercial | 🟡 stale |
 | [copernicus-mcp](https://github.com/wb1016/copernicus-mcp) | Access ESA Copernicus OData API — search/download Sentinel-1/2/3/5P/6 imagery | Python<br>local | wb1016 | community | 🟩 open | 🟢 active |
 | [earthdata-mcp](https://github.com/nasa/earthdata-mcp) | LLM access to NASA Common Metadata Repository — discover/verify/access Earth science datasets | Python<br>local | NASA | official | 🟩 open | 🟢 active |
 | [google-earth-engine-mcp](https://github.com/cameronking4/google-earth-engine-mcp) | Query Google Earth Engine with natural language — fetch datasets, run tasks, visualize in chat | TypeScript<br>self-hosted | cameronking4 | community | 🟦 commercial | 🟡 stale |
@@ -133,7 +133,7 @@ _Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 54 · 🟥 paywalled 8._
 | [SkyWatch MCP](https://docs.skywatch.com/docs/mcp/mcp-server/) | Search SkyWatch's commercial satellite imagery archive (700+ sensors from 25+ providers) in natural language, with provider and pricing reference; results link to SkyWatch Explore for viewing and ordering | hosted | SkyWatch | official | 🟦 commercial | ⚪ hosted |
 | [stac-mcp](https://github.com/BnJam/stac-mcp) | Natural-language search of any STAC-compliant catalog (defaults to Planetary Computer) | Python<br>local | BnJam | community | 🟩 open | 🟢 active |
 | [Tilebox MCP Server](https://tilebox.com/docs/ai/onboard-your-agent) | Create and manage geospatial datasets and distributed workflows, with docs search + CLI and Skills for coding agents | Python / Go<br>hosted | Tilebox | official | 🟦 commercial | ⚪ hosted |
-| [unicef-gee-mcp](https://github.com/tryolabs/unicef-gee-mcp) | Google Earth Engine access/analysis for UNICEF workflows | Python<br>self-hosted | Tryolabs (for UNICEF) | community | 🟦 commercial | 🟢 active |
+| [unicef-gee-mcp](https://github.com/tryolabs/unicef-gee-mcp) | Google Earth Engine access/analysis for UNICEF workflows | Python<br>self-hosted | Tryolabs (for UNICEF) | community | 🟦 commercial | 🟡 stale |
 | [Vexcel MCP](https://vexceldata.com/platform/vexcel-mcp/) | Official Vexcel aerial & oblique imagery, DSM/DTM elevation, roof/solar/pool property metadata & post-disaster damage assessments for AI agents | hosted | Vexcel | official | 🟥 paywalled | ⚪ hosted |
 
 ### Weather & climate
@@ -221,8 +221,8 @@ _Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 54 · 🟥 paywalled 8._
 
 | Server | Description | Lang / Deployment | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
-| [No Stairs Please MCP Server](https://nostairsplease.com/mcp) | US and BC independent live-music venue discovery, booking contacts, capacity filtering, and drive-time tour routing | hosted | No Stairs Please | official | 🟨 free | — |
-| [OpenMapp MCP](https://www.openmapp.com) | Find Brazilian Jiu-Jitsu gyms in the contiguous US near a city, neighbourhood or ZIP, with open mats, drop-in policies, visitor fees when known and weekly schedules | hosted | OpenMapp | official | 🟨 free | — |
+| [No Stairs Please MCP Server](https://nostairsplease.com/mcp) | US and BC independent live-music venue discovery, booking contacts, capacity filtering, and drive-time tour routing | hosted | No Stairs Please | official | 🟨 free | ⚪ hosted |
+| [OpenMapp MCP](https://www.openmapp.com) | Find Brazilian Jiu-Jitsu gyms in the contiguous US near a city, neighbourhood or ZIP, with open mats, drop-in policies, visitor fees when known and weekly schedules | hosted | OpenMapp | official | 🟨 free | ⚪ hosted |
 
 ### Other (IP geolocation, misc)
 
@@ -230,7 +230,7 @@ _Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 54 · 🟥 paywalled 8._
 | --- | --- | --- | --- | --- | --- | --- |
 | [ipgeolocation-io-mcp](https://github.com/ipgeolocation/ipgeolocation-io-mcp) | Official ipgeolocation.io — IP geolocation, VPN/proxy detection, timezone, astronomy, ASN | local | IPGeolocation.io | official | 🟦 commercial | 🟢 active |
 | [IPinfo MCP Server](https://mcp.ipinfo.io/) | Hosted IPinfo MCP — country/continent (free), city/coords/timezone/postal (detailed) | hosted | IPinfo | official | 🟦 commercial | ⚪ hosted |
-| [mcp-server-ipinfo](https://github.com/briandconnelly/mcp-server-ipinfo) | IP geolocation via the IPInfo API (location + network details) | Python<br>local | briandconnelly | community | 🟦 commercial | 🟢 active |
+| [mcp-server-ipinfo](https://github.com/briandconnelly/mcp-server-ipinfo) | IP geolocation via the IPInfo API (location + network details) | Python<br>local | briandconnelly | community | 🟦 commercial | 🔴 archived |
 | [TimezoneToolkit](https://github.com/Cicatriiz/timezone-toolkit) | Timezone conversion plus sunrise/sunset/twilight from lat/long | TypeScript<br>local | Cicatriiz | community | 🟩 open | 🟡 stale |
 
 <!-- AUTOGEN:END -->
