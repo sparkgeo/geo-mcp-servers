@@ -1,6 +1,6 @@
 # Geospatial MCP landscape: strategic overview
 
-Snapshot of the catalog on 2026-11-16: 116 servers, health last checked 2026-11-03 (the two newest entries are not yet checked).
+Snapshot of the catalog on 2026-11-16: 116 servers, health checked 2026-11-15.
 The tables in `README.md` are generated and stay current. This file is a hand-written analysis and does not update itself, so re-run the numbers before relying on them later.
 
 ## Summary
@@ -12,7 +12,7 @@ The catalog shows a market that is broad but uneven. Everyday location tasks (ge
 | Servers | 116 across 13 categories |
 | Access | 48 open · 6 free · 54 commercial · 8 paywalled |
 | Published by the vendor (`official`) | 50 (43%) |
-| Health | 65 active · 28 hosted · 18 stale · 2 pending · 1 archived · 2 not yet checked |
+| Health | 62 active · 30 hosted · 20 stale · 2 pending · 2 archived |
 | Deployment | 54 local · 32 hosted · 16 local+hosted · 5 self-hosted · 1 add-in · 8 unknown |
 | Usable from web clients (hosted or local+hosted) | 48 (41%) |
 | Implementation language, where known | Python 40 · TypeScript 25 · JavaScript/Node 4 · other 5 |
@@ -23,14 +23,14 @@ The catalog shows a market that is broad but uneven. Everyday location tasks (ge
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Maps, tiles & commercial platforms | 19 | 0 | 19 | 13 | 6 |
 | Geocoding & place search | 18 | 9 | 9 | 6 | 5 |
-| Remote sensing (STAC / EO) | 17 | 6 | 11 | 9 | 1 |
+| Remote sensing (STAC / EO) | 17 | 6 | 11 | 9 | 3 |
 | Weather & climate | 12 | 12 | 0 | 1 | 2 |
 | Desktop & enterprise GIS | 10 | 5 | 5 | 0 | 3 |
 | Geospatial data access & catalogs | 10 | 6 | 4 | 8 | 0 |
 | GIS / geoprocessing toolkits | 8 | 6 | 2 | 3 | 0 |
 | Aviation & maritime tracking | 6 | 3 | 3 | 1 | 0 |
 | Parcels & property | 5 | 0 | 5 | 4 | 0 |
-| Other (IP geolocation, misc) | 4 | 1 | 3 | 2 | 1 |
+| Other (IP geolocation, misc) | 4 | 1 | 3 | 2 | 2 |
 | Specialist location directories | 2 | 2 | 0 | 2 | 0 |
 | Spatial databases | 3 | 2 | 1 | 1 | 0 |
 | Routing, isochrones & navigation | 2 | 2 | 0 | 0 | 1 |
@@ -52,7 +52,7 @@ Geocoding, reverse geocoding, place search and routing appear in more servers th
 
 Being official does not guarantee upkeep. The Baidu, Foursquare and Stadia Maps servers are official but stale.
 
-Vendors are also starting to replace community wrappers of their own APIs. Geoapify now publishes an official hosted server, which sits beside the older community server for the same API. That community server is stale.
+Vendors are also starting to replace community wrappers of their own APIs. Geoapify now publishes an official hosted server, which sits beside the older community server for the same API. That community server is stale. In November 2026 the community IPinfo server was archived, leaving IPinfo's own hosted server in its place.
 
 ### Data vendors prefer hosted servers
 
@@ -75,13 +75,13 @@ Vendors host and the community ships local servers. Six in ten official servers 
 
 The public endpoints in the local + hosted group mostly come from two community operators, not from the data vendors. Pipeworx runs gateway endpoints for six servers (MapTiler, Nominatim, what3words, OSRM, ATTOM and EarthScope), and cyanheads runs public instances of four (OpenStreetMap, Open-Meteo, OpenAQ and NOAA Marine). These are convenient, but a user's queries then go to a third party that is neither the user nor the data provider.
 
-Maintenance follows the same split. 13 of the 18 stale servers are local, and all 16 local + hosted servers are active, because someone has to keep a public endpoint running.
+Maintenance follows the same split. 14 of the 20 stale servers are local, and all 16 local + hosted servers are active, because someone has to keep a public endpoint running.
 
 By category, the pattern follows the work. Desktop GIS and geoprocessing toolkits are almost entirely local, because they drive software or data on the user's machine. Parcels and property data is entirely remote, because the value is the vendor's dataset.
 
 ### Earth observation is the most commercially varied area
 
-Remote sensing has the widest spread of access models in the catalog: open STAC and NASA/ESA access, Earth Engine wrappers, imagery marketplaces (SkyFi, SkyWatch), and paid-only vendor platforms. Three of the catalog's eight paywalled servers are here. Newer entries go beyond search and download to embeddings and similarity search (LGND) and array-data queries over Zarr (Arraylake), which suggests the area is moving from data access towards analysis. Discovery is improving too: AWS now publishes an official server for its Registry of Open Data, which finds datasets with STAC endpoints and previews public S3 buckets.
+Remote sensing has the widest spread of access models in the catalog: open STAC and NASA/ESA access, Earth Engine wrappers, imagery marketplaces (SkyFi, SkyWatch), and paid-only vendor platforms. Three of the catalog's eight paywalled servers are here. Newer entries go beyond search and download to embeddings and similarity search (LGND) and array-data queries over Zarr (Arraylake), which suggests the area is moving from data access towards analysis. Google Earth Engine is the weak spot: all three Earth Engine servers in the catalog are community projects, and all three are now stale, two of them since November 2026. Discovery is improving too: AWS now publishes an official server for its Registry of Open Data, which finds datasets with STAC endpoints and previews public S3 buckets.
 
 ### Weather is open and US-heavy
 
