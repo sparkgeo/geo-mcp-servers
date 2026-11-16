@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**115 servers tracked** across 13 categories.
+**116 servers tracked** across 13 categories.
 
 _Health checked 2026-11-03 (active = repo pushed within 12 months): 🟢 active 65 · 🟡 stale 18 · ⚪ hosted 28 · ⏳ pending 2 · 🔴 archived 1._
 
 
-_Access: 🟩 open 48 · 🟨 free 5 · 🟦 commercial 54 · 🟥 paywalled 8._
+_Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 54 · 🟥 paywalled 8._
 
 ### Categories
 
@@ -49,7 +49,7 @@ _Access: 🟩 open 48 · 🟨 free 5 · 🟦 commercial 54 · 🟥 paywalled 8._
 - [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (10)
 - [Parcels & property](#parcels--property) (5)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (6)
-- [Specialist location directories](#specialist-location-directories) (1)
+- [Specialist location directories](#specialist-location-directories) (2)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (4)
 
 ### Geocoding & place search
@@ -221,6 +221,7 @@ _Access: 🟩 open 48 · 🟨 free 5 · 🟦 commercial 54 · 🟥 paywalled 8._
 
 | Server | Description | Lang / Deployment | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
+| [No Stairs Please MCP Server](https://nostairsplease.com/mcp) | US and BC independent live-music venue discovery, booking contacts, capacity filtering, and drive-time tour routing | hosted | No Stairs Please | official | 🟨 free | — |
 | [OpenMapp MCP](https://www.openmapp.com) | Find Brazilian Jiu-Jitsu gyms in the contiguous US near a city, neighbourhood or ZIP, with open mats, drop-in policies, visitor fees when known and weekly schedules | hosted | OpenMapp | official | 🟨 free | — |
 
 ### Other (IP geolocation, misc)
