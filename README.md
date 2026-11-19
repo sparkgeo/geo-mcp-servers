@@ -229,7 +229,7 @@ _Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 55 · 🟥 paywalled 8._
 
 | Server | Description | Lang / Deployment | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
-| [ipgeolocation-io-mcp](https://github.com/ipgeolocation/ipgeolocation-io-mcp) | Official ipgeolocation.io — IP geolocation, VPN/proxy detection, timezone, astronomy, ASN | local | IPGeolocation.io | official | 🟦 commercial | 🟢 active |
+| [ipgeolocation-io-mcp](https://github.com/ipgeolocation/ipgeolocation-io-mcp) | Look up IP geolocation, company information, ASN and network data, time zones, astronomy and currency. Check IPs for VPN, proxy, Tor, bot, hosting and spam activity, find abuse contacts and parse user agents | local | IPGeolocation.io | official | 🟦 commercial | 🟢 active |
 | [IPinfo MCP Server](https://mcp.ipinfo.io/) | Hosted IPinfo MCP — country/continent (free), city/coords/timezone/postal (detailed) | hosted | IPinfo | official | 🟦 commercial | ⚪ hosted |
 | [mcp-server-ipinfo](https://github.com/briandconnelly/mcp-server-ipinfo) | IP geolocation via the IPInfo API (location + network details) | Python<br>local | briandconnelly | community | 🟦 commercial | 🔴 archived |
 | [TimezoneToolkit](https://github.com/Cicatriiz/timezone-toolkit) | Timezone conversion plus sunrise/sunset/twilight from lat/long | TypeScript<br>local | Cicatriiz | community | 🟩 open | 🟡 stale |

@@ -781,7 +781,7 @@ servers:
   - name: ipgeolocation-io-mcp
     access: commercial
     url: https://github.com/ipgeolocation/ipgeolocation-io-mcp
-    description: Official ipgeolocation.io — IP geolocation, VPN/proxy detection, timezone, astronomy, ASN
+    description: Look up IP geolocation, company information, ASN and network data, time zones, astronomy and currency. Check IPs for VPN, proxy, Tor, bot, hosting and spam activity, find abuse contacts and parse user agents
     category: other
     author: IPGeolocation.io
     deployment: local
