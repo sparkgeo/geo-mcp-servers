@@ -1355,3 +1355,15 @@ servers:
     tags: [bjj, martial-arts, gyms, places, hosted]
     note: "endpoint https://www.openmapp.com/mcp (Streamable HTTP, no auth); listing manifest at github.com/burmanharry/openmapp; MCP Registry: com.openmapp/openmapp"
     added: 2026-11-16
+  - name: Geobox MCP
+    access: commercial
+    url: https://geobox.cloud/help#ai
+    description: "Cloud storage for your geodata, open to your assistant: list and query a workspace's GeoParquet with DuckDB, search open reference catalogs, make new datasets, zonal statistics on rasters, Sentinel-2 images"
+    category: data_access
+    author: Geomermaids
+    official: true
+    deployment: hosted
+    vendor_domain: geobox.cloud
+    tags: [geoparquet, duckdb, cloud-storage, catalog, zonal-statistics, sentinel-2, hosted]
+    note: "endpoint https://geobox.cloud/mcp (Streamable HTTP, workspace API key made on the AI page, read-only or read and act); free plan with quotas"
+    added: 2026-11-19
