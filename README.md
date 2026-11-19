@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**116 servers tracked** across 13 categories.
+**117 servers tracked** across 13 categories.
 
 _Health checked 2026-11-15 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 20 · ⚪ hosted 30 · ⏳ pending 2 · 🔴 archived 2._
 
 
-_Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 54 · 🟥 paywalled 8._
+_Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 55 · 🟥 paywalled 8._
 
 ### Categories
 
@@ -46,7 +46,7 @@ _Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 54 · 🟥 paywalled 8._
 - [Weather & climate](#weather--climate) (12)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (10)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (8)
-- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (10)
+- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (11)
 - [Parcels & property](#parcels--property) (5)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (6)
 - [Specialist location directories](#specialist-location-directories) (2)
@@ -189,6 +189,7 @@ _Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 54 · 🟥 paywalled 8._
 | [Factori MCP](https://factori.ai/mcp/) | Location intelligence from mobility data — POI visits and trends, visitor profiles, market saturation and demographics, for site selection, audience building and out-of-home (OOH) planning | hosted | Factori | official | 🟥 paywalled | ⚪ hosted |
 | [Fotoshi MCP](https://fotoshi.com/developer/mcp) | Search public geotagged Fotoshi photos within a bounded area, resolve place names, and get each photo's licence and attribution; signed-in users can also retrieve their own public photos | hosted | Fotoshi | official | 🟨 free | ⚪ hosted |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | hosted | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
+| [Geobox MCP](https://geobox.cloud/help#ai) | Cloud storage for your geodata, open to your assistant: list and query a workspace's GeoParquet with DuckDB, search open reference catalogs, make new datasets, zonal statistics on rasters, Sentinel-2 images | hosted | Geomermaids | official | 🟦 commercial | — |
 | [geoDB (mineral exploration)](https://geodb.io/connect-ai/) | Hosted remote MCP over a mineral-exploration system of record, reading and writing drill holes, assays, QA/QC, geophysics and claims through a scoped, revocable, logged grant, with dry run, confirm and undo on every write | hosted | geoDB | official | 🟥 paywalled | ⚪ hosted |
 | [GeoLens MCP](https://github.com/geolens-io/geolens) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python<br>local | GeoLens | official | 🟩 open | 🟢 active |
 | [geonode-mcp](https://github.com/christianbraun/geonode-mcp) | Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2 | Python<br>self-hosted | Christian Braun | community | 🟩 open | 🟢 active |
