@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**117 servers tracked** across 13 categories.
+**118 servers tracked** across 13 categories.
 
 _Health checked 2026-11-15 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 20 · ⚪ hosted 30 · ⏳ pending 2 · 🔴 archived 2._
 
 
-_Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 55 · 🟥 paywalled 8._
+_Access: 🟩 open 49 · 🟨 free 6 · 🟦 commercial 55 · 🟥 paywalled 8._
 
 ### Categories
 
@@ -44,7 +44,7 @@ _Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 55 · 🟥 paywalled 8._
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (17)
 - [Weather & climate](#weather--climate) (12)
-- [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (10)
+- [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (11)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (8)
 - [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (11)
 - [Parcels & property](#parcels--property) (5)
@@ -158,6 +158,7 @@ _Access: 🟩 open 48 · 🟨 free 6 · 🟦 commercial 55 · 🟥 paywalled 8._
 | Server | Description | Lang / Deployment | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
 | [ArcGISMCP](https://github.com/GarrickGarcia/ArcGISMCP) | Integrates ArcGIS Online — search/query geospatial feature layers | Python<br>local | GarrickGarcia | community | 🟦 commercial | 🟡 stale |
+| [Columbus](https://github.com/wiatrek-kevin-s/columbus) | Governed GIS desktop app and MCP server: per-source read-only or read-write access to Oracle/SQL Server/file geodatabases, PostGIS, shapefiles, GeoPackage and CSV, with sandboxed scripts, approvals and a local audit log | Rust<br>local | wiatrek-kevin-s | community | 🟩 open | — |
 | [esri-mcp](https://github.com/eKerney/esri-mcp) | Query & map Esri Living Atlas data, focus on water resources | Python<br>unknown | eKerney | community | 🟦 commercial | 🟡 stale |
 | [gis-agent-bridges](https://github.com/YUYU20061107/gis-agent-bridges) | Safety-gated MCP bridges for mainstream desktop GIS (SuperMap, ArcGIS Pro/ArcMap, QGIS, GeoScene, MapGIS, ENVI, Global Mapper, FME) - localhost-only, confirm-gated writes, originals read-only, no arbitrary code execution | Python<br>local | YUYU20061107 | community | 🟦 commercial | 🟢 active |
 | [MCP-ArcGISPro](https://github.com/geo2004/MCP-ArcGISPro) | Control and automate ArcGIS Pro from Claude Desktop | Python<br>local | geo2004 | community | 🟥 paywalled | 🟢 active |

@@ -1367,3 +1367,14 @@ servers:
     tags: [geoparquet, duckdb, cloud-storage, catalog, zonal-statistics, sentinel-2, hosted]
     note: "endpoint https://geobox.cloud/mcp (Streamable HTTP, workspace API key made on the AI page, read-only or read and act); free plan with quotas"
     added: 2026-11-19
+  - name: Columbus
+    access: open
+    url: https://github.com/wiatrek-kevin-s/columbus
+    description: "Governed GIS desktop app and MCP server: per-source read-only or read-write access to Oracle/SQL Server/file geodatabases, PostGIS, shapefiles, GeoPackage and CSV, with sandboxed scripts, approvals and a local audit log"
+    category: desktop_gis
+    author: wiatrek-kevin-s
+    language: Rust
+    deployment: local
+    tags: [desktop-gis, geodatabase, postgis, oracle, sql-server, governance, sandbox]
+    note: "test release (0.15), not code-signed, no professional audit; arcpy support experimental; Mac (Apple Silicon) and Windows; bring your own AI key or local model"
+    added: 2026-11-20
