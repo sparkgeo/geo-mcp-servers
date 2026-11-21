@@ -110,6 +110,11 @@
         "watch": {
           "description": "True for a server that is not generally available yet (early access / waitlist / announced with no public endpoint). check_health.py marks it 'pending' and prints it on a watchlist so the maintainer re-checks for GA.",
           "type": "boolean"
+        },
+
+        "experimental": {
+          "description": "True for a server that is available but not yet stable, set only when the author's own materials call it beta, a test or pre-release, experimental, or untested on real software. The README marks it with a test-tube flag next to Type, and check_health.py lists it so the maintainer re-checks whether it has matured.",
+          "type": "boolean"
         }
       },
 

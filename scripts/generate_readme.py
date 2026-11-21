@@ -149,6 +149,8 @@ def build_tables(data: dict, health: dict) -> str:
             lang = "<br>".join(p for p in (esc(s.get("language", "")), esc(s.get("deployment", ""))) if p) or "—"
             author = esc(s.get("author", "")) or "—"
             kind = "official" if s.get("official") else "community"
+            if s.get("experimental"):
+                kind += " 🧪"  # available but not yet stable, per the author
             row = f"| {name} | {desc} | {lang} | {author} | {kind} |"
             if show_access:
                 row += f" {ACCESS_LABELS.get(s.get('access'), '—')} |"

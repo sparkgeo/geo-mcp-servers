@@ -21,6 +21,11 @@
 #   watch:       (optional, bool) true if not generally available yet (early
 #                access / waitlist). check_health.py marks it ⏳ pending and lists
 #                it as a watchlist reminder to re-check for GA.
+#   experimental: (optional, bool) true if available but not yet stable. Set it
+#                only when the author's own materials say beta, test release,
+#                pre-release, experimental or untested on real software. The
+#                README shows 🧪 next to Type; check_health.py lists these entries
+#                so they can be re-checked. Not for watch entries (not GA yet).
 #
 # `official: true` is the strongest trust signal this catalog emits, so CI makes
 # you back it up rather than just assert it:
@@ -228,6 +233,7 @@ servers:
     deployment: local
     tags: [desktop-gis, supermap, arcgis, qgis, geoscene, mapgis, envi, fme]
     note: "early (v0.2-0.4): only SuperMap file-fallback and ArcMap headless tested on real software; other packages and all live modes protocol-tested only. Most apps need a paid licence; QGIS is free. Standalone SuperMap bridge: github.com/YUYU20061107/supermap-gis-bridge"
+    experimental: true
     added: 2026-10-26
 
   # ---- Maps, tiles & commercial platforms ----
@@ -254,6 +260,7 @@ servers:
     deployment: hosted
     vendor_domain: arcgis.com
     tags: [arcgis, geocoding, routing]
+    experimental: true
     added: 2026-08-02
   - name: Mapbox MCP Server
     access: commercial
@@ -904,6 +911,7 @@ servers:
     deployment: hosted
     vendor_domain: planet.com
     tags: [planet, imagery, tasking]
+    experimental: true
     added: 2026-08-05
   - name: Microsoft Planetary Computer Pro MCP Tools
     access: paywalled
@@ -1132,6 +1140,7 @@ servers:
     vendor_orgs: [EarthLegend]
     tags: [embeddings, satellite-imagery, geoai, similarity-search]
     note: "beta; MCP access is gated to paid Developer/Pro/Enterprise plans — the underlying API has a free tier"
+    experimental: true
     added: 2026-09-07
   - name: LGND Geo
     access: free
@@ -1206,6 +1215,7 @@ servers:
     deployment: local
     tags: [aws, open-data, s3, stac, catalog, dataset-discovery, earth-observation]
     note: "uvx awslabs.roda-mcp-server@latest; public buckets need no AWS account, requester-pays datasets need AWS credentials; AWS labels it for development and evaluation use"
+    experimental: true
     added: 2026-10-15
   - name: Factori MCP
     access: paywalled
@@ -1377,4 +1387,5 @@ servers:
     deployment: local
     tags: [desktop-gis, geodatabase, postgis, oracle, sql-server, governance, sandbox]
     note: "test release (0.15), not code-signed, no professional audit; arcpy support experimental; Mac (Apple Silicon) and Windows; bring your own AI key or local model"
+    experimental: true
     added: 2026-11-20
