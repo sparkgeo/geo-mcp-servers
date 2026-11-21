@@ -1389,3 +1389,15 @@ servers:
     note: "test release (0.15), not code-signed, no professional audit; arcpy support experimental; Mac (Apple Silicon) and Windows; bring your own AI key or local model"
     experimental: true
     added: 2026-11-20
+  - name: BatchData MCP Server
+    access: paywalled
+    url: https://batchdata.io/mcp-server
+    description: "U.S. property data for agents: lookup, comparables and search across 169 million+ parcels, address verification and geocoding, plus skip tracing and reverse skip tracing (owner contact data) and phone compliance checks"
+    category: property
+    author: BatchData
+    official: true
+    deployment: hosted
+    vendor_domain: batchdata.io
+    tags: [parcels, property-data, owners, skip-tracing, address-verification, geocoding, hosted]
+    note: "endpoint https://mcp.batchdata.com (Streamable HTTP, OAuth 2.1 sign-in or BatchData API token); requires a BatchData account; usage-based pricing (contact sales); skip tracing must be enabled by a team admin; MCP Registry: io.github.batchdataco/batchdata-mcp-server"
+    added: 2026-11-21
