@@ -77,6 +77,9 @@ If you are not sure whether a server fits, open a
 - Keep `description` to a single line, present tense, no trailing period needed.
 - Mark `official: true` only when the vendor/owner of the underlying service
   publishes it (e.g. Mapbox's own MCP server).
+- Mark `experimental: true` only when the author's own materials call the server
+  beta, a test or pre-release, experimental, or untested on real software. Use
+  `watch: true` instead if it is not generally available yet.
 
 ## No-code option
 

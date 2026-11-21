@@ -176,6 +176,11 @@ def main() -> int:
         print("\n⏳ Watchlist — early access / not GA; re-check for a public endpoint:")
         for name in watch:
             print(f"  {name}")
+    experimental = [s.get("name") for s in servers if s.get("experimental")]
+    if experimental:
+        print("\n🧪 Experimental — re-check whether each is now stable (then drop the flag):")
+        for name in experimental:
+            print(f"  {name}")
     return 0
 
 

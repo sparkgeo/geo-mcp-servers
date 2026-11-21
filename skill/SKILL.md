@@ -39,6 +39,9 @@ resolved `$REPO` in every command below.
    🟥 paywalled) and a generated **health** status (🟢 active / 🟡 stale /
    ⚪ hosted / ⏳ pending / 🔴 archived|dead) — use these when recommending
    (e.g. prefer active + open/free unless the user wants a specific vendor).
+   Entries with **`experimental: true`** (🧪) are available but not yet stable by their
+   author's own account: prefer stable options, and if you recommend one, say it is
+   experimental and repeat any caveat in its `note`.
 4. Filter on **`deployment`** (where the server runs). If you do not know how the
    user will connect, ask whether they use a desktop client (Claude Desktop,
    Claude Code, an IDE) or a web client (claude.ai, ChatGPT).
@@ -76,6 +79,7 @@ resolved `$REPO` in every command below.
        vendor_domain: <example.com>                  # REQUIRED when official + non-GitHub URL, AND for any hosted entry (URL host must equal it or be a subdomain)
        deployment: <local | hosted | local+hosted | self-hosted | addin | unknown>   # optional; see below
        watch: true                                   # ONLY if not generally available yet (beta/waitlist) — renders ⏳ pending
+       experimental: true                            # ONLY if available but the author calls it beta/test/experimental — renders 🧪
        tags: [<keywords>]
        note: <caveat — endpoint URL, API-key need, version support, etc.>   # optional, ≤300 chars
        added: <YYYY-MM-DD>
@@ -94,6 +98,9 @@ resolved `$REPO` in every command below.
      a desktop app). `check_health.py` suggests a value for entries that have none.
    - **Hosted services**: set `deployment: hosted` + `vendor_domain`.
    - **Not yet GA** (private beta / waitlist): set `watch: true`.
+   - **Available but not stable** (the author's own words: beta, test release, pre-release,
+     experimental, untested on real software): set `experimental: true`. Never set it on
+     your own judgment.
 
 4. **Regenerate the README** (the repo ships a `.venv` with PyYAML):
 
