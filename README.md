@@ -29,7 +29,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**118 servers tracked** across 13 categories.
+**119 servers tracked** across 13 categories.
 
 _Health checked 2026-11-15 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 20 · ⚪ hosted 30 · ⏳ pending 2 · 🔴 archived 2._
 
@@ -47,7 +47,7 @@ _Access: 🟩 open 49 · 🟨 free 6 · 🟦 commercial 55 · 🟥 paywalled 8._
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (11)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (8)
 - [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (11)
-- [Parcels & property](#parcels--property) (5)
+- [Parcels & property](#parcels--property) (6)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (6)
 - [Specialist location directories](#specialist-location-directories) (2)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (4)
@@ -203,6 +203,7 @@ _Access: 🟩 open 49 · 🟨 free 6 · 🟦 commercial 55 · 🟥 paywalled 8._
 | Server | Description | Lang / Deployment | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
 | [ATTOM MCP](https://github.com/pipeworx-io/mcp-attom) | Premium US real-estate & property data from ATTOM Data Solutions — property details, valuations, ownership & sales history | TypeScript<br>local+hosted | Pipeworx (uses ATTOM API) | community | 🟥 paywalled | 🟢 active |
+| [BatchData MCP Server](https://batchdata.io/mcp-server) | U.S. property data for agents: property lookup, comparables and property search across 169 million+ U.S. parcels, owner skip tracing, phone checks, and address verification and geocoding | hosted | BatchData | official | — | — |
 | [LandRecords.us MCP Server](https://landrecords.us/documentation/mcp-server) | Query 160M+ US land parcels by attribute, address, radius, bbox or GeoJSON polygon — ownership, assessed value, land use, acreage & geometry | hosted | landrecords.us | official | 🟦 commercial | ⚪ hosted |
 | [MAIA MCP](https://maia-analytics.com/docs/mcp/connect) | Hosted connector that builds US location datasets as map + table projects — parcels, owners, zoning, buildings, businesses & contacts — from plain-language requests, with CSV/GeoJSON import and project querying | hosted | MAIA Analytics | official | 🟦 commercial | ⚪ hosted |
 | [Pluia (PLU IA) MCP Server](https://pluia.fr/ia) | French zoning (PLU) for any address or parcel in France, rules cited with the official PDF page | hosted | AZERIA IT | official | 🟦 commercial | ⚪ hosted |
