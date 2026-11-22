@@ -1401,3 +1401,15 @@ servers:
     tags: [parcels, property-data, owners, skip-tracing, address-verification, geocoding, hosted]
     note: "endpoint https://mcp.batchdata.com (Streamable HTTP, OAuth 2.1 sign-in or BatchData API token); requires a BatchData account; usage-based pricing (contact sales); skip tracing must be enabled by a team admin; MCP Registry: io.github.batchdataco/batchdata-mcp-server"
     added: 2026-11-21
+  - name: Climatch
+    access: free
+    url: https://climatch.co/agents
+    description: "Monthly climate normals (TerraClimate 1991-2020) for 31,000+ towns: similar-climate search, town comparisons, best weather by month and crop suitability (FAO ECOCROP)"
+    category: weather
+    author: Harry Burman
+    official: true
+    deployment: hosted
+    vendor_domain: climatch.co
+    tags: [climate-normals, terraclimate, geonames, crop-suitability, ecocrop, hosted]
+    note: "endpoint https://climatch.co/mcp (Streamable HTTP, no auth, read-only); data from TerraClimate, GeoNames and FAO ECOCROP; MCP Registry: io.github.burmanharry/climatch"
+    added: 2026-11-22

@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**119 servers tracked** across 13 categories.
+**120 servers tracked** across 13 categories.
 
 _Health checked 2026-11-15 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 20 · ⚪ hosted 30 · ⏳ pending 2 · 🔴 archived 2._
 
 
-_Access: 🟩 open 49 · 🟨 free 6 · 🟦 commercial 55 · 🟥 paywalled 9._
+_Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 55 · 🟥 paywalled 9._
 
 ### Categories
 
@@ -43,7 +43,7 @@ _Access: 🟩 open 49 · 🟨 free 6 · 🟦 commercial 55 · 🟥 paywalled 9._
 - [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (19)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (17)
-- [Weather & climate](#weather--climate) (12)
+- [Weather & climate](#weather--climate) (13)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (11)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (8)
 - [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (11)
@@ -141,6 +141,7 @@ _Access: 🟩 open 49 · 🟨 free 6 · 🟦 commercial 55 · 🟥 paywalled 9._
 | Server | Description | Lang / Deployment | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
 | [aqicn-mcp](https://github.com/mattmarcin/aqicn-mcp) | Real-time air quality from the World Air Quality Index (AQICN) by city or coordinates | local | mattmarcin | community | 🟨 free | 🟡 stale |
+| [Climatch](https://climatch.co/agents) | Monthly climate normals (TerraClimate 1991-2020) for 31,000+ towns: similar-climate search, town comparisons, best weather by month and crop suitability (FAO ECOCROP) | hosted | Harry Burman | official | 🟨 free | — |
 | [dynamical.org Weather & Climate Catalog](https://github.com/dynamical-org/mcp) | Hosted server over dynamical.org's open STAC catalog of cloud-optimized weather & climate archives and forecasts (GFS, HRRR, ECMWF/AIFS) — dataset search & docs, ready-to-run xarray/Zarr/Icechunk snippets, forecast-run freshness | Python<br>local+hosted | dynamical.org | official | 🟩 open | 🟢 active |
 | [Government of Canada Weather MCP](https://github.com/SeanLF/weather-mcp) | 5-day weather forecasts for any location in Canada (by latitude/longitude) via the Government of Canada Weather API | Python<br>local | SeanLF | community | 🟩 open | 🟡 stale |
 | [mcp_weather_server](https://github.com/isdaniel/mcp_weather_server) | Weather info via the Open-Meteo API | Python<br>local | isdaniel | community | 🟩 open | 🟢 active |
