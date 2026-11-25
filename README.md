@@ -29,9 +29,9 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**121 servers tracked** across 13 categories.
+**121 servers tracked** across 14 categories.
 
-_Health checked 2026-11-15 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 20 · ⚪ hosted 30 · ⏳ pending 2 · 🔴 archived 2._
+_Health checked 2026-11-25 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 21 · ⚪ hosted 33 · ⏳ pending 2 · 🔴 archived 2._
 
 
 _Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 9._
@@ -46,10 +46,11 @@ _Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 9._
 - [Weather & climate](#weather--climate) (13)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (11)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (8)
-- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (12)
+- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (11)
 - [Parcels & property](#parcels--property) (6)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (6)
 - [Specialist location directories](#specialist-location-directories) (2)
+- [General tools with geospatial capability](#general-tools-with-geospatial-capability) (1)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (4)
 
 ### Geocoding & place search
@@ -141,7 +142,7 @@ _Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 9._
 | Server | Description | Lang / Deployment | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
 | [aqicn-mcp](https://github.com/mattmarcin/aqicn-mcp) | Real-time air quality from the World Air Quality Index (AQICN) by city or coordinates | local | mattmarcin | community | 🟨 free | 🟡 stale |
-| [Climatch](https://climatch.co/agents) | Monthly climate normals (TerraClimate 1991-2020) for 31,000+ towns: similar-climate search, town comparisons, best weather by month and crop suitability (FAO ECOCROP) | hosted | Harry Burman | official | 🟨 free | — |
+| [Climatch](https://climatch.co/agents) | Monthly climate normals (TerraClimate 1991-2020) for 31,000+ towns: similar-climate search, town comparisons, best weather by month and crop suitability (FAO ECOCROP) | hosted | Harry Burman | official | 🟨 free | ⚪ hosted |
 | [dynamical.org Weather & Climate Catalog](https://github.com/dynamical-org/mcp) | Hosted server over dynamical.org's open STAC catalog of cloud-optimized weather & climate archives and forecasts (GFS, HRRR, ECMWF/AIFS) — dataset search & docs, ready-to-run xarray/Zarr/Icechunk snippets, forecast-run freshness | Python<br>local+hosted | dynamical.org | official | 🟩 open | 🟢 active |
 | [Government of Canada Weather MCP](https://github.com/SeanLF/weather-mcp) | 5-day weather forecasts for any location in Canada (by latitude/longitude) via the Government of Canada Weather API | Python<br>local | SeanLF | community | 🟩 open | 🟡 stale |
 | [mcp_weather_server](https://github.com/isdaniel/mcp_weather_server) | Weather info via the Open-Meteo API | Python<br>local | isdaniel | community | 🟩 open | 🟢 active |
@@ -159,7 +160,7 @@ _Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 9._
 | Server | Description | Lang / Deployment | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
 | [ArcGISMCP](https://github.com/GarrickGarcia/ArcGISMCP) | Integrates ArcGIS Online — search/query geospatial feature layers | Python<br>local | GarrickGarcia | community | 🟦 commercial | 🟡 stale |
-| [Columbus](https://github.com/wiatrek-kevin-s/columbus) | Governed GIS desktop app and MCP server: per-source read-only or read-write access to Oracle/SQL Server/file geodatabases, PostGIS, shapefiles, GeoPackage and CSV, with sandboxed scripts, approvals and a local audit log | Rust<br>local | wiatrek-kevin-s | community 🧪 | 🟩 open | — |
+| [Columbus](https://github.com/wiatrek-kevin-s/columbus) | Governed GIS desktop app and MCP server: per-source read-only or read-write access to Oracle/SQL Server/file geodatabases, PostGIS, shapefiles, GeoPackage and CSV, with sandboxed scripts, approvals and a local audit log | Rust<br>local | wiatrek-kevin-s | community 🧪 | 🟩 open | 🟢 active |
 | [esri-mcp](https://github.com/eKerney/esri-mcp) | Query & map Esri Living Atlas data, focus on water resources | Python<br>unknown | eKerney | community | 🟦 commercial | 🟡 stale |
 | [gis-agent-bridges](https://github.com/YUYU20061107/gis-agent-bridges) | Safety-gated MCP bridges for mainstream desktop GIS (SuperMap, ArcGIS Pro/ArcMap, QGIS, GeoScene, MapGIS, ENVI, Global Mapper, FME) - localhost-only, confirm-gated writes, originals read-only, no arbitrary code execution | Python<br>local | YUYU20061107 | community 🧪 | 🟦 commercial | 🟢 active |
 | [MCP-ArcGISPro](https://github.com/geo2004/MCP-ArcGISPro) | Control and automate ArcGIS Pro from Claude Desktop | Python<br>local | geo2004 | community | 🟥 paywalled | 🟢 active |
@@ -189,10 +190,9 @@ _Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 9._
 | --- | --- | --- | --- | --- | --- | --- |
 | [DC Hub](https://github.com/azmartone67/dchub-mcp-server) | Data-center site selection data — Data Center Power Index (DCPI) daily grid-power availability scores across 300+ markets, plus grid, fiber, gas and interconnection-queue data | JavaScript<br>local+hosted | DC Hub | official | 🟦 commercial | 🟢 active |
 | [Factori MCP](https://factori.ai/mcp/) | Location intelligence from mobility data — POI visits and trends, visitor profiles, market saturation and demographics, for site selection, audience building and out-of-home (OOH) planning | hosted | Factori | official | 🟥 paywalled | ⚪ hosted |
-| [Firecrawl MCP Server](https://github.com/firecrawl/firecrawl-mcp-server) | Firecrawl Alexandria geospatial tools (ArcGIS public GIS layers, Element 84 Earth Search Sentinel-2 scenes, OpenAddresses, FEMA / ORNL USA Structures) on a web data server for search, scraping and crawling | TypeScript<br>local+hosted | Firecrawl | official | 🟦 commercial | — |
 | [Fotoshi MCP](https://fotoshi.com/developer/mcp) | Search public geotagged Fotoshi photos within a bounded area, resolve place names, and get each photo's licence and attribution; signed-in users can also retrieve their own public photos | hosted | Fotoshi | official | 🟨 free | ⚪ hosted |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | hosted | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
-| [Geobox MCP](https://geobox.cloud/help#ai) | Cloud storage for your geodata, open to your assistant: list and query a workspace's GeoParquet with DuckDB, search open reference catalogs, make new datasets, zonal statistics on rasters, Sentinel-2 images | hosted | Geomermaids | official | 🟦 commercial | — |
+| [Geobox MCP](https://geobox.cloud/help#ai) | Cloud storage for your geodata, open to your assistant: list and query a workspace's GeoParquet with DuckDB, search open reference catalogs, make new datasets, zonal statistics on rasters, Sentinel-2 images | hosted | Geomermaids | official | 🟦 commercial | ⚪ hosted |
 | [geoDB (mineral exploration)](https://geodb.io/connect-ai/) | Hosted remote MCP over a mineral-exploration system of record, reading and writing drill holes, assays, QA/QC, geophysics and claims through a scoped, revocable, logged grant, with dry run, confirm and undo on every write | hosted | geoDB | official | 🟥 paywalled | ⚪ hosted |
 | [GeoLens MCP](https://github.com/geolens-io/geolens) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python<br>local | GeoLens | official | 🟩 open | 🟢 active |
 | [geonode-mcp](https://github.com/christianbraun/geonode-mcp) | Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2 | Python<br>self-hosted | Christian Braun | community | 🟩 open | 🟢 active |
@@ -205,7 +205,7 @@ _Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 9._
 | Server | Description | Lang / Deployment | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
 | [ATTOM MCP](https://github.com/pipeworx-io/mcp-attom) | Premium US real-estate & property data from ATTOM Data Solutions — property details, valuations, ownership & sales history | TypeScript<br>local+hosted | Pipeworx (uses ATTOM API) | community | 🟥 paywalled | 🟢 active |
-| [BatchData MCP Server](https://batchdata.io/mcp-server) | U.S. property data for agents: lookup, comparables and search across 169 million+ parcels, address verification and geocoding, plus skip tracing and reverse skip tracing (owner contact data) and phone compliance checks | hosted | BatchData | official | 🟥 paywalled | — |
+| [BatchData MCP Server](https://batchdata.io/mcp-server) | U.S. property data for agents: lookup, comparables and search across 169 million+ parcels, address verification and geocoding, plus skip tracing and reverse skip tracing (owner contact data) and phone compliance checks | hosted | BatchData | official | 🟥 paywalled | ⚪ hosted |
 | [LandRecords.us MCP Server](https://landrecords.us/documentation/mcp-server) | Query 160M+ US land parcels by attribute, address, radius, bbox or GeoJSON polygon — ownership, assessed value, land use, acreage & geometry | hosted | landrecords.us | official | 🟦 commercial | ⚪ hosted |
 | [MAIA MCP](https://maia-analytics.com/docs/mcp/connect) | Hosted connector that builds US location datasets as map + table projects — parcels, owners, zoning, buildings, businesses & contacts — from plain-language requests, with CSV/GeoJSON import and project querying | hosted | MAIA Analytics | official | 🟦 commercial | ⚪ hosted |
 | [Pluia (PLU IA) MCP Server](https://pluia.fr/ia) | French zoning (PLU) for any address or parcel in France, rules cited with the official PDF page | hosted | AZERIA IT | official | 🟦 commercial | ⚪ hosted |
@@ -215,7 +215,7 @@ _Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 9._
 
 | Server | Description | Lang / Deployment | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
-| [ADS-B MCP Server](https://github.com/dirkhh/adsb-mcp-server) | Exposes a local ADS-B feeder (readsb/tar1090) — aircraft positions, callsigns, altitudes, routes | Python<br>local | dirkhh | community | 🟩 open | 🟢 active |
+| [ADS-B MCP Server](https://github.com/dirkhh/adsb-mcp-server) | Exposes a local ADS-B feeder (readsb/tar1090) — aircraft positions, callsigns, altitudes, routes | Python<br>local | dirkhh | community | 🟩 open | 🟡 stale |
 | [Flightradar24 API MCP](https://github.com/Flightradar24/fr24api-mcp) | Official Flightradar24 flight-tracking API access | local | Flightradar24 | official | 🟦 commercial | 🟢 active |
 | [God's Eye View](https://github.com/bilawalsidhu/gods-eye-view) | Live open-source spatial intelligence on a photorealistic 3D globe — show a place with live flights (incl. military ADS-B), vessels, satellites, earthquakes, traffic & public CCTV, rendered in-conversation | JavaScript<br>local | Bilawal Sidhu | community | 🟩 open | 🟢 active |
 | [MarineTraffic MCP Server](https://github.com/Cyreslab-AI/marinetraffic-mcp-server) | Vessel positions/details, search & vessels-in-area via MarineTraffic | local | Cyreslab-AI | community | 🟦 commercial | 🟢 active |
@@ -228,6 +228,12 @@ _Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 9._
 | --- | --- | --- | --- | --- | --- | --- |
 | [No Stairs Please MCP Server](https://nostairsplease.com/mcp) | US and BC independent live-music venue discovery, booking contacts, capacity filtering, and drive-time tour routing | hosted | No Stairs Please | official | 🟨 free | ⚪ hosted |
 | [OpenMapp MCP](https://www.openmapp.com) | Find Brazilian Jiu-Jitsu gyms in the contiguous US near a city, neighbourhood or ZIP, with open mats, drop-in policies, visitor fees when known and weekly schedules | hosted | OpenMapp | official | 🟨 free | ⚪ hosted |
+
+### General tools with geospatial capability
+
+| Server | Description | Lang / Deployment | By | Type | Access | Health |
+| --- | --- | --- | --- | --- | --- | --- |
+| [Firecrawl MCP Server](https://github.com/firecrawl/firecrawl-mcp-server) | Firecrawl Alexandria geospatial tools (ArcGIS public GIS layers, Element 84 Earth Search Sentinel-2 scenes, OpenAddresses, FEMA / ORNL USA Structures) on a web data server for search, scraping and crawling | TypeScript<br>local+hosted | Firecrawl | official | 🟦 commercial | 🟢 active |
 
 ### Other (IP geolocation, misc)
 

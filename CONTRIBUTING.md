@@ -21,6 +21,14 @@ listed there, a directory must:
   the vendor's GitHub org or domain), and
 - have searching places by location as its main function.
 
+A general-purpose server whose main job is **not** geospatial — a web
+search/scrape server, a general data platform, a toolkit — goes in **General
+tools with geospatial capability** (`general_tools`), not in a core category it
+would otherwise crowd. To be listed there, the server must expose **real,
+named geospatial tools** (for example GIS layer, STAC, geocoding or parcel
+tools), not merely be capable of returning geographic text. Describe those
+tools in the entry so a reader can see what the geospatial surface actually is.
+
 We do not list:
 
 - **Servers whose data use breaks the provider's terms**, such as scrapers of

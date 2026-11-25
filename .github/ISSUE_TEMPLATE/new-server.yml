@@ -41,6 +41,7 @@ body:
         - Parcels & property
         - Aviation & maritime tracking (ADS-B, AIS)
         - Specialist location directories
+        - General tools with geospatial capability
         - Other / misc
     validations:
       required: true

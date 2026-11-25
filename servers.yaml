@@ -64,6 +64,7 @@ categories:
   property:         "Parcels & property"
   tracking:         "Aviation & maritime tracking (ADS-B, AIS)"
   directory:        "Specialist location directories"
+  general_tools:    "General tools with geospatial capability"
   other:            "Other (IP geolocation, misc)"
 
 servers:
@@ -1417,7 +1418,7 @@ servers:
     access: commercial
     url: https://github.com/firecrawl/firecrawl-mcp-server
     description: "Firecrawl Alexandria geospatial tools (ArcGIS public GIS layers, Element 84 Earth Search Sentinel-2 scenes, OpenAddresses, FEMA / ORNL USA Structures) on a web data server for search, scraping and crawling"
-    category: data_access
+    category: general_tools
     author: Firecrawl
     language: TypeScript
     deployment: local+hosted

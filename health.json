@@ -1,11 +1,17 @@
 {
   "active_months": 12,
-  "checked": "2026-11-15",
+  "checked": "2026-11-25",
   "servers": {
     "https://api.geobble.com/mcp": {
       "status": "hosted"
     },
     "https://apidocs.geoapify.com/mcp": {
+      "status": "hosted"
+    },
+    "https://batchdata.io/mcp-server": {
+      "status": "hosted"
+    },
+    "https://climatch.co/agents": {
       "status": "hosted"
     },
     "https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403": {
@@ -37,6 +43,9 @@
     },
     "https://geoai.tools": {
       "status": "pending"
+    },
+    "https://geobox.cloud/help#ai": {
+      "status": "hosted"
     },
     "https://geodb.io/connect-ai/": {
       "status": "hosted"
@@ -134,7 +143,7 @@
       "status": "active"
     },
     "https://github.com/aws-samples/sample-geospatial-kiro-power-pack": {
-      "pushed": "2026-09",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/awslabs/mcp/tree/main/src/roda-mcp-server": {
@@ -199,7 +208,7 @@
     },
     "https://github.com/dirkhh/adsb-mcp-server": {
       "pushed": "2025-11",
-      "status": "active"
+      "status": "stale"
     },
     "https://github.com/domdomegg/google-maps-places-mcp": {
       "pushed": "2026-11",
@@ -212,6 +221,10 @@
     "https://github.com/eKerney/esri-mcp": {
       "pushed": "2025-09",
       "status": "stale"
+    },
+    "https://github.com/firecrawl/firecrawl-mcp-server": {
+      "pushed": "2026-11",
+      "status": "active"
     },
     "https://github.com/foursquare/foursquare-places-mcp": {
       "pushed": "2025-04",
@@ -266,11 +279,11 @@
       "status": "stale"
     },
     "https://github.com/mahdin75/geoserver-mcp": {
-      "pushed": "2026-08",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/mahdin75/gis-mcp": {
-      "pushed": "2026-08",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/mapbox/mcp-server": {
@@ -377,7 +390,12 @@
       "pushed": "2025-01",
       "status": "stale"
     },
+    "https://github.com/wiatrek-kevin-s/columbus": {
+      "pushed": "2026-11",
+      "status": "active"
+    },
     "https://landrecords.us/documentation/mcp-server": {
+      "moved_to": "https://landstats.com/documentation/mcp-server",
       "status": "hosted"
     },
     "https://lgnd.ai/resources/lgnd-geo": {
