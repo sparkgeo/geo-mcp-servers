@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**120 servers tracked** across 13 categories.
+**121 servers tracked** across 13 categories.
 
 _Health checked 2026-11-15 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 20 · ⚪ hosted 30 · ⏳ pending 2 · 🔴 archived 2._
 
 
-_Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 55 · 🟥 paywalled 9._
+_Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 9._
 
 ### Categories
 
@@ -46,7 +46,7 @@ _Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 55 · 🟥 paywalled 9._
 - [Weather & climate](#weather--climate) (13)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (11)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (8)
-- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (11)
+- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (12)
 - [Parcels & property](#parcels--property) (6)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (6)
 - [Specialist location directories](#specialist-location-directories) (2)
@@ -189,6 +189,7 @@ _Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 55 · 🟥 paywalled 9._
 | --- | --- | --- | --- | --- | --- | --- |
 | [DC Hub](https://github.com/azmartone67/dchub-mcp-server) | Data-center site selection data — Data Center Power Index (DCPI) daily grid-power availability scores across 300+ markets, plus grid, fiber, gas and interconnection-queue data | JavaScript<br>local+hosted | DC Hub | official | 🟦 commercial | 🟢 active |
 | [Factori MCP](https://factori.ai/mcp/) | Location intelligence from mobility data — POI visits and trends, visitor profiles, market saturation and demographics, for site selection, audience building and out-of-home (OOH) planning | hosted | Factori | official | 🟥 paywalled | ⚪ hosted |
+| [Firecrawl MCP Server](https://github.com/firecrawl/firecrawl-mcp-server) | Firecrawl Alexandria geospatial tools (ArcGIS public GIS layers, Element 84 Earth Search Sentinel-2 scenes, OpenAddresses, FEMA / ORNL USA Structures) on a web data server for search, scraping and crawling | TypeScript<br>local+hosted | Firecrawl | official | 🟦 commercial | — |
 | [Fotoshi MCP](https://fotoshi.com/developer/mcp) | Search public geotagged Fotoshi photos within a bounded area, resolve place names, and get each photo's licence and attribution; signed-in users can also retrieve their own public photos | hosted | Fotoshi | official | 🟨 free | ⚪ hosted |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | hosted | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
 | [Geobox MCP](https://geobox.cloud/help#ai) | Cloud storage for your geodata, open to your assistant: list and query a workspace's GeoParquet with DuckDB, search open reference catalogs, make new datasets, zonal statistics on rasters, Sentinel-2 images | hosted | Geomermaids | official | 🟦 commercial | — |
