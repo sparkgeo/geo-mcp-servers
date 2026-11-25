@@ -1413,3 +1413,16 @@ servers:
     tags: [climate-normals, terraclimate, geonames, crop-suitability, ecocrop, hosted]
     note: "endpoint https://climatch.co/mcp (Streamable HTTP, no auth, read-only); data from TerraClimate, GeoNames and FAO ECOCROP; MCP Registry: io.github.burmanharry/climatch"
     added: 2026-11-22
+  - name: Firecrawl MCP Server
+    access: commercial
+    url: https://github.com/firecrawl/firecrawl-mcp-server
+    description: "Firecrawl Alexandria geospatial tools (ArcGIS public GIS layers, Element 84 Earth Search Sentinel-2 scenes, OpenAddresses, FEMA / ORNL USA Structures) on a web data server for search, scraping and crawling"
+    category: data_access
+    author: Firecrawl
+    language: TypeScript
+    deployment: local+hosted
+    official: true
+    vendor_orgs: [firecrawl]
+    tags: [firecrawl-alexandria, arcgis, stac, sentinel-2, addresses, building-footprints, web-search, hosted]
+    note: "endpoint https://mcp.firecrawl.dev/v2/mcp (Streamable HTTP; OAuth sign-in at /v2/mcp-oauth or a Firecrawl API key); Firecrawl Alexandria tools need sign-in or a key and bill each call in Firecrawl credits; free plan with 1,000 credits a month; MCP Registry: io.github.firecrawl/firecrawl-mcp-server"
+    added: 2026-11-25
