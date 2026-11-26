@@ -1427,3 +1427,15 @@ servers:
     tags: [firecrawl-alexandria, arcgis, stac, sentinel-2, addresses, building-footprints, web-search, hosted]
     note: "endpoint https://mcp.firecrawl.dev/v2/mcp (Streamable HTTP; OAuth sign-in at /v2/mcp-oauth or a Firecrawl API key); Firecrawl Alexandria tools need sign-in or a key and bill each call in Firecrawl credits; free plan with 1,000 credits a month; MCP Registry: io.github.firecrawl/firecrawl-mcp-server"
     added: 2026-11-25
+  - name: Geloky Geocoding MCP
+    access: paywalled
+    url: https://geloky.com/help-api#mcp
+    description: "Hosted batch geocoding and reverse geocoding (up to 50 addresses a call), road distances and multi-stop routes from addresses or points, and the nearest location for each customer"
+    category: geocoding
+    author: Geloky
+    official: true
+    deployment: hosted
+    vendor_domain: geloky.com
+    tags: [geocoding, reverse-geocoding, batch-geocoding, distance, routing, hosted]
+    note: "endpoint https://geloky.com/mcp (streamable HTTP); API key in X-Api-Key or Authorization: Bearer; $0.001 per lookup from a prepaid wallet, $10 bonus on the first top-up; MCP Registry: com.geloky/geocoding"
+    added: 2026-11-26
