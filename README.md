@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**122 servers tracked** across 14 categories.
+**123 servers tracked** across 14 categories.
 
 _Health checked 2026-11-25 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 21 · ⚪ hosted 33 · ⏳ pending 2 · 🔴 archived 2._
 
 
-_Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 10._
+_Access: 🟩 open 50 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 10._
 
 ### Categories
 
@@ -46,7 +46,7 @@ _Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 10.
 - [Weather & climate](#weather--climate) (13)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (11)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (8)
-- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (11)
+- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (12)
 - [Parcels & property](#parcels--property) (6)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (6)
 - [Specialist location directories](#specialist-location-directories) (2)
@@ -191,6 +191,7 @@ _Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 10.
 | --- | --- | --- | --- | --- | --- | --- |
 | [DC Hub](https://github.com/azmartone67/dchub-mcp-server) | Data-center site selection data — Data Center Power Index (DCPI) daily grid-power availability scores across 300+ markets, plus grid, fiber, gas and interconnection-queue data | JavaScript<br>local+hosted | DC Hub | official | 🟦 commercial | 🟢 active |
 | [Factori MCP](https://factori.ai/mcp/) | Location intelligence from mobility data — POI visits and trends, visitor profiles, market saturation and demographics, for site selection, audience building and out-of-home (OOH) planning | hosted | Factori | official | 🟥 paywalled | ⚪ hosted |
+| [FEMA Disaster Declarations & Aid MCP](https://github.com/theluckystrike/fema-disaster-declarations-aid-mcp) | US federal disaster declarations by county or 5-digit FIPS code, incident type, and FEMA Individual/Public Assistance and Hazard Mitigation grant totals via OpenFEMA | TypeScript<br>hosted | theluckystrike | community | 🟩 open | — |
 | [Fotoshi MCP](https://fotoshi.com/developer/mcp) | Search public geotagged Fotoshi photos within a bounded area, resolve place names, and get each photo's licence and attribution; signed-in users can also retrieve their own public photos | hosted | Fotoshi | official | 🟨 free | ⚪ hosted |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | hosted | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
 | [Geobox MCP](https://geobox.cloud/help#ai) | Cloud storage for your geodata, open to your assistant: list and query a workspace's GeoParquet with DuckDB, search open reference catalogs, make new datasets, zonal statistics on rasters, Sentinel-2 images | hosted | Geomermaids | official | 🟦 commercial | ⚪ hosted |
