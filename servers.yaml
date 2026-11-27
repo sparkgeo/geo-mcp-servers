@@ -1439,3 +1439,15 @@ servers:
     tags: [geocoding, reverse-geocoding, batch-geocoding, distance, routing, hosted]
     note: "endpoint https://geloky.com/mcp (streamable HTTP); API key in X-Api-Key or Authorization: Bearer; $0.001 per lookup from a prepaid wallet, $10 bonus on the first top-up; MCP Registry: com.geloky/geocoding"
     added: 2026-11-26
+  - name: FEMA Disaster Declarations & Aid MCP
+    access: open
+    url: https://github.com/theluckystrike/fema-disaster-declarations-aid-mcp
+    description: "US federal disaster declarations by county or 5-digit FIPS code, incident type, and FEMA Individual/Public Assistance and Hazard Mitigation grant totals via OpenFEMA"
+    category: data_access
+    author: theluckystrike
+    language: TypeScript
+    deployment: hosted
+    vendor_domain: mcpstamp.com
+    tags: [fema, disasters, hazards, fips, county, open-data, hosted]
+    note: "hosted Streamable HTTP endpoint https://fema-disaster-declarations-aid-mcp.lipmichal.workers.dev/mcp (no auth, no API key); docs at https://www.mcpstamp.com/free-servers/fema-disaster-declarations-aid-mcp/"
+    added: 2026-11-27
