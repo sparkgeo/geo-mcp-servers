@@ -401,8 +401,7 @@
       "pushed": "2026-11",
       "status": "active"
     },
-    "https://landrecords.us/documentation/mcp-server": {
-      "moved_to": "https://landstats.com/documentation/mcp-server",
+    "https://landstats.com/documentation/mcp-server": {
       "status": "hosted"
     },
     "https://lgnd.ai/resources/lgnd-geo": {

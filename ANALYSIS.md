@@ -1,6 +1,6 @@
 # Geospatial MCP landscape: strategic overview
 
-Snapshot of the catalog on 2026-11-27: 122 servers, health checked 2026-11-25 (Geloky, added after that check, is not yet checked).
+Snapshot of the catalog on 2026-11-27: 123 servers, health checked 2026-11-27.
 The tables in `README.md` are generated and stay current. This file is a hand-written analysis and does not update itself, so re-run the numbers before relying on them later.
 
 ## Summary
@@ -9,14 +9,14 @@ The catalog shows a market that is broad but uneven. Everyday location tasks (ge
 
 | Measure | Value |
 | --- | --- |
-| Servers | 122 across 14 categories |
-| Access | 49 open · 7 free · 56 commercial · 10 paywalled |
+| Servers | 123 across 14 categories |
+| Access | 50 open · 7 free · 56 commercial · 10 paywalled |
 | Published by the vendor (`official`) | 55 (45%) |
-| Health | 63 active · 33 hosted · 21 stale · 2 pending · 2 archived · 1 not yet checked |
+| Health | 64 active · 34 hosted · 21 stale · 2 pending · 2 archived |
 | Marked experimental (🧪) | 6 |
-| Deployment | 55 local · 36 hosted · 17 local+hosted · 5 self-hosted · 1 add-in · 8 unknown |
-| Usable from web clients (hosted or local+hosted) | 53 (43%) |
-| Implementation language, where known | Python 40 · TypeScript 26 · JavaScript/Node 4 · other 6 |
+| Deployment | 55 local · 36 hosted · 18 local+hosted · 5 self-hosted · 1 add-in · 8 unknown |
+| Usable from web clients (hosted or local+hosted) | 54 (44%) |
+| Implementation language, where known | Python 40 · TypeScript 27 · JavaScript/Node 4 · other 6 |
 
 ## Coverage by category
 
@@ -26,8 +26,8 @@ The catalog shows a market that is broad but uneven. Everyday location tasks (ge
 | Maps, tiles & commercial platforms | 19 | 0 | 19 | 13 | 6 |
 | Remote sensing (STAC / EO) | 17 | 6 | 11 | 9 | 3 |
 | Weather & climate | 13 | 13 | 0 | 2 | 2 |
+| Geospatial data access & catalogs | 12 | 7 | 5 | 9 | 0 |
 | Desktop & enterprise GIS | 11 | 6 | 5 | 0 | 3 |
-| Geospatial data access & catalogs | 11 | 6 | 5 | 9 | 0 |
 | GIS / geoprocessing toolkits | 8 | 6 | 2 | 3 | 0 |
 | Parcels & property | 6 | 0 | 6 | 5 | 0 |
 | Aviation & maritime tracking | 6 | 3 | 3 | 1 | 1 |
@@ -58,7 +58,7 @@ Vendors are also starting to replace community wrappers of their own APIs. Geoap
 
 ### Data vendors prefer hosted servers
 
-Of the 36 hosted servers, nearly all come from vendors selling data or a platform: parcel, zoning and property data (Regrid, LandRecords.us, MAIA, Pluia, BatchData), imagery (Vexcel, Planet, Planetary Computer Pro, SkyWatch), address and postal data (Smarty, Zip-Codes.com), location services (Geoapify, Geloky), climate data (Climatch), mobility and foot-traffic data (Factori), mineral-exploration data (geoDB), geotagged photos (Fotoshi), specialist directories (No Stairs Please, OpenMapp) and cloud GIS and geodata storage (CARTO, Felt, GIS Cloud, Geobble, Geobox). A hosted server keeps the vendor's data and API keys on their side and lets them update tools without users reinstalling anything. We expect this to become the default delivery model for commercial geodata, and recent additions bear that out: six of the seven servers added between 2026-10-16 and 2026-10-29 are hosted servers published by the vendor, and of the nine added since then, eight are published by their vendors and six are hosted. It also changes what the catalog can check: a hosted server has no source code to scan, so trust rests on the vendor's domain.
+Of the 36 hosted servers, nearly all come from vendors selling data or a platform: parcel, zoning and property data (Regrid, Landstats, MAIA, Pluia, BatchData), imagery (Vexcel, Planet, Planetary Computer Pro, SkyWatch), address and postal data (Smarty, Zip-Codes.com), location services (Geoapify, Geloky), climate data (Climatch), mobility and foot-traffic data (Factori), mineral-exploration data (geoDB), geotagged photos (Fotoshi), specialist directories (No Stairs Please, OpenMapp) and cloud GIS and geodata storage (CARTO, Felt, GIS Cloud, Geobble, Geobox). A hosted server keeps the vendor's data and API keys on their side and lets them update tools without users reinstalling anything. We expect this to become the default delivery model for commercial geodata, and recent additions bear that out: six of the seven servers added between 2026-10-16 and 2026-10-29 are hosted servers published by the vendor, and of the ten added since then, eight are published by their vendors and six are hosted. It also changes what the catalog can check: a hosted server has no source code to scan, so trust rests on the vendor's domain.
 
 ### Where servers run
 
@@ -68,16 +68,16 @@ Every entry records a `deployment` value: where the server runs and who runs it.
 | --- | ---: | ---: | ---: | --- |
 | Local | 55 | 12 | 43 | Install it; your client starts it on your machine. Needs a desktop client. |
 | Hosted | 36 | 34 | 2 | Connect to the vendor's URL. Works from web clients; queries go to the vendor. |
-| Local + hosted | 17 | 7 | 10 | Run it yourself, or use a public endpoint someone else runs. |
+| Local + hosted | 18 | 7 | 11 | Run it yourself, or use a public endpoint someone else runs. |
 | Self-hosted | 5 | 0 | 5 | Deploy it as an HTTP service yourself. |
 | Add-in | 1 | 0 | 1 | Runs inside a desktop application (ArcGIS Pro). |
 | Unknown | 8 | 2 | 6 | The README does not say. |
 
-Vendors host and the community ships local servers. More than six in ten official servers (34 of 55) are hosted, while nearly two thirds of the community servers (43 of 67) run locally. Only 53 servers, 43% of the catalog, can be used from a web client such as claude.ai without installing anything.
+Vendors host and the community ships local servers. More than six in ten official servers (34 of 55) are hosted, while nearly two thirds of the community servers (43 of 68) run locally. Only 54 servers, 44% of the catalog, can be used from a web client such as claude.ai without installing anything.
 
 The public endpoints in the local + hosted group mostly come from two community operators, not from the data vendors. Pipeworx runs gateway endpoints for six servers (MapTiler, Nominatim, what3words, OSRM, ATTOM and EarthScope), and cyanheads runs public instances of four (OpenStreetMap, Open-Meteo, OpenAQ and NOAA Marine). These are convenient, but a user's queries then go to a third party that is neither the user nor the data provider.
 
-Maintenance follows the same split. 15 of the 21 stale servers are local, and all 17 local + hosted servers are active, because someone has to keep a public endpoint running.
+Maintenance follows the same split. 15 of the 21 stale servers are local, and all 18 local + hosted servers are active, because someone has to keep a public endpoint running.
 
 By category, the pattern follows the work. Desktop GIS and geoprocessing toolkits are almost entirely local, because they drive software or data on the user's machine. Parcels and property data is entirely remote, because the value is the vendor's dataset.
 
@@ -112,7 +112,7 @@ These capabilities have no dedicated server in the catalog. Some may exist but n
 | Public transit (GTFS, schedules, real-time) | Nothing |
 | Fleet and logistics optimisation (vehicle routing, dispatch) | Trip optimisation inside OSRM MCP only |
 | Cloud warehouse spatial SQL (BigQuery, Snowflake, Databricks) | Wherobots (Apache Sedona), warehouse access through CARTO and Felt, and DuckDB queries over GeoParquet in Geobox storage |
-| Natural hazards (wildfire, flood, earthquake) as a focus | 2D flood simulation in Hydrata (paid runs); natural-risk lookups inside TerraLab; wildfire inside weather-mcp; earthquakes inside God's Eye View and the EarthScope server |
+| Natural hazards (wildfire, flood, earthquake) as a focus | US federal disaster declarations and FEMA aid totals by county/FIPS (FEMA Disaster Declarations & Aid, via OpenFEMA) — the first hazards-focused server, though it covers declared events and aid rather than live hazard modelling; 2D flood simulation in Hydrata (paid runs); natural-risk lookups inside TerraLab; wildfire inside weather-mcp; earthquakes inside God's Eye View and the EarthScope server |
 | Demographics and census data | Census tract demographics in Zip-Codes.com, population estimates in TerraLab, mobility-derived demographics in Factori (paid), and census enrichment inside Smarty |
 | Elevation and terrain as a service | Spread across MapTiler, TerraLab, MapSmith and Open-Meteo |
 | 3D, point clouds and digital twins | Cesium and one module of the Kiro power pack |
