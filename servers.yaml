@@ -1446,7 +1446,7 @@ servers:
     category: data_access
     author: theluckystrike
     language: TypeScript
-    deployment: hosted
+    deployment: local+hosted
     vendor_domain: mcpstamp.com
     tags: [fema, disasters, hazards, fips, county, open-data, hosted]
     note: "hosted Streamable HTTP endpoint https://fema-disaster-declarations-aid-mcp.lipmichal.workers.dev/mcp (no auth, no API key); docs at https://www.mcpstamp.com/free-servers/fema-disaster-declarations-aid-mcp/"

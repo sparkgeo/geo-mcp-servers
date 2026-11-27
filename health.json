@@ -1,6 +1,6 @@
 {
   "active_months": 12,
-  "checked": "2026-11-25",
+  "checked": "2026-11-27",
   "servers": {
     "https://api.geobble.com/mcp": {
       "status": "hosted"
@@ -39,6 +39,9 @@
       "status": "hosted"
     },
     "https://fotoshi.com/developer/mcp": {
+      "status": "hosted"
+    },
+    "https://geloky.com/help-api#mcp": {
       "status": "hosted"
     },
     "https://geoai.tools": {
@@ -215,7 +218,7 @@
       "status": "active"
     },
     "https://github.com/dynamical-org/mcp": {
-      "pushed": "2026-10",
+      "pushed": "2026-11",
       "status": "active"
     },
     "https://github.com/eKerney/esri-mcp": {
@@ -361,6 +364,10 @@
     "https://github.com/stadiamaps/stadiamaps-mcp-server-ts": {
       "pushed": "2025-07",
       "status": "stale"
+    },
+    "https://github.com/theluckystrike/fema-disaster-declarations-aid-mcp": {
+      "pushed": "2026-11",
+      "status": "active"
     },
     "https://github.com/tomtom-international/tomtom-maps-mcp": {
       "pushed": "2026-11",

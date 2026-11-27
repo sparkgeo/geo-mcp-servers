@@ -31,7 +31,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 **123 servers tracked** across 14 categories.
 
-_Health checked 2026-11-25 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 21 · ⚪ hosted 33 · ⏳ pending 2 · 🔴 archived 2._
+_Health checked 2026-11-27 (active = repo pushed within 12 months): 🟢 active 64 · 🟡 stale 21 · ⚪ hosted 34 · ⏳ pending 2 · 🔴 archived 2._
 
 
 _Access: 🟩 open 50 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 10._
@@ -57,7 +57,7 @@ _Access: 🟩 open 50 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 10.
 
 | Server | Description | Lang / Deployment | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
-| [Geloky Geocoding MCP](https://geloky.com/help-api#mcp) | Hosted batch geocoding and reverse geocoding (up to 50 addresses a call), road distances and multi-stop routes from addresses or points, and the nearest location for each customer | hosted | Geloky | official | 🟥 paywalled | — |
+| [Geloky Geocoding MCP](https://geloky.com/help-api#mcp) | Hosted batch geocoding and reverse geocoding (up to 50 addresses a call), road distances and multi-stop routes from addresses or points, and the nearest location for each customer | hosted | Geloky | official | 🟥 paywalled | ⚪ hosted |
 | [Geoapify MCP Server (community)](https://github.com/OriShmila/geoapify-mcp-server) | Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time | Python<br>local | OriShmila | community | 🟦 commercial | 🟡 stale |
 | [Geoapify MCP Server (official)](https://apidocs.geoapify.com/mcp) | Geocoding, reverse geocoding, place search, routing, route matrices, and GeoJSON geometry operations | hosted | Geoapify | official | 🟦 commercial | ⚪ hosted |
 | [geocode-mcp](https://github.com/X-McKay/geocode-mcp) | Lat/long for places via free Nominatim, no API key | Python<br>local | X-McKay | community | 🟩 open | 🟡 stale |
@@ -191,7 +191,7 @@ _Access: 🟩 open 50 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 10.
 | --- | --- | --- | --- | --- | --- | --- |
 | [DC Hub](https://github.com/azmartone67/dchub-mcp-server) | Data-center site selection data — Data Center Power Index (DCPI) daily grid-power availability scores across 300+ markets, plus grid, fiber, gas and interconnection-queue data | JavaScript<br>local+hosted | DC Hub | official | 🟦 commercial | 🟢 active |
 | [Factori MCP](https://factori.ai/mcp/) | Location intelligence from mobility data — POI visits and trends, visitor profiles, market saturation and demographics, for site selection, audience building and out-of-home (OOH) planning | hosted | Factori | official | 🟥 paywalled | ⚪ hosted |
-| [FEMA Disaster Declarations & Aid MCP](https://github.com/theluckystrike/fema-disaster-declarations-aid-mcp) | US federal disaster declarations by county or 5-digit FIPS code, incident type, and FEMA Individual/Public Assistance and Hazard Mitigation grant totals via OpenFEMA | TypeScript<br>hosted | theluckystrike | community | 🟩 open | — |
+| [FEMA Disaster Declarations & Aid MCP](https://github.com/theluckystrike/fema-disaster-declarations-aid-mcp) | US federal disaster declarations by county or 5-digit FIPS code, incident type, and FEMA Individual/Public Assistance and Hazard Mitigation grant totals via OpenFEMA | TypeScript<br>local+hosted | theluckystrike | community | 🟩 open | 🟢 active |
 | [Fotoshi MCP](https://fotoshi.com/developer/mcp) | Search public geotagged Fotoshi photos within a bounded area, resolve place names, and get each photo's licence and attribution; signed-in users can also retrieve their own public photos | hosted | Fotoshi | official | 🟨 free | ⚪ hosted |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | hosted | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
 | [Geobox MCP](https://geobox.cloud/help#ai) | Cloud storage for your geodata, open to your assistant: list and query a workspace's GeoParquet with DuckDB, search open reference catalogs, make new datasets, zonal statistics on rasters, Sentinel-2 images | hosted | Geomermaids | official | 🟦 commercial | ⚪ hosted |
