@@ -29,16 +29,16 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**121 servers tracked** across 14 categories.
+**122 servers tracked** across 14 categories.
 
 _Health checked 2026-11-25 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 21 · ⚪ hosted 33 · ⏳ pending 2 · 🔴 archived 2._
 
 
-_Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 9._
+_Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 10._
 
 ### Categories
 
-- [Geocoding & place search](#geocoding--place-search) (18)
+- [Geocoding & place search](#geocoding--place-search) (19)
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (2)
 - [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (19)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
@@ -57,6 +57,7 @@ _Access: 🟩 open 49 · 🟨 free 7 · 🟦 commercial 56 · 🟥 paywalled 9._
 
 | Server | Description | Lang / Deployment | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
+| [Geloky Geocoding MCP](https://geloky.com/help-api#mcp) | Hosted batch geocoding and reverse geocoding (up to 50 addresses a call), road distances and multi-stop routes from addresses or points, and the nearest location for each customer | hosted | Geloky | official | 🟥 paywalled | — |
 | [Geoapify MCP Server (community)](https://github.com/OriShmila/geoapify-mcp-server) | Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time | Python<br>local | OriShmila | community | 🟦 commercial | 🟡 stale |
 | [Geoapify MCP Server (official)](https://apidocs.geoapify.com/mcp) | Geocoding, reverse geocoding, place search, routing, route matrices, and GeoJSON geometry operations | hosted | Geoapify | official | 🟦 commercial | ⚪ hosted |
 | [geocode-mcp](https://github.com/X-McKay/geocode-mcp) | Lat/long for places via free Nominatim, no API key | Python<br>local | X-McKay | community | 🟩 open | 🟡 stale |
